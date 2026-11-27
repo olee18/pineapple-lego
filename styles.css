@@ -21,8 +21,9 @@
   --border: #393329;
   --shadow-hard: 0 6px 0 rgba(57, 51, 41, 0.15);
   --shadow-soft: 0 20px 54px rgba(94, 65, 22, 0.14);
-  --font: "Avenir Next Rounded", "Avenir Next", "Sukhumvit Set", "Thonburi",
-    "Noto Sans Thai", Tahoma, sans-serif;
+  /* Rounded Fredoka for Latin letters and numbers, looped Lao for Lao text. */
+  --font: "Fredoka", "Noto Sans Lao Looped", "Avenir Next Rounded", "Avenir Next",
+    "Noto Sans Lao", "Phetsarath OT", Tahoma, sans-serif;
   color-scheme: light;
 }
 
@@ -225,33 +226,29 @@ svg { display: block; }
   box-shadow: 0 8px 0 rgba(57, 51, 41, 0.15);
 }
 
-.brand__brick {
+.brand__mark {
   position: relative;
   display: block;
-  width: 36px;
-  height: 26px;
+  width: 40px;
+  height: 40px;
   flex: none;
-  border: 2px solid var(--border);
-  border-radius: 5px;
-  background: linear-gradient(180deg, #ffd95f, var(--yellow));
-  box-shadow:
-    inset 0 -4px 0 rgba(159, 107, 8, 0.2),
-    inset 0 2px 0 rgba(255, 255, 255, 0.38),
-    0 3px 0 rgba(57, 51, 41, 0.16);
-  transform: rotate(-5deg);
+  margin: -6px 0 -6px -2px;
+  transform: rotate(-4deg);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1.4);
 }
-.brand__brick i {
+.brand:hover .brand__mark { transform: rotate(4deg) scale(1.06); }
+.brand__mark img { display: block; width: 100%; height: 100%; }
+/* Santa hat on the logo, only in the Christmas theme. */
+.brand__hat {
   position: absolute;
-  top: -7px;
-  width: 9px;
-  height: 7px;
-  border: 2px solid var(--border);
-  border-bottom: 0;
-  border-radius: 4px 4px 0 0;
-  background: #ffd45a;
+  top: -9px;
+  right: -7px;
+  display: none;
+  width: 26px;
+  height: 22px;
+  transform: rotate(22deg);
 }
-.brand__brick i:first-child { left: 5px; }
-.brand__brick i:last-child { left: 20px; }
+html.is-xmas .brand__hat { display: block; }
 
 .brand__copy { display: flex; flex-direction: column; gap: 1px; }
 .brand__copy strong {
@@ -1547,6 +1544,7 @@ svg { display: block; }
 }
 .win-actions .btn { min-width: 0; width: 100%; }
 .win-next { grid-column: 1 / -1; }
+.btn[hidden] { display: none; }
 
 .save-link {
   display: inline-flex;
@@ -1636,7 +1634,7 @@ svg { display: block; }
   box-shadow: 0 0 0 3px rgba(255, 199, 44, 0.2);
 }
 .level-card.is-active::after {
-  content: "กำลังเล่น";
+  content: "ກຳລັງຫຼິ້ນ";
   position: absolute;
   top: 7px;
   right: 8px;
@@ -1719,7 +1717,7 @@ svg { display: block; }
   font-size: 14px;
   opacity: 0.55;
 }
-.level-card.is-active::after { content: "กำลังเล่น"; }
+.level-card.is-active::after { content: "ກຳລັງຫຼິ້ນ"; }
 
 /* =========================================================
    Photo mode
@@ -1901,10 +1899,6 @@ svg { display: block; }
     padding: 6px 10px 6px 7px;
     border-radius: 13px;
   }
-  .brand__brick { width: 32px; height: 23px; }
-  .brand__brick i { top: -6px; width: 8px; height: 6px; }
-  .brand__brick i:first-child { left: 4px; }
-  .brand__brick i:last-child { left: 18px; }
   .brand__copy strong { font-size: 14px; }
   .brand__copy span { font-size: 10px; }
   .level-badge { display: none; }
@@ -2000,9 +1994,6 @@ svg { display: block; }
   .brand__copy span { display: none; }
   .brand__copy strong { font-size: 14px; }
   .brand { gap: 7px; }
-  .brand__brick { width: 30px; height: 21px; }
-  .brand__brick i { width: 7px; height: 6px; }
-  .brand__brick i:last-child { left: 16px; }
   .toolbar { gap: 5px; }
   .icon-btn { width: 34px; height: 34px; }
   .mobile-progress { top: 61px; width: min(300px, calc(100% - 24px)); }
@@ -2285,6 +2276,9 @@ svg { display: block; }
   animation: introBob 3.2s ease-in-out infinite;
 }
 .intro__art svg { width: 100%; height: 100%; }
+.intro__art { position: relative; }
+.intro__art img { display: block; width: 100%; height: 100%; }
+.intro__art .brand__hat { top: -14%; right: -10%; width: 58%; height: auto; }
 .intro__kicker {
   margin-top: clamp(8px, 1.6svh, 14px);
   padding: 5px 12px;
@@ -2323,6 +2317,38 @@ svg { display: block; }
   margin-top: clamp(12px, 2.6svh, 22px);
   font-size: 18px;
 }
+/* Night / Christmas switches under the start button. */
+.intro__themes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+.intro__theme {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 14px;
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(255, 250, 240, 0.9);
+  box-shadow: 0 3px 0 rgba(57, 51, 41, 0.14);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.2s ease, color 0.2s ease;
+}
+.intro__theme svg { width: 18px; height: 18px; }
+.intro__theme:hover { transform: translateY(-1px); }
+.intro__theme:active { transform: translateY(2px); box-shadow: 0 1px 0 rgba(57, 51, 41, 0.14); }
+.intro__theme:focus-visible { outline: 3px solid var(--yellow-deep); outline-offset: 2px; }
+#introNight[aria-pressed="true"] { color: #fff6df; background: #2b3266; }
+.app.is-night #introNight[aria-pressed="true"] { border-color: #fff6df; box-shadow: 0 0 0 3px rgba(255, 246, 223, 0.25); }
+.app.is-night .intro__theme { border-color: #fff6df; }
+#introXmas[aria-pressed="true"] { color: #fff; background: #c8202b; }
 /* Little studded bricks floating around the title. */
 .intro__brick {
   position: absolute;
@@ -2369,13 +2395,297 @@ svg { display: block; }
 /* Game name in the top bar uses the same rounded display font. */
 .brand__copy strong { font-family: "Fredoka", var(--font); font-weight: 700; letter-spacing: 0.01em; }
 
-/* Small credit under the game name on the title screen. */
-.intro__by {
-  margin-top: 6px;
-  color: var(--ink-faint);
-  font-family: "Fredoka", var(--font);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+
+/* =========================================================
+   Christmas theme (toggled by #xmasBtn, class .is-xmas)
+   ========================================================= */
+
+.snow {
+  position: absolute;
+  inset: -100% 0 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.9s ease;
+  background-image:
+    radial-gradient(3px 3px at 12% 8%, #fff 60%, transparent 70%),
+    radial-gradient(2px 2px at 28% 22%, #fff 60%, transparent 70%),
+    radial-gradient(3px 3px at 46% 12%, #fff 60%, transparent 70%),
+    radial-gradient(2px 2px at 63% 30%, #fff 60%, transparent 70%),
+    radial-gradient(3px 3px at 81% 6%, #fff 60%, transparent 70%),
+    radial-gradient(2px 2px at 92% 26%, #fff 60%, transparent 70%),
+    radial-gradient(2px 2px at 6% 38%, #fff 60%, transparent 70%),
+    radial-gradient(3px 3px at 37% 44%, #fff 60%, transparent 70%),
+    radial-gradient(2px 2px at 71% 47%, #fff 60%, transparent 70%);
+  background-size: 100% 50%;
+  animation: snowfall 14s linear infinite;
 }
-.app.is-night .intro__by { color: #c9c2e0; }
+.snow--far {
+  background-size: 60% 25%;
+  filter: blur(0.6px);
+  animation-duration: 22s;
+}
+@keyframes snowfall {
+  from { transform: translateY(0); }
+  to { transform: translateY(50%); }
+}
+.app.is-xmas .snow { opacity: 0.9; }
+.app.is-xmas .snow--far { opacity: 0.55; }
+
+.app.is-xmas .sky {
+  background: linear-gradient(180deg, #b9d4ec 0%, #d6e6f3 45%, #eef3f6 75%, #f7f3ec 100%);
+}
+.app.is-xmas .sun { opacity: 0.35; }
+.app.is-xmas.is-night .sky {
+  background: linear-gradient(180deg, #0b1533 0%, #18285a 45%, #2c3a6e 75%, #47507e 100%);
+}
+.app.is-xmas .intro__title { color: #c8202b; }
+.app.is-xmas .intro__title span { color: #2e8b57; }
+.app.is-xmas.is-night .intro__title { color: #ff6b6b; }
+.app.is-xmas.is-night .intro__title span { color: #7fd99a; }
+
+#xmasBtn[aria-pressed="true"] svg { color: #c8202b; }
+#xmasBtn[aria-pressed="true"] .xmas-dot { fill: #e8a80f; }
+
+@media (prefers-reduced-motion: reduce) {
+  .snow { animation: none; }
+}
+
+/* =========================================================
+   Settings menu (gear button in the toolbar)
+   ========================================================= */
+
+.settings { position: relative; }
+#settingsBtn[aria-expanded="true"] { background: var(--yellow-soft); }
+.settings__menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 80;
+  display: grid;
+  gap: 2px;
+  width: 232px;
+  padding: 8px;
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: 0 6px 0 rgba(57, 51, 41, 0.12), var(--shadow-soft);
+  animation: settings-in 0.18s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.settings__menu[hidden] { display: none; }
+@keyframes settings-in {
+  from { opacity: 0; transform: translateY(-6px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+.settings__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 46px;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 12px;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+button.settings__row:hover { background: var(--paper-2); }
+.settings__row:focus-visible { outline: 3px solid var(--yellow-deep); outline-offset: -3px; }
+.settings__row svg { flex: none; width: 20px; height: 20px; }
+.settings__label { flex: 1; }
+.settings__row--lang { cursor: default; }
+
+/* On/off switch drawn from aria-pressed. */
+.settings__switch {
+  position: relative;
+  flex: none;
+  width: 40px;
+  height: 24px;
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  background: var(--paper-3);
+  transition: background 0.2s ease;
+}
+.settings__switch::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(57, 51, 41, 0.3);
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.settings__row[aria-pressed="true"] .settings__switch { background: var(--green); }
+#themeBtn[aria-pressed="true"] .settings__switch { background: #2b3266; }
+#xmasBtn[aria-pressed="true"] .settings__switch { background: #c8202b; }
+.settings__row[aria-pressed="true"] .settings__switch::after { transform: translateX(16px); }
+
+/* Icons inside the rows: the night row always shows the moon, sound swaps on/off. */
+.settings__menu #themeBtn .icon-sun { display: none; }
+.settings__menu #themeBtn .icon-moon { display: block; }
+#soundBtn .icon-off { display: none; }
+#soundBtn.is-muted .icon-on { display: none; }
+#soundBtn.is-muted .icon-off { display: block; }
+
+.settings__lang {
+  min-width: 56px;
+  height: 30px;
+  padding: 0 10px;
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--yellow-soft);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.settings__lang:hover { background: var(--yellow); }
+
+/* Level badge: small grid icon so it reads as "choose level". */
+.level-badge__icon { flex: none; width: 15px; height: 15px; color: var(--ink-soft); }
+
+/* ---------------------------------------------------------
+   Christmas look for the interface (html.is-xmas)
+   Red + green accents, snow caps on panels, candy-cane stripes.
+   --------------------------------------------------------- */
+
+html.is-xmas {
+  --xmas-red: #d42a35;
+  --xmas-red-deep: #9e1a24;
+  --xmas-green: #2e8b57;
+  --xmas-green-soft: #e3f3e8;
+  --candy: repeating-linear-gradient(135deg, #d42a35 0 8px, #ffffff 8px 16px);
+}
+
+/* Snow resting on top of the floating panels. */
+html.is-xmas .build-panel::before,
+html.is-xmas .goal-card::before,
+html.is-xmas .tray-wrap::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 14px;
+  right: 14px;
+  height: 16px;
+  pointer-events: none;
+  background:
+    radial-gradient(12px 9px at 8% 70%, #fff 96%, transparent),
+    radial-gradient(16px 11px at 22% 60%, #fff 96%, transparent),
+    radial-gradient(10px 8px at 36% 75%, #fff 96%, transparent),
+    radial-gradient(18px 12px at 52% 58%, #fff 96%, transparent),
+    radial-gradient(11px 8px at 67% 72%, #fff 96%, transparent),
+    radial-gradient(16px 11px at 81% 60%, #fff 96%, transparent),
+    radial-gradient(10px 8px at 94% 74%, #fff 96%, transparent),
+    linear-gradient(#fff, #fff) bottom / 100% 6px no-repeat;
+  filter: drop-shadow(0 2px 0 rgba(57, 51, 41, 0.12));
+}
+html.is-xmas .build-panel,
+html.is-xmas .goal-card,
+html.is-xmas .tray-wrap {
+  background: rgba(255, 253, 250, 0.95);
+  box-shadow: 0 6px 0 rgba(158, 26, 36, 0.18), var(--shadow-soft);
+}
+
+/* Headings and counters in red and green. */
+html.is-xmas .panel-head h2,
+html.is-xmas .goal-head h2,
+html.is-xmas .tray-head h2 { color: var(--xmas-red-deep); }
+html.is-xmas .panel-count { background: var(--xmas-green); }
+html.is-xmas .progress-fill,
+html.is-xmas .mobile-track i { background: var(--candy); }
+
+/* Buttons: red with a deep red edge, white text. */
+html.is-xmas .btn {
+  color: #fff;
+  background: var(--xmas-red);
+  box-shadow: 0 5px 0 var(--xmas-red-deep), inset 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+html.is-xmas .btn:hover { background: #e0353f; }
+html.is-xmas .btn--secondary {
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: 0 5px 0 rgba(57, 51, 41, 0.14);
+}
+html.is-xmas .instruction__badge { color: #fff; background: var(--xmas-red); }
+
+/* Tray pieces: green ring for the next piece, soft red when picked. */
+html.is-xmas .piece.is-next {
+  background: var(--xmas-green-soft);
+  box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.35);
+}
+html.is-xmas .piece.is-next:hover { box-shadow: 0 0 0 4px rgba(46, 139, 87, 0.45), 0 4px 0 rgba(57, 51, 41, 0.1); }
+html.is-xmas .piece.is-selected { background: #ffe1e1; }
+
+
+/* Dialogs: candy-cane stripe along the top edge, red kicker text. */
+html.is-xmas .modal__card {
+  background: var(--candy) top / 100% 10px no-repeat, var(--paper);
+}
+html.is-xmas .modal__kicker { color: var(--xmas-red); }
+html.is-xmas .level-card.is-active { background: #fdeceb; box-shadow: 0 0 0 3px rgba(212, 42, 53, 0.22); }
+
+/* Settings and toolbar buttons: tiny red accent when open. */
+html.is-xmas #settingsBtn[aria-expanded="true"] { background: #ffe1e1; }
+html.is-xmas .settings__menu { background: var(--candy) top / 100% 8px no-repeat, var(--paper); padding-top: 14px; }
+
+/* Home screen card. */
+html.is-xmas .intro__kicker { background: #ffe1e1; }
+html.is-xmas .step.is-current { background: var(--xmas-green-soft); }
+html.is-xmas .step.is-current .step__status { color: #fff; background: var(--xmas-red); box-shadow: 0 0 0 3px rgba(212, 42, 53, 0.2); }
+
+/* Levels with more than 8 pieces (e.g. Santa's chimney, 12 pieces). */
+.tray--scroll {
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: 84px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  padding-bottom: 4px;
+}
+.tray--scroll .piece { scroll-snap-align: start; }
+.step-list--compact { gap: 0; }
+.step-list--compact .step { min-height: 26px; padding: 2px 7px; }
+.step-list--compact .step__name { font-size: 12px; }
+.step-list--compact .step__name small { display: none; }
+
+/* Drag and drop from the tray */
+.piece.is-next { touch-action: none; } /* lets a finger drag the next piece instead of scrolling */
+.drag-ghost {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 95;
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin: -36px 0 0 -36px;
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255, 250, 240, 0.92);
+  box-shadow: 0 10px 24px rgba(57, 51, 41, 0.28);
+  pointer-events: none;
+  transition: box-shadow 0.15s ease, background 0.15s ease;
+}
+.drag-ghost .brick-icon { transform: scale(1.15); }
+.drag-ghost.is-over {
+  background: #fff3c9;
+  box-shadow: 0 0 0 6px rgba(255, 199, 44, 0.55), 0 10px 24px rgba(57, 51, 41, 0.28);
+}
+html.is-xmas .drag-ghost.is-over { background: #e3f3e8; box-shadow: 0 0 0 6px rgba(46, 139, 87, 0.5), 0 10px 24px rgba(57, 51, 41, 0.28); }
+.app.is-dragging-piece, .app.is-dragging-piece * { cursor: grabbing !important; user-select: none; }
+
+@media (max-width: 480px) {
+  .brand__mark { width: 34px; height: 34px; }
+}
+

@@ -1,5 +1,5 @@
 /* Pineapple — offline app shell */
-const CACHE = "brickbloom-v24";
+const CACHE = "brickbloom-v61";
 const ASSETS = [
   "./",
   "./index.html",
@@ -7,6 +7,7 @@ const ASSETS = [
   "./game.js",
   "./i18n.js",
   "./favicon.svg",
+  "./logo.svg",
   "./manifest.webmanifest",
   "./vendor/three.min.js",
   "./icons/icon-192.png",

@@ -80,46 +80,6 @@
       ],
     },
     {
-      id: "tulip",
-      th: "ทิวลิป",
-      en: "Tulip",
-      difficulty: "ง่าย",
-      accent: "#F268A5",
-      cardBg: "#FFE5F0",
-      build: buildTulipModel,
-      goalSvg: goalTulipPremiumSvg(),
-      steps: [
-        { id: "stem", th: "ก้าน", en: "Stem", icon: "stem", color: 0x4f9b50, css: "#4f9b50", hint: "ปักก้านให้ตรง", goal: "เริ่มจากก้านทิวลิป", target: [0, 0.72, 0], markerScale: 1.35, hitRadius: 0.9, studs: 2 },
-        { id: "leafLeft", th: "ใบซ้าย", en: "Leaf L", icon: "leaf", color: 0x6cc95d, css: "#6cc95d", hint: "หนีบใบยาวโค้งใบแรก", goal: "เพิ่มใบยาวด้านซ้าย", target: [-0.42, 1.15, 0.2], markerScale: 1.15, hitRadius: 0.7, studs: 3 },
-        { id: "leafRight", th: "ใบขวา", en: "Leaf R", icon: "leaf", color: 0x65bd58, css: "#65bd58", hint: "เพิ่มใบยาวอีกข้าง", goal: "เพิ่มใบยาวด้านขวา", target: [0.42, 1.45, 0.2], markerScale: 1.15, hitRadius: 0.7, studs: 3 },
-        { id: "leafFront", th: "ใบหน้า", en: "Front leaf", icon: "leaf", color: 0x4a9449, css: "#4a9449", hint: "ติดใบสั้นด้านหน้า", goal: "เพิ่มใบสั้นด้านหน้า", target: [0, 0.75, 0.45], markerScale: 1.0, hitRadius: 0.65, studs: 2 },
-        { id: "calyx", th: "ฐานดอก", en: "Base", icon: "core", color: 0x387a3e, css: "#387a3e", hint: "วางฐานรองดอกสีเขียว", goal: "ใบครบแล้ว วางฐานรองดอก", target: [0, 3.12, 0.3], markerScale: 1.15, hitRadius: 0.7, studs: 3 },
-        { id: "core", th: "เกสร", en: "Core", icon: "core", color: 0xe4b33a, css: "#e4b33a", hint: "วางเกสรกลางดอก", goal: "วางเกสรกับก้านเกสร", target: [0, 3.55, 0.3], markerScale: 1.15, hitRadius: 0.7, studs: 4 },
-        { id: "petalsInner", th: "กลีบใน", en: "Inner", icon: "petals", color: 0xd94c91, css: "#d94c91", hint: "ประกบกลีบชั้นในสามกลีบ", goal: "เกสรพร้อม ประกบกลีบใน", target: [0, 3.75, 0.45], markerScale: 1.9, hitRadius: 1.0, studs: 4 },
-        { id: "petals", th: "กลีบนอก", en: "Outer", icon: "petals", color: 0xf268a5, css: "#f268a5", hint: "ห่อกลีบนอกให้เป็นถ้วย", goal: "เกือบเสร็จ ห่อกลีบนอก", target: [0, 3.75, 0.55], markerScale: 2.3, hitRadius: 1.18, studs: 5 },
-      ],
-    },
-    {
-      id: "daisy",
-      th: "เดซี่",
-      en: "Daisy",
-      difficulty: "ง่าย",
-      accent: "#F4D35E",
-      cardBg: "#FFF7DE",
-      build: buildDaisyModel,
-      goalSvg: goalDaisyPremiumSvg(),
-      steps: [
-        { id: "stem", th: "ก้าน", en: "Stem", icon: "stem", color: 0x4f9b50, css: "#4f9b50", hint: "ปักก้านเดซี่", goal: "เริ่มจากก้านเล็ก ๆ", target: [0, 0.72, 0], markerScale: 1.35, hitRadius: 0.9, studs: 2 },
-        { id: "leafLeft", th: "ใบซ้าย", en: "Leaf L", icon: "leaf", color: 0x65bd58, css: "#65bd58", hint: "หนีบใบหยักใบแรก", goal: "เพิ่มใบเล็กด้านซ้าย", target: [-0.55, 1.05, 0.3], markerScale: 1.1, hitRadius: 0.66, studs: 3 },
-        { id: "leafRight", th: "ใบขวา", en: "Leaf R", icon: "leaf", color: 0x6cc95d, css: "#6cc95d", hint: "เพิ่มใบหยักอีกข้าง", goal: "เพิ่มใบเล็กด้านขวา", target: [0.55, 1.6, -0.2], markerScale: 1.1, hitRadius: 0.66, studs: 3 },
-        { id: "bud", th: "ดอกตูม", en: "Bud", icon: "stem", color: 0x8fcf7a, css: "#8fcf7a", hint: "ต่อกิ่งดอกตูมด้านข้าง", goal: "เพิ่มกิ่งดอกตูม", target: [0.55, 1.55, 0.6], markerScale: 1.0, hitRadius: 0.62, studs: 2 },
-        { id: "calyx", th: "กลีบเลี้ยง", en: "Sepals", icon: "petals", color: 0x2f6637, css: "#2f6637", hint: "วางกลีบเลี้ยงสีเขียวรองดอก", goal: "ใบครบแล้ว วางกลีบเลี้ยงรองดอก", target: [0, 3.0, 0.2], markerScale: 1.6, hitRadius: 0.9, studs: 4 },
-        { id: "core", th: "เกสร", en: "Core", icon: "core", color: 0xffc72c, css: "#ffc72c", hint: "วางเกสรเหลืองทรงโดม", goal: "ประกอบเกสรหลายชั้น", target: [0, 3.0, 0.45], markerScale: 1.2, hitRadius: 0.72, studs: 4 },
-        { id: "petalsInner", th: "กลีบใน", en: "Inner", icon: "petals", color: 0xf2ebdd, css: "#f2ebdd", hint: "เติมกลีบขาวชั้นใน", goal: "เกสรพร้อม เติมกลีบชั้นใน", target: [0, 3.0, 0.5], markerScale: 1.8, hitRadius: 1.0, studs: 4 },
-        { id: "petals", th: "กลีบนอก", en: "Outer", icon: "petals", color: 0xfdfbf1, css: "#fdfbf1", hint: "เปิดกลีบขาวชั้นนอก", goal: "เกือบเสร็จ เปิดกลีบนอกให้บาน", target: [0, 3.0, 0.55], markerScale: 2.6, hitRadius: 1.3, studs: 5 },
-      ],
-    },
-    {
       id: "rose",
       th: "กุหลาบ",
       en: "Rose",
@@ -142,6 +102,7 @@
     {
       id: "bouquet",
       th: "ช่อดอกไม้",
+      bare: true, // the vase stands on the bare wooden base
       en: "Bouquet",
       difficulty: "มาสเตอร์",
       accent: "#B97CD9",
@@ -159,7 +120,149 @@
         { id: "babysBreath", th: "ดอกยิปโซ", en: "Baby's breath", icon: "petals", color: 0xffffff, css: "#ffffff", hint: "โปรยดอกยิปโซให้ช่อเต็ม", goal: "เกือบเสร็จ โปรยดอกยิปโซ", target: [0, 2.5, 0.8], markerScale: 2.4, hitRadius: 1.2, studs: 5 },
       ],
     },
+    {
+      id: "snowman",
+      th: "สโนว์แมน",
+      en: "Snowman",
+      difficulty: "ง่าย",
+      accent: "#D62F38",
+      cardBg: "#E8F1F8",
+      build: buildSnowmanModel,
+      goalSvg: goalSnowmanSvg(),
+      bare: true, // stands on snow, no soil bed
+      noBee: true,
+      winTh: "สโนว์แมนเสร็จแล้ว!",
+      doneSub: "ลากฉากเพื่อชื่นชมสโนว์แมน",
+      doneGoal: "สโนว์แมนพร้อมฉลองคริสต์มาสแล้ว",
+      steps: [
+        { id: "snowBase", th: "กองหิมะ", en: "Snow", icon: "petals", color: 0xeef4f8, css: "#dfe9f1", hint: "วางกองหิมะบนฐาน", goal: "เริ่มจากกองหิมะก่อน", target: [0, 0.12, 0.95], markerScale: 1.6, hitRadius: 1.0, studs: 5 },
+        { id: "body", th: "ตัวล่าง", en: "Body", icon: "core", color: 0xffffff, css: "#f4f7fa", hint: "วางก้อนหิมะใหญ่เป็นตัว", goal: "ปั้นตัวสโนว์แมน", target: [0, 1.05, 1.0], markerScale: 1.8, hitRadius: 1.1, studs: 4 },
+        { id: "head", th: "หัว", en: "Head", icon: "core", color: 0xffffff, css: "#f4f7fa", hint: "วางก้อนหิมะเล็กเป็นหัว", goal: "ตัวพร้อมแล้ว วางหัว", target: [0, 2.55, 0.75], markerScale: 1.5, hitRadius: 0.95, studs: 3 },
+        { id: "armLeft", th: "แขนซ้าย", en: "Arm L", icon: "leaf", color: 0x6b3f22, css: "#6b3f22", hint: "ปักแขนกิ่งไม้ด้านซ้าย", goal: "เพิ่มแขนกิ่งไม้ข้างแรก", target: [-1.25, 1.95, 0.25], markerScale: 1.05, hitRadius: 0.75, studs: 2 },
+        { id: "armRight", th: "แขนขวา", en: "Arm R", icon: "leaf", color: 0x6b3f22, css: "#6b3f22", hint: "ปักแขนกิ่งไม้ด้านขวา", goal: "เพิ่มแขนอีกข้าง", target: [1.25, 1.95, 0.25], markerScale: 1.05, hitRadius: 0.75, studs: 2 },
+        { id: "face", th: "หน้า", en: "Face", icon: "stem", color: 0xff8a1f, css: "#ff8a1f", hint: "ติดตา จมูกแครอท และปาก", goal: "แต่งหน้าให้สโนว์แมน", target: [0, 2.6, 0.85], markerScale: 1.1, hitRadius: 0.75, studs: 2 },
+        { id: "scarf", th: "ผ้าพันคอ", en: "Scarf", icon: "petals", color: 0x2e8b57, css: "#2e8b57", hint: "พันผ้าพันคอสีเขียว", goal: "พันผ้าพันคอให้อุ่น", target: [0, 1.98, 0.8], markerScale: 1.4, hitRadius: 0.85, studs: 4 },
+        { id: "hat", th: "หมวกซานต้า", en: "Santa hat", icon: "stem", color: 0xd62f38, css: "#d62f38", hint: "สวมหมวกซานต้าสีแดง", goal: "เกือบเสร็จ สวมหมวกซานต้า", target: [0, 3.5, 0.35], markerScale: 1.4, hitRadius: 0.9, studs: 3 },
+      ],
+    },
+    {
+      id: "xmasTree",
+      th: "ต้นคริสต์มาส",
+      en: "Christmas tree",
+      difficulty: "ท้าทาย",
+      accent: "#2E8B57",
+      cardBg: "#E6F3EA",
+      build: buildXmasTreeModel,
+      goalSvg: goalXmasTreeSvg(),
+      bare: true,
+      noBee: true,
+      winTh: "ต้นคริสต์มาสเสร็จแล้ว!",
+      doneSub: "ลากฉากเพื่อชื่นชมต้นคริสต์มาส",
+      doneGoal: "ต้นคริสต์มาสพร้อมฉลองแล้ว",
+      steps: [
+        { id: "pot", th: "กระถาง", en: "Pot", icon: "core", color: 0xc8202b, css: "#c8202b", hint: "ตั้งกระถางสีแดงกลางฐาน", goal: "เริ่มจากตั้งกระถาง", target: [0, 0.35, 0.85], markerScale: 1.4, hitRadius: 0.9, studs: 4 },
+        { id: "trunk", th: "ลำต้น", en: "Trunk", icon: "stem", color: 0x6b3f22, css: "#6b3f22", hint: "ปักลำต้นลงในกระถาง", goal: "กระถางพร้อม ปักลำต้น", target: [0, 0.85, 0.5], markerScale: 1.0, hitRadius: 0.7, studs: 2 },
+        { id: "tierBottom", th: "ใบชั้นล่าง", en: "Bottom tier", icon: "petals", color: 0x2e8b57, css: "#2e8b57", hint: "วางใบสนชั้นใหญ่สุด", goal: "วางใบสนชั้นล่าง", target: [0, 1.35, 1.15], markerScale: 1.8, hitRadius: 1.1, studs: 5 },
+        { id: "tierMid", th: "ใบชั้นกลาง", en: "Middle tier", icon: "petals", color: 0x3a9d5d, css: "#3a9d5d", hint: "ซ้อนใบสนชั้นกลาง", goal: "ซ้อนใบสนชั้นกลาง", target: [0, 2.25, 0.9], markerScale: 1.6, hitRadius: 1.0, studs: 4 },
+        { id: "tierTop", th: "ใบชั้นบน", en: "Top tier", icon: "petals", color: 0x48b06a, css: "#48b06a", hint: "วางใบสนชั้นยอด", goal: "วางใบสนชั้นบนสุด", target: [0, 3.0, 0.6], markerScale: 1.3, hitRadius: 0.9, studs: 3 },
+        { id: "ornaments", th: "ลูกบอลประดับ", en: "Baubles", icon: "core", color: 0xffc72c, css: "#ffc72c", hint: "แขวนลูกบอลประดับรอบต้น", goal: "แต่งลูกบอลหลากสี", target: [0, 2.0, 1.05], markerScale: 1.7, hitRadius: 1.1, studs: 4 },
+        { id: "garland", th: "สายไฟประดับ", en: "Lights", icon: "stem", color: 0xfff3b0, css: "#fff3b0", hint: "พันสายไฟวนรอบต้น", goal: "พันสายไฟให้ต้นเป็นประกาย", target: [0, 2.6, 0.95], markerScale: 1.7, hitRadius: 1.1, studs: 3 },
+        { id: "star", th: "ดาวบนยอด", en: "Star", icon: "core", color: 0xffd34d, css: "#ffd34d", hint: "ติดดาวสีทองบนยอด", goal: "เกือบเสร็จ ติดดาวบนยอด", target: [0, 3.85, 0.3], markerScale: 1.2, hitRadius: 0.8, studs: 2 },
+      ],
+    },
+    {
+      id: "reindeer",
+      th: "กวางเรนเดียร์",
+      en: "Reindeer",
+      difficulty: "ท้าทาย",
+      accent: "#9A6234",
+      cardBg: "#F3E7DA",
+      build: buildReindeerModel,
+      goalSvg: goalReindeerSvg(),
+      bare: true,
+      lift: 0.4 /* red pedestal height */,
+      noBee: true,
+      winTh: "กวางเรนเดียร์เสร็จแล้ว!",
+      doneSub: "ลากฉากเพื่อชื่นชมกวางเรนเดียร์",
+      doneGoal: "กวางเรนเดียร์พร้อมลากเลื่อนซานต้าแล้ว",
+      steps: [
+        { id: "snowBase", th: "กองหิมะ", en: "Snow", icon: "petals", color: 0xeef4f8, css: "#dfe9f1", hint: "วางกองหิมะบนฐาน", goal: "เริ่มจากกองหิมะก่อน", target: [0, 0.12, 0.95], markerScale: 1.6, hitRadius: 1.0, studs: 5 },
+        { id: "legs", th: "ขา", en: "Legs", icon: "stem", color: 0x9a6234, css: "#9a6234", hint: "วางขาหน้าและขาหลัง", goal: "ต่อขากวางก่อน", target: [0, 0.45, 0.75], markerScale: 1.4, hitRadius: 0.9, studs: 3 },
+        { id: "body", th: "ลำตัว", en: "Body", icon: "core", color: 0x9a6234, css: "#9a6234", hint: "วางลำตัวสีน้ำตาล", goal: "ต่อลำตัวกวาง", target: [0, 0.95, 0.75], markerScale: 1.7, hitRadius: 1.05, studs: 4 },
+        { id: "head", th: "หัว", en: "Head", icon: "core", color: 0xf1dcb8, css: "#c99a6a", hint: "วางหัวบนลำตัว", goal: "ตัวพร้อมแล้ว วางหัว", target: [0, 1.75, 0.8], markerScale: 1.4, hitRadius: 0.9, studs: 3 },
+        { id: "face", th: "ตาและจมูกแดง", en: "Eyes & red nose", icon: "core", color: 0xe0262f, css: "#e0262f", hint: "ติดตากับจมูกแดง", goal: "แต่งหน้าให้กวาง", target: [0, 1.7, 0.85], markerScale: 1.0, hitRadius: 0.7, studs: 2 },
+        { id: "ears", th: "หู", en: "Ears", icon: "leaf", color: 0x9a6234, css: "#9a6234", hint: "ติดหูสองข้าง", goal: "เพิ่มหูสองข้าง", target: [0, 1.9, 0.55], markerScale: 1.3, hitRadius: 0.85, studs: 2 },
+        { id: "antlers", th: "เขากวาง", en: "Antlers", icon: "stem", color: 0x6b3f22, css: "#6b3f22", hint: "ปักเขากวางสองข้าง", goal: "ปักเขากวางให้สวย", target: [0, 2.45, 0.3], markerScale: 1.5, hitRadius: 0.95, studs: 3 },
+        { id: "hat", th: "หมวกซานต้า", en: "Santa hat", icon: "stem", color: 0xd62f38, css: "#d62f38", hint: "สวมหมวกซานต้าสีแดง", goal: "เกือบเสร็จ สวมหมวกซานต้า", target: [0, 2.3, 0.5], markerScale: 1.2, hitRadius: 0.85, studs: 3 },
+      ],
+    },
+    {
+      id: "santa",
+      th: "ซานต้าบนปล่องไฟ",
+      en: "Santa's chimney",
+      difficulty: "มาสเตอร์",
+      accent: "#D42A35",
+      cardBg: "#FBE3E3",
+      build: buildSantaModel,
+      goalSvg: goalSantaSvg(),
+      bare: true,
+      lift: 0.4 /* red pedestal height */,
+      noBee: true,
+      winTh: "ซานต้ามาถึงแล้ว!",
+      doneSub: "ลากฉากเพื่อชื่นชมซานต้า",
+      doneGoal: "ซานต้าพร้อมแจกของขวัญแล้ว",
+      steps: [
+        { id: "base", th: "ฐานหิมะ", en: "Snowy base", icon: "petals", color: 0xf7f4ee, css: "#e9e4da", hint: "วางฐานหิมะกับพรมแดง", goal: "เริ่มจากฐานหิมะ", target: [0, 0.18, 0.95], markerScale: 1.8, hitRadius: 1.1, studs: 5 },
+        { id: "chimneyLow", th: "ปล่องไฟชั้นล่าง", en: "Chimney (low)", icon: "core", color: 0xb8714a, css: "#b8714a", hint: "ก่ออิฐชั้นล่างของปล่องไฟ", goal: "ก่อปล่องไฟอิฐ", target: [0, 0.55, 0.75], markerScale: 1.6, hitRadius: 1.0, studs: 4 },
+        { id: "chimneyHigh", th: "ปล่องไฟชั้นบน", en: "Chimney (top)", icon: "core", color: 0xa45f3d, css: "#a45f3d", hint: "ก่ออิฐให้ปล่องไฟสูงขึ้น", goal: "ก่ออิฐชั้นบน", target: [0, 1.28, 0.75], markerScale: 1.6, hitRadius: 1.0, studs: 4 },
+        { id: "ledge", th: "ขอบปล่องไฟ", en: "Ledge", icon: "petals", color: 0x9c8466, css: "#9c8466", hint: "วางขอบบนปล่องไฟ", goal: "ปิดขอบปล่องไฟ", target: [0, 1.74, 0.8], markerScale: 1.7, hitRadius: 1.0, studs: 5 },
+        { id: "body", th: "ตัวซานต้า", en: "Santa's body", icon: "core", color: 0xd42a35, css: "#d42a35", hint: "ให้ซานต้าโผล่จากปล่องไฟ", goal: "ซานต้าโผล่ออกมาแล้ว", target: [0, 2.2, 0.72], markerScale: 1.5, hitRadius: 0.95, studs: 4 },
+        { id: "armRest", th: "แขนซ้าย", en: "Left arm", icon: "leaf", color: 0xd42a35, css: "#d42a35", hint: "วางแขนซ้ายเกาะขอบปล่องไฟ", goal: "เพิ่มแขนซ้าย", target: [-0.68, 1.9, 0.9], markerScale: 1.1, hitRadius: 0.75, studs: 3 },
+        { id: "armWave", th: "แขนขวาโบกมือ", en: "Waving arm", icon: "leaf", color: 0x1f1d22, css: "#1f1d22", hint: "ยกแขนขวาโบกมือทักทาย", goal: "ซานต้าโบกมือทักทาย", target: [0.85, 2.75, 0.5], markerScale: 1.1, hitRadius: 0.75, studs: 3 },
+        { id: "head", th: "หัว", en: "Head", icon: "core", color: 0xf2c9a8, css: "#f2c9a8", hint: "วางหัวซานต้า", goal: "ตัวพร้อม วางหัว", target: [0, 3.0, 0.65], markerScale: 1.4, hitRadius: 0.9, studs: 3 },
+        { id: "beard", th: "เครายาว", en: "Beard", icon: "petals", color: 0xf7f4ee, css: "#ece6da", hint: "ติดเคราขาวฟู", goal: "ติดเคราขาว", target: [0, 2.55, 0.68], markerScale: 1.2, hitRadius: 0.8, studs: 4 },
+        { id: "face", th: "ตาและจมูก", en: "Eyes & nose", icon: "stem", color: 0xe9898f, css: "#e9898f", hint: "ติดตากับจมูกชมพู", goal: "แต่งหน้าซานต้า", target: [0, 3.05, 0.66], markerScale: 0.95, hitRadius: 0.65, studs: 2 },
+        { id: "hat", th: "หมวกซานต้า", en: "Santa hat", icon: "stem", color: 0xd42a35, css: "#d42a35", hint: "สวมหมวกซานต้าสีแดง", goal: "สวมหมวกให้ซานต้า", target: [0, 3.45, 0.5], markerScale: 1.3, hitRadius: 0.85, studs: 3 },
+        { id: "wreath", th: "พวงหรีด", en: "Wreath", icon: "leaf", color: 0x2e8b57, css: "#2e8b57", hint: "แขวนพวงหรีดหน้าปล่องไฟ", goal: "แขวนพวงหรีด", target: [0, 0.95, 0.78], markerScale: 1.3, hitRadius: 0.85, studs: 3 },
+        { id: "sack", th: "ถุงของขวัญ", en: "Gift sack", icon: "core", color: 0x8a5a32, css: "#8a5a32", hint: "วางถุงของขวัญข้างปล่องไฟ", goal: "เกือบเสร็จ วางถุงของขวัญ", target: [1.0, 0.65, 0.1], markerScale: 1.2, hitRadius: 0.8, studs: 3 },
+      ],
+    },
+    {
+      id: "globe",
+      th: "ของขวัญ",
+      en: "Gifts",
+      difficulty: "มาสเตอร์",
+      accent: "#C8202B",
+      cardBg: "#FBE3E3",
+      build: buildGlobeModel,
+      goalSvg: goalGlobeSvg(),
+      bare: true,
+      noBee: true,
+      winTh: "สุขสันต์วันคริสต์มาส!",
+      doneSub: "ลากฉากเพื่อชื่นชมของขวัญ",
+      doneGoal: "ลูกแก้วหิมะพร้อมมอบเป็นของขวัญแล้ว",
+      steps: [
+        { id: "base", th: "ฐานสีแดง", en: "Red base", icon: "core", color: 0xc8202b, css: "#c8202b", hint: "ตั้งฐานสีแดงกลางเวที", goal: "เริ่มจากฐานลูกแก้ว", target: [0, 0.55, 1.15], markerScale: 1.8, hitRadius: 1.1, studs: 5 },
+        { id: "trims", th: "ขอบทอง", en: "Gold trims", icon: "petals", color: 0xd9b04c, css: "#d9b04c", hint: "ใส่ขอบทองและขาทอง", goal: "แต่งขอบสีทอง", target: [0, 0.99, 0.98], markerScale: 1.6, hitRadius: 1.0, studs: 4 },
+        { id: "bow", th: "โบว์และใบฮอลลี่", en: "Bow & holly", icon: "leaf", color: 0xe0263f, css: "#e0263f", hint: "ติดโบว์แดงด้านหน้า", goal: "ผูกโบว์ให้สวย", target: [0, 0.55, 1.25], markerScale: 1.1, hitRadius: 0.75, studs: 3 },
+        { id: "floor", th: "พื้นหิมะ", en: "Snow floor", icon: "petals", color: 0xeef4f8, css: "#dfe9f1", hint: "โรยพื้นหิมะบนฐาน", goal: "ปูพื้นหิมะในลูกแก้ว", target: [0, 1.1, 0.78], markerScale: 1.4, hitRadius: 0.9, studs: 4 },
+        { id: "tree", th: "ต้นคริสต์มาส", en: "Christmas tree", icon: "leaf", color: 0x2a7047, css: "#2a7047", hint: "ตั้งต้นคริสต์มาสด้านซ้าย", goal: "ตั้งต้นคริสต์มาสน้อย", target: [-0.38, 1.6, 0.35], markerScale: 1.0, hitRadius: 0.7, studs: 3 },
+        { id: "house", th: "บ้านขนมปังขิง", en: "Gingerbread house", icon: "core", color: 0xb5713f, css: "#b5713f", hint: "วางบ้านหลังเล็กด้านหลัง", goal: "สร้างบ้านหลังน้อย", target: [0.36, 1.3, 0.2], markerScale: 1.0, hitRadius: 0.7, studs: 3 },
+        { id: "santa", th: "ซานต้า", en: "Santa", icon: "core", color: 0xd42a35, css: "#d42a35", hint: "วางซานต้าตรงกลาง", goal: "ซานต้ามาแล้ว", target: [0.06, 1.45, 0.66], markerScale: 1.0, hitRadius: 0.65, studs: 2 },
+        { id: "snowman", th: "สโนว์แมน", en: "Snowman", icon: "core", color: 0xffffff, css: "#f4f7fa", hint: "วางสโนว์แมนตัวจิ๋ว", goal: "เพิ่มสโนว์แมน", target: [-0.36, 1.38, 0.72], markerScale: 1.0, hitRadius: 0.65, studs: 2 },
+        { id: "gifts", th: "กองของขวัญ", en: "Gift pile", icon: "core", color: 0x2e8b57, css: "#2e8b57", hint: "วางกล่องของขวัญจิ๋ว", goal: "เพิ่มของขวัญ", target: [0.44, 1.18, 0.62], markerScale: 0.8, hitRadius: 0.6, studs: 2 },
+        { id: "glass", th: "ลูกแก้ว", en: "Glass globe", icon: "petals", color: 0xdff3ff, css: "#bfe3f5", hint: "ครอบลูกแก้วใส", goal: "ครอบลูกแก้ว", target: [0, 2.3, 0.95], markerScale: 1.8, hitRadius: 1.1, studs: 5 },
+        { id: "flakes", th: "เกล็ดหิมะ", en: "Snowflakes", icon: "petals", color: 0xffffff, css: "#ffffff", hint: "เติมเกล็ดหิมะในลูกแก้ว", goal: "ใส่เกล็ดหิมะ", target: [0, 1.9, 1.05], markerScale: 1.3, hitRadius: 0.9, studs: 3 },
+        { id: "lights", th: "ไฟและกุญแจไขลาน", en: "Lights & key", icon: "stem", color: 0xffd34d, css: "#ffd34d", hint: "เปิดไฟและติดกุญแจไขลาน", goal: "เกือบเสร็จ เปิดไฟประดับ", target: [0.85, 0.9, 0.6], markerScale: 1.1, hitRadius: 0.75, studs: 3 },
+      ],
+    },
   ];
+
+  // Levels standing on a red pedestal are raised by `lift`; move their glowing spots up too.
+  LEVELS.forEach((level) => {
+    if (!level.lift) return;
+    level.steps.forEach((step) => { step.target = [step.target[0], step.target[1] + level.lift, step.target[2]]; });
+  });
 
   let activeLevelIndex = 0;
   let STEPS = LEVELS[0].steps;
@@ -356,6 +459,9 @@
   function renderTray() {
     tray.style.setProperty("--steps", STEPS.length);
     tray.classList.toggle("tray--many", STEPS.length > 5);
+    // Very long levels (12 pieces): tray scrolls sideways, step list gets compact.
+    tray.classList.toggle("tray--scroll", STEPS.length > 8);
+    stepList.classList.toggle("step-list--compact", STEPS.length > 8);
     tray.innerHTML = STEPS.map((step, index) => `
       <button class="piece" type="button" data-index="${index}" aria-pressed="false">
         <span class="brick-icon brick-icon--${step.icon}" style="--brick:${step.css}" aria-hidden="true">${studMarkup(step.studs)}</span>
@@ -445,9 +551,9 @@
     if (complete || state.won) {
       instructionBadge.textContent = "✓";
       instructionTitle.textContent = "ต่อครบแล้ว!";
-      instructionSub.textContent = "ลากฉากเพื่อชื่นชมดอกไม้";
+      instructionSub.textContent = LEVELS[activeLevelIndex].doneSub || "ลากฉากเพื่อชื่นชมดอกไม้";
       panelNote.textContent = "ดอกทานตะวันพร้อมแล้ว";
-      goalCopy.textContent = "ดอกทานตะวันบานเต็มที่แล้ว";
+      goalCopy.textContent = LEVELS[activeLevelIndex].doneGoal || "ดอกทานตะวันบานเต็มที่แล้ว";
     } else {
       const step = STEPS[current];
       instructionBadge.textContent = String(current + 1);
@@ -609,6 +715,15 @@
   const groundMats = {};
   let isNight = false;
   try { isNight = localStorage.getItem("bb-theme") === "night"; } catch (error) { /* storage unavailable */ }
+  // Christmas theme: on/off is saved; with no saved choice it turns on by itself from 1 Dec to 6 Jan.
+  let isXmas = (() => {
+    const now = new Date();
+    return now.getMonth() === 11 || (now.getMonth() === 0 && now.getDate() <= 6);
+  })();
+  try {
+    const saved = localStorage.getItem("bb-xmas");
+    if (saved) isXmas = saved === "on";
+  } catch (error) { /* storage unavailable */ }
   let startupStep = ""; // "help" -> "levels" -> "" while the opening screens show
   const DOME_RADIUS = 1.9;
   const DOME_HEIGHT = 3.15;
@@ -976,13 +1091,31 @@
     exposure: 1.05, lantern: 2.2, pollen: 0xffe27a, pollenSize: 0.11, pollenOpacity: 0.95,
   };
 
+  // Snowy ground and falling snow, layered over the day or night palette.
+  const XMAS_DAY = {
+    hemiSky: 0xf2f7ff, fog: 0xe4edf5, ground: 0xe9f0f5, mat: 0xf6f9fb, matRim: 0xc9d7e2,
+    pollen: 0xffffff, pollenSize: 0.1, pollenOpacity: 0.92,
+  };
+  const XMAS_NIGHT = {
+    fog: 0x2a3560, ground: 0x7d88b3, mat: 0x9aa4c8, matRim: 0x6f789e,
+    pollen: 0xffffff, pollenSize: 0.11, pollenOpacity: 0.9,
+  };
+
+  // Bees stay away at night, in winter and on non-flower levels.
+  function beeAllowed() {
+    return !isNight && !isXmas && !LEVELS[activeLevelIndex].noBee;
+  }
+
+  let themeToken = 0;
+
   function applyTheme({ animate = true } = {}) {
     app.classList.toggle("is-night", isNight);
-    const btn = document.getElementById("themeBtn");
-    if (btn) {
-      btn.setAttribute("aria-pressed", String(isNight));
-      btn.setAttribute("aria-label", isNight ? "โหมดกลางวัน" : "โหมดกลางคืน");
-    }
+    app.classList.toggle("is-xmas", isXmas);
+    document.documentElement.classList.toggle("is-xmas", isXmas);
+    document.getElementById("introNight")?.setAttribute("aria-pressed", String(isNight));
+    document.getElementById("introXmas")?.setAttribute("aria-pressed", String(isXmas));
+    document.getElementById("xmasBtn")?.setAttribute("aria-pressed", String(isXmas));
+    document.getElementById("themeBtn")?.setAttribute("aria-pressed", String(isNight));
     if (!hemiLight) return;
     const from = {
       hemiSky: hemiLight.color.clone(), hemiGround: hemiLight.groundColor.clone(), hemi: hemiLight.intensity,
@@ -994,10 +1127,14 @@
       pollenSize: ambientPollen ? ambientPollen.material.size : 0.065,
       pollenOpacity: ambientPollen ? ambientPollen.material.opacity : 0.58,
     };
-    const to = isNight ? NIGHT : DAY;
+    const base = isNight ? NIGHT : DAY;
+    const to = isXmas ? { ...base, ...(isNight ? XMAS_NIGHT : XMAS_DAY) } : base;
     const c = new THREE.Color();
     const mix = (a, hex, p) => a.clone().lerp(c.setHex(hex), p);
+    // Only the newest theme change may paint, so two quick taps can't fight.
+    const token = ++themeToken;
     const step = (p) => {
+      if (token !== themeToken) return;
       hemiLight.color.copy(mix(from.hemiSky, to.hemiSky, p));
       hemiLight.groundColor.copy(mix(from.hemiGround, to.hemiGround, p));
       hemiLight.intensity = THREE.MathUtils.lerp(from.hemi, to.hemi, p);
@@ -1020,11 +1157,18 @@
         ambientPollen.material.opacity = THREE.MathUtils.lerp(from.pollenOpacity, to.pollenOpacity, p);
       }
     };
-    ambientPollen && (ambientPollen.material.blending = isNight ? THREE.AdditiveBlending : THREE.NormalBlending);
+    ambientPollen && (ambientPollen.material.blending = isNight && !isXmas ? THREE.AdditiveBlending : THREE.NormalBlending);
     ambientPollen && (ambientPollen.material.needsUpdate = true);
-    fairyLights.visible = isNight;
+    fairyLights.visible = isNight || isXmas;
+    // Red / green / gold bulbs for Christmas, warm white otherwise.
+    let bulb = 0;
+    fairyLights.children.forEach((child) => {
+      if (!child.isSprite) return;
+      child.material.color.setHex(isXmas ? [0xff4040, 0x3fd46a, 0xffd34d][bulb % 3] : 0xffc86b);
+      bulb += 1;
+    });
     // Bees sleep at night.
-    if (beeGroup && state.won) beeGroup.visible = !isNight;
+    if (beeGroup && state.won) beeGroup.visible = beeAllowed();
     if (animate && !reducedMotion) tween(0.9, 0, step);
     else step(1);
   }
@@ -1034,6 +1178,13 @@
     try { localStorage.setItem("bb-theme", isNight ? "night" : "day"); } catch (error) { /* ignore */ }
     applyTheme();
     showToast(isNight ? "โหมดกลางคืน" : "โหมดกลางวัน");
+  }
+
+  function toggleXmas() {
+    isXmas = !isXmas;
+    try { localStorage.setItem("bb-xmas", isXmas ? "on" : "off"); } catch (error) { /* ignore */ }
+    applyTheme();
+    showToast(isXmas ? "ธีมคริสต์มาส" : "ธีมดอกไม้");
   }
 
   function updateNightLights(time) {
@@ -1391,6 +1542,7 @@
       leafSway = [];
 
       const model = level.build();
+      if (level.lift) model.groups.forEach((group) => { group.position.y += level.lift; });
       const separate = new Set(model.petalRoots || []);
       model.groups.forEach((group) => mergePieceMeshes(group, separate));
       pieceGroups.push(...model.groups);
@@ -1503,7 +1655,7 @@
     levelDot.style.boxShadow = `0 0 0 3px ${level.accent}33`;
     levelBtn.setAttribute("aria-label", `เลือกด่าน — ปัจจุบัน ${level.th}`);
     goalArt.innerHTML = level.goalSvg;
-    winTitle.textContent = `${level.th}บานแล้ว!`;
+    winTitle.textContent = level.winTh || `${level.th}บานแล้ว!`;
     winBadge.innerHTML = fullGoalSvg(level);
     nextLevel.hidden = activeLevelIndex >= LEVELS.length - 1;
     if (!nextLevel.hidden) {
@@ -1564,7 +1716,7 @@
     if (activeRuntime) hideRuntime(activeRuntime);
     activeLevelIndex = index;
     // The bouquet's vase stands on the bare wooden base; flowers grow in soil.
-    if (soilGroup) soilGroup.visible = LEVELS[index].id !== "bouquet";
+    if (soilGroup) soilGroup.visible = !LEVELS[index].bare;
     assignRuntime(levelRuntimes[index]);
 
     window.clearTimeout(state.winTimer);
@@ -2049,28 +2201,7 @@
     };
   }
 
-  function goalDaisyPremiumSvg() {
-    return goalShell(`
-      <g class="goal-piece" data-step="0">
-        <rect x="87.5" y="80" width="5" height="66" rx="2.5" fill="#4F9B50"/>
-        <rect x="82.5" y="139" width="15" height="7" rx="2.5" fill="#3D7C42"/>
-      </g>
-      <g class="goal-piece" data-step="1"><ellipse cx="70" cy="124" rx="18" ry="7" fill="#65BD58" transform="rotate(-24 70 124)"/></g>
-      <g class="goal-piece" data-step="2"><ellipse cx="110" cy="112" rx="17" ry="7" fill="#6CC95D" transform="rotate(24 110 120)"/></g>
-      <g class="goal-piece" data-step="3">
-        <path d="M91 132 L114 120 L120 106" stroke="#4A9449" stroke-width="3" stroke-linecap="round" fill="none"/>
-        <ellipse cx="120" cy="102" rx="5" ry="7" fill="#FFFDF4" stroke="#387A3E" stroke-width="2"/>
-      </g>
-      <g class="goal-piece" data-step="7">${ringPetalsSvg(22, 90, 66, 30, 4.5, 14, ["#FFFDF4", "#F2EBDD"])}</g>
-      <g class="goal-piece" data-step="4">${ringPetalsSvg(12, 90, 66, 17, 3.5, 7, ["#2F6637", "#4A9449"], 8)}</g>
-      <g class="goal-piece" data-step="6">${ringPetalsSvg(16, 90, 66, 20, 3.5, 8, ["#FFF6DC", "#F2EBDD"], 6)}</g>
-      <g class="goal-piece" data-step="5">
-        <circle cx="90" cy="66" r="13" fill="#F08C00"/>
-        <circle cx="90" cy="66" r="9" fill="#FFC21A"/>
-        <circle cx="90" cy="66" r="4" fill="#FFE27A"/>
-      </g>
-    `, "#FFF7DE");
-  }
+
 
 
 
@@ -2240,24 +2371,7 @@
     };
   }
 
-  function goalTulipPremiumSvg() {
-    return goalShell(`
-      <g class="goal-piece" data-step="0">
-        <rect x="87.5" y="80" width="5" height="66" rx="2.5" fill="#4F9B50"/>
-        <rect x="82.5" y="139" width="15" height="7" rx="2.5" fill="#3D7C42"/>
-      </g>
-      <g class="goal-piece" data-step="1"><path d="M88 142 C70 128 60 108 50 92 C66 104 78 118 90 136Z" fill="#6CC95D"/></g>
-      <g class="goal-piece" data-step="2"><path d="M92 140 C108 124 118 102 126 86 C112 100 102 116 90 132Z" fill="#65BD58"/></g>
-      <g class="goal-piece" data-step="3"><path d="M90 144 C84 134 80 126 76 118 C84 124 89 130 93 140Z" fill="#4A9449"/></g>
-      <g class="goal-piece" data-step="4"><rect x="80" y="76" width="20" height="7" rx="3.5" fill="#387A3E"/></g>
-      <g class="goal-piece" data-step="5"><rect x="88" y="52" width="4" height="24" rx="2" fill="#C9E07A"/><circle cx="90" cy="51" r="4" fill="#3B2440"/></g>
-      <g class="goal-piece" data-step="6"><path d="M90 30 C74 42 72 64 80 78 L100 78 C108 64 106 42 90 30Z" fill="#D94C91"/></g>
-      <g class="goal-piece" data-step="7">
-        <path d="M70 40 C60 56 64 74 78 80 L88 78 C76 64 76 50 82 36Z" fill="#F268A5"/>
-        <path d="M110 40 C120 56 116 74 102 80 L92 78 C104 64 104 50 98 36Z" fill="#FF88B8"/>
-      </g>
-    `, "#FFE5F0");
-  }
+
 
   /* ---------------------------------------------------------
      Premium rose: upright spiral bloom, three-leaflet leaves, thorns
@@ -2839,6 +2953,17 @@
     if (!ambientPollenData || reducedMotion) return;
     const { positions, speeds, phases, count } = ambientPollenData;
     for (let i = 0; i < count; i += 1) {
+      if (isXmas) {
+        // Christmas theme: the same particles fall as snow.
+        positions[i * 3 + 1] -= (speeds[i] * 1.6 + 0.12) * dt;
+        positions[i * 3] += Math.sin(time * 0.8 + phases[i]) * 0.12 * dt;
+        if (positions[i * 3 + 1] < 0.1) {
+          positions[i * 3 + 1] = 4.7;
+          positions[i * 3] = (Math.random() - 0.5) * 5.2;
+          positions[i * 3 + 2] = (Math.random() - 0.5) * 2.8 + 0.3;
+        }
+        continue;
+      }
       positions[i * 3 + 1] += speeds[i] * dt;
       positions[i * 3] += Math.sin(time * 0.42 + phases[i]) * 0.06 * dt;
       if (positions[i * 3 + 1] > 4.7) {
@@ -2848,6 +2973,1181 @@
       }
     }
     ambientPollen.geometry.attributes.position.needsUpdate = true;
+  }
+
+  /* ---------------------------------------------------------
+     Christmas snowman: brick-stepped snowballs, twig arms,
+     carrot nose, green scarf and a Santa hat
+     --------------------------------------------------------- */
+
+  const SNOW_WHITE = 0xffffff;
+  const SNOW_SHADE = 0xe6eef5;
+  const SNOW_BODY_Y = 1.05;
+  const SNOW_BODY_R = 0.95;
+  const SNOW_HEAD_Y = 2.55;
+  const SNOW_HEAD_R = 0.66;
+
+  // A ball built from stacked round plates, so it reads as bricks.
+  function steppedBall(group, cy, r, colors, layerH = 0.13) {
+    const count = Math.round((r * 2) / layerH);
+    for (let i = 0; i < count; i += 1) {
+      const y = cy - r + layerH * (i + 0.5);
+      const dy = y - cy;
+      const rr = Math.sqrt(Math.max(0, r * r - dy * dy));
+      if (rr < 0.12) continue;
+      group.add(mesh(new THREE.CylinderGeometry(rr, rr, layerH * 0.96, 28), plastic(colors[i % colors.length], { roughness: 0.42 }), [0, y, 0]));
+    }
+    // Studs on the top layer.
+    const topY = cy + r - layerH * 0.5;
+    const topR = Math.sqrt(Math.max(0, r * r - Math.pow(r - layerH, 2)));
+    addStud(group, 0, topY + layerH * 0.5 + 0.03, 0, colors[0], Math.min(0.14, topR * 0.6), 0.07);
+  }
+
+  // Point on the front of a ball at height y and sideways offset x.
+  function ballFront(cy, r, x, y, lift = 0.02) {
+    const dy = y - cy;
+    return Math.sqrt(Math.max(0, r * r - dy * dy - x * x)) + lift;
+  }
+
+  function snowmanBase() {
+    const group = new THREE.Group();
+    group.add(mesh(new THREE.CylinderGeometry(1.45, 1.52, 0.1, 48), plastic(SNOW_SHADE, { roughness: 0.6 }), [0, 0.05, 0]));
+    // Snow lumps around the edge.
+    for (let i = 0; i < 14; i += 1) {
+      const a = (i / 14) * Math.PI * 2 + 0.2;
+      const rad = 1.05 + (i % 3) * 0.12;
+      const lump = mesh(new THREE.SphereGeometry(0.16 + (i % 2) * 0.05, 14, 10), plastic(i % 2 ? SNOW_WHITE : SNOW_SHADE, { roughness: 0.5 }), [Math.cos(a) * rad, 0.12, Math.sin(a) * rad]);
+      lump.scale.y = 0.55;
+      group.add(lump);
+    }
+    // Two little gift bricks.
+    [[0.95, 0.55, 0xd62f38, 0xffd34d], [-1.0, 0.45, 0x2e8b57, 0xd62f38]].forEach(([x, z, box, ribbon]) => {
+      const gift = new THREE.Group();
+      gift.position.set(x, 0.24, z);
+      gift.rotation.y = x > 0 ? -0.4 : 0.35;
+      gift.add(mesh(new THREE.BoxGeometry(0.3, 0.28, 0.3), plastic(box)));
+      gift.add(mesh(new THREE.BoxGeometry(0.31, 0.29, 0.07), plastic(ribbon)));
+      gift.add(mesh(new THREE.BoxGeometry(0.07, 0.29, 0.31), plastic(ribbon)));
+      addStud(gift, 0, 0.17, 0, ribbon, 0.07, 0.06);
+      group.add(gift);
+    });
+    return group;
+  }
+
+  function snowmanBody() {
+    const group = new THREE.Group();
+    steppedBall(group, SNOW_BODY_Y, SNOW_BODY_R, [SNOW_WHITE, SNOW_SHADE]);
+    // Coal buttons down the front.
+    [0.78, 1.08, 1.38].forEach((y) => {
+      addStud(group, 0, y, ballFront(SNOW_BODY_Y, SNOW_BODY_R, 0, y), 0x2b2b30, 0.075, 0.07, Math.PI / 2);
+    });
+    return group;
+  }
+
+  function snowmanHead() {
+    const group = new THREE.Group();
+    steppedBall(group, SNOW_HEAD_Y, SNOW_HEAD_R, [SNOW_WHITE, SNOW_SHADE], 0.12);
+    return group;
+  }
+
+  function snowmanArm(side) {
+    // side: -1 = left, 1 = right. The group pivots at the shoulder.
+    const group = new THREE.Group();
+    group.position.set(side * 0.74, 1.7, 0);
+    group.rotation.z = side * 0.45;
+    const wood = plastic(0x6b3f22, { roughness: 0.6 });
+    const twig = plastic(0x55301a, { roughness: 0.6 });
+    group.add(mesh(new THREE.CylinderGeometry(0.05, 0.065, 0.95, 10), wood, [side * 0.47, 0, 0], [0, 0, Math.PI / 2]));
+    group.add(mesh(new THREE.CylinderGeometry(0.03, 0.04, 0.32, 8), twig, [side * 0.92, 0.12, 0], [0, 0, side * -0.6]));
+    group.add(mesh(new THREE.CylinderGeometry(0.03, 0.04, 0.28, 8), twig, [side * 0.62, 0.11, 0], [0, 0, side * -0.4]));
+    group.add(mesh(new THREE.CylinderGeometry(0.03, 0.035, 0.24, 8), twig, [side * 0.98, -0.06, 0], [0, 0, side * -1.9]));
+    addStud(group, side * 0.05, 0, 0, 0x6b3f22, 0.09, 0.08, 0);
+    return group;
+  }
+
+  function snowmanFace() {
+    const group = new THREE.Group();
+    const coal = 0x232328;
+    [-0.22, 0.22].forEach((x) => {
+      addStud(group, x, 2.7, ballFront(SNOW_HEAD_Y, SNOW_HEAD_R, x, 2.7), coal, 0.075, 0.08, Math.PI / 2);
+    });
+    // Carrot nose.
+    const noseZ = ballFront(SNOW_HEAD_Y, SNOW_HEAD_R, 0, 2.56, 0);
+    group.add(mesh(new THREE.ConeGeometry(0.08, 0.42, 14), plastic(0xff8a1f), [0, 2.56, noseZ + 0.2], [Math.PI / 2, 0, 0]));
+    group.add(mesh(new THREE.CylinderGeometry(0.085, 0.085, 0.04, 14), plastic(0xe06d0c), [0, 2.56, noseZ + 0.01], [Math.PI / 2, 0, 0]));
+    // Smile of small studs.
+    [-0.2, -0.1, 0, 0.1, 0.2].forEach((x) => {
+      const y = 2.36 + Math.abs(x) * 0.35;
+      addStud(group, x, y, ballFront(SNOW_HEAD_Y, SNOW_HEAD_R, x, y), coal, 0.04, 0.05, Math.PI / 2);
+    });
+    return group;
+  }
+
+  function snowmanScarf() {
+    const group = new THREE.Group();
+    const green = plastic(0x2e8b57);
+    const red = plastic(0xd62f38);
+    group.add(mesh(new THREE.CylinderGeometry(0.6, 0.66, 0.24, 32), green, [0, 1.98, 0]));
+    group.add(mesh(new THREE.TorusGeometry(0.63, 0.035, 8, 40), red, [0, 2.05, 0], [Math.PI / 2, 0, 0]));
+    group.add(mesh(new THREE.TorusGeometry(0.65, 0.035, 8, 40), red, [0, 1.91, 0], [Math.PI / 2, 0, 0]));
+    // Hanging tail at the front right.
+    const tail = new THREE.Group();
+    tail.position.set(0.32, 1.88, 0.58);
+    tail.rotation.set(0.25, 0, 0.12);
+    tail.add(mesh(new THREE.BoxGeometry(0.24, 0.62, 0.08), green, [0, -0.3, 0]));
+    tail.add(mesh(new THREE.BoxGeometry(0.25, 0.05, 0.09), red, [0, -0.2, 0]));
+    tail.add(mesh(new THREE.BoxGeometry(0.25, 0.05, 0.09), red, [0, -0.42, 0]));
+    addStud(tail, 0, -0.05, 0.05, 0x2e8b57, 0.05, 0.04, Math.PI / 2);
+    group.add(tail);
+    for (let i = 0; i < 8; i += 1) {
+      const a = (i / 8) * Math.PI * 2;
+      addStud(group, Math.cos(a) * 0.5, 2.12, Math.sin(a) * 0.5, 0x2e8b57, 0.06, 0.05);
+    }
+    return group;
+  }
+
+  function snowmanHat(position = [0, 3.02, 0], scale = 1) {
+    // Outer group sways; the inner group holds the hat's own tilt.
+    const group = new THREE.Group();
+    group.position.set(position[0], position[1], position[2]);
+    group.scale.setScalar(scale);
+    group.userData.baseScale = scale;
+    const hat = new THREE.Group();
+    hat.rotation.set(-0.12, 0, -0.18);
+    group.add(hat);
+    const red = plastic(0xd62f38);
+    hat.add(mesh(new THREE.CylinderGeometry(0.52, 0.52, 0.18, 32), plastic(SNOW_WHITE, { roughness: 0.7 }), [0, 0.05, 0]));
+    // Stepped red cone that bends to one side.
+    const layers = 7;
+    for (let i = 0; i < layers; i += 1) {
+      const t = i / layers;
+      const r = 0.46 * (1 - t) + 0.08;
+      hat.add(mesh(new THREE.CylinderGeometry(r * 0.92, r, 0.13, 24), red, [Math.pow(t, 2) * 0.35, 0.2 + i * 0.12, 0]));
+    }
+    hat.add(mesh(new THREE.SphereGeometry(0.13, 16, 12), plastic(SNOW_WHITE, { roughness: 0.7 }), [0.4, 1.05, 0]));
+    return group;
+  }
+
+  function buildSnowmanModel() {
+    petalRoots = [];
+    const base = snowmanBase();
+    const body = snowmanBody();
+    const head = snowmanHead();
+    const armL = snowmanArm(-1);
+    const armR = snowmanArm(1);
+    const face = snowmanFace();
+    const scarf = snowmanScarf();
+    const hat = snowmanHat();
+    return {
+      groups: [base, body, head, armL, armR, face, scarf, hat],
+      stemGroup: body,
+      leafLeftGroup: armL,
+      leafRightGroup: armR,
+      centerGroup: head,
+      petalGroup: hat,
+      petalRoots,
+      headSwayGroups: [hat],
+      leafSway: [
+        { group: armL, baseZ: armL.rotation.z, amp: 0.05, phase: 0.3 },
+        { group: armR, baseZ: armR.rotation.z, amp: 0.05, phase: 1.9 },
+      ],
+    };
+  }
+
+  function goalSnowmanSvg() {
+    return goalShell(`
+      <g class="goal-piece" data-step="0"><ellipse cx="90" cy="146" rx="52" ry="8" fill="#DFE9F1"/></g>
+      <g class="goal-piece" data-step="1">
+        <circle cx="90" cy="116" r="30" fill="#FFFFFF" stroke="#C9D6E2" stroke-width="2"/>
+        <circle cx="90" cy="106" r="2.6" fill="#2B2B30"/><circle cx="90" cy="116" r="2.6" fill="#2B2B30"/><circle cx="90" cy="126" r="2.6" fill="#2B2B30"/>
+      </g>
+      <g class="goal-piece" data-step="2"><circle cx="90" cy="70" r="21" fill="#FFFFFF" stroke="#C9D6E2" stroke-width="2"/></g>
+      <g class="goal-piece" data-step="3"><path d="M64 96 L40 82 M48 87 L42 76" stroke="#6B3F22" stroke-width="3.5" stroke-linecap="round"/></g>
+      <g class="goal-piece" data-step="4"><path d="M116 96 L140 82 M132 87 L138 76" stroke="#6B3F22" stroke-width="3.5" stroke-linecap="round"/></g>
+      <g class="goal-piece" data-step="5">
+        <circle cx="83" cy="66" r="2.6" fill="#232328"/><circle cx="97" cy="66" r="2.6" fill="#232328"/>
+        <path d="M90 71 L104 74 L90 75 Z" fill="#FF8A1F"/>
+        <path d="M83 79 Q90 84 97 79" stroke="#232328" stroke-width="2" stroke-linecap="round"/>
+      </g>
+      <g class="goal-piece" data-step="6">
+        <rect x="70" y="86" width="40" height="8" rx="4" fill="#2E8B57"/>
+        <rect x="96" y="90" width="8" height="18" rx="2" fill="#2E8B57"/>
+      </g>
+      <g class="goal-piece" data-step="7">
+        <path d="M70 52 Q86 22 112 34 L108 50 Z" fill="#D62F38"/>
+        <rect x="68" y="48" width="44" height="8" rx="4" fill="#FFFFFF" stroke="#C9D6E2" stroke-width="1.5"/>
+        <circle cx="113" cy="34" r="5" fill="#FFFFFF" stroke="#C9D6E2" stroke-width="1.5"/>
+      </g>
+    `, "#E8F1F8");
+  }
+
+  /* ---------------------------------------------------------
+     Christmas tree: red pot, three stepped green tiers,
+     baubles, a spiral of lights and a gold star
+     --------------------------------------------------------- */
+
+  // [bottom y, top y, bottom radius, top radius] for each green tier.
+  const TREE_TIERS = [
+    [1.0, 2.1, 1.18, 0.42],
+    [1.9, 2.95, 0.92, 0.3],
+    [2.7, 3.66, 0.66, 0.08],
+  ];
+
+  function tierRadius(tier, y) {
+    const [y0, y1, r0, r1] = tier;
+    return r0 + (r1 - r0) * ((y - y0) / (y1 - y0));
+  }
+
+  // Outer radius of the whole tree at height y (widest tier there).
+  function treeRadius(y) {
+    return TREE_TIERS.reduce((best, tier) => (y >= tier[0] && y <= tier[1] ? Math.max(best, tierRadius(tier, y)) : best), 0);
+  }
+
+  function treePot() {
+    const group = new THREE.Group();
+    group.add(mesh(new THREE.CylinderGeometry(0.62, 0.48, 0.62, 32), plastic(0xc8202b), [0, 0.31, 0]));
+    group.add(mesh(new THREE.CylinderGeometry(0.67, 0.67, 0.1, 32), plastic(0xa8161f), [0, 0.64, 0]));
+    group.add(mesh(new THREE.TorusGeometry(0.585, 0.035, 8, 40), plastic(0xffc72c, { metalness: 0.3 }), [0, 0.42, 0], [Math.PI / 2, 0, 0]));
+    group.add(mesh(new THREE.CylinderGeometry(0.6, 0.6, 0.04, 32), plastic(0x3e2614, { roughness: 0.85, clearcoat: 0 }), [0, 0.68, 0]));
+    for (let i = 0; i < 10; i += 1) {
+      const a = (i / 10) * Math.PI * 2;
+      addStud(group, Math.cos(a) * 0.63, 0.72, Math.sin(a) * 0.63, 0xa8161f, 0.05, 0.05);
+    }
+    return group;
+  }
+
+  function treeTrunk() {
+    const group = new THREE.Group();
+    group.add(mesh(new THREE.CylinderGeometry(0.13, 0.16, 0.55, 14), plastic(0x6b3f22, { roughness: 0.6 }), [0, 0.92, 0]));
+    group.add(mesh(new THREE.TorusGeometry(0.16, 0.03, 8, 20), plastic(0x55301a), [0, 0.72, 0], [Math.PI / 2, 0, 0]));
+    return group;
+  }
+
+  // Small repeatable "random" number from a position, so every load looks the same.
+  function hash3(x, y, z) {
+    const s = Math.sin(x * 127.1 + y * 311.7 + z * 74.7) * 43758.5453;
+    return s - Math.floor(s);
+  }
+
+  // One skirt of fir branches: a cone whose rim is cut into drooping branch
+  // tips, with layered ridges up the side and a little jitter like needles.
+  function firSkirtGeometry(radius, height, tips, ridges, twist) {
+    const geo = new THREE.ConeGeometry(radius, height, tips * 4, ridges * 3, false);
+    const pos = geo.attributes.position;
+    for (let i = 0; i < pos.count; i += 1) {
+      const x = pos.getX(i);
+      const y = pos.getY(i);
+      const z = pos.getZ(i);
+      const r = Math.hypot(x, z);
+      if (r < 1e-4) continue;
+      const a = Math.atan2(z, x) + twist;
+      const t = (y + height / 2) / height; // 0 at the rim, 1 at the tip
+      const tip = Math.pow(0.5 + 0.5 * Math.cos(a * tips), 1.6); // 1 at a branch tip
+      const ridge = 1 - ((t * ridges) % 1); // sawtooth: each ridge is a row of branches
+      const jitter = (hash3(x, y, z) - 0.5) * 0.08;
+      const k = 1 - 0.2 * (1 - tip) * (1 - t) + 0.07 * ridge * (1 - t) + jitter * (1 - t * 0.6);
+      pos.setX(i, x * k);
+      pos.setZ(i, z * k);
+      // Branch tips hang down, more at the rim.
+      pos.setY(i, y - 0.12 * tip * Math.pow(1 - t, 2) - 0.035 * ridge * (1 - t));
+    }
+    geo.computeVertexNormals();
+    return geo;
+  }
+
+  function treeTier(index, colors) {
+    const group = new THREE.Group();
+    const tier = TREE_TIERS[index];
+    const [y0, y1] = tier;
+    const height = y1 - y0;
+    const needles = colors.map((c) => plastic(c, { roughness: 0.78, clearcoat: 0.05, flatShading: true }));
+    const snow = plastic(0xf7fbff, { roughness: 0.9, clearcoat: 0 });
+    // Three overlapping skirts per tier, darker underneath like a real fir.
+    for (let k = 0; k < 3; k += 1) {
+      const yb = y0 + k * height * 0.3;
+      const rb = tierRadius(tier, yb) + 0.05;
+      const top = y1 + 0.04;
+      const h = top - yb;
+      const tips = 9 + index * -1 + k * 2;
+      const twist = (k * 0.9 + index * 0.4);
+      const skirt = mesh(firSkirtGeometry(rb, h, tips, 3, twist), needles[k % needles.length], [0, yb + h / 2, 0]);
+      group.add(skirt);
+      // Dusting of snow on some of the branch tips.
+      for (let i = 0; i < tips; i += 1) {
+        if (hash3(index, k, i) < 0.45) continue;
+        const a = (i / tips) * Math.PI * 2 - twist;
+        const rr = rb * 0.8;
+        const flake = mesh(new THREE.SphereGeometry(0.09, 8, 6), snow, [Math.cos(a) * rr, yb + h * 0.14 - 0.06, Math.sin(a) * rr], [0, -a, -0.35]);
+        flake.scale.set(1.3, 0.35, 0.8);
+        flake.castShadow = false;
+        group.add(flake);
+      }
+    }
+    return group;
+  }
+
+  function treeOrnaments() {
+    const group = new THREE.Group();
+    const colors = [0xd62f38, 0xffc72c, 0x3b7bd8, 0xd62f38, 0xe8e8ee, 0xffc72c];
+    const spots = [
+      [1.25, -0.2], [1.3, 0.75], [1.2, 1.7], [1.35, 2.6], [1.3, 3.6], [1.25, 4.6], [1.4, 5.5],
+      [2.15, 0.3], [2.2, 1.3], [2.1, 2.4], [2.25, 3.3], [2.15, 4.3], [2.2, 5.3],
+      [2.95, 0.9], [3.0, 2.1], [2.95, 3.3], [3.0, 4.5], [3.0, 5.6],
+    ];
+    spots.forEach(([y, a], i) => {
+      // Angle 1.57 (π/2) faces the camera; spread the rest round the tree.
+      const r = treeRadius(y) * 0.9 + 0.05;
+      const ball = new THREE.Group();
+      ball.position.set(Math.cos(a) * r, y, Math.sin(a) * r);
+      ball.add(mesh(new THREE.SphereGeometry(0.095, 16, 12), plastic(colors[i % colors.length], { roughness: 0.2, clearcoat: 1, metalness: 0.15 })));
+      ball.add(mesh(new THREE.CylinderGeometry(0.03, 0.03, 0.05, 8), plastic(0xc9a227, { metalness: 0.4 }), [0, 0.1, 0]));
+      group.add(ball);
+    });
+    return group;
+  }
+
+  function treeGarland() {
+    const group = new THREE.Group();
+    const bulbColors = [0xfff3b0, 0xffb347, 0xfff3b0, 0x9fe8ff];
+    const count = 54;
+    const points = [];
+    for (let i = 0; i < count; i += 1) {
+      const t = i / (count - 1);
+      const y = 1.05 + t * 2.35;
+      const a = t * Math.PI * 2 * 3.2;
+      const r = treeRadius(y) * 0.9 + 0.04;
+      points.push(new THREE.Vector3(Math.cos(a) * r, y, Math.sin(a) * r));
+      if (i % 2 === 0) {
+        const c = bulbColors[(i / 2) % bulbColors.length];
+        group.add(mesh(new THREE.SphereGeometry(0.05, 10, 8), plastic(c, { emissive: c, emissiveIntensity: 1.1 }), [points[i].x, y, points[i].z]));
+      }
+    }
+    const wire = new THREE.CatmullRomCurve3(points);
+    const cable = mesh(new THREE.TubeGeometry(wire, 160, 0.012, 5, false), plastic(0x1f4d2e, { roughness: 0.8 }));
+    cable.castShadow = false;
+    group.add(cable);
+    return group;
+  }
+
+  function treeStar() {
+    const group = new THREE.Group();
+    group.position.set(0, 3.82, 0);
+    const shape = new THREE.Shape();
+    for (let i = 0; i < 10; i += 1) {
+      const a = Math.PI / 2 + (i / 10) * Math.PI * 2;
+      const r = i % 2 === 0 ? 0.3 : 0.13;
+      if (i === 0) shape.moveTo(Math.cos(a) * r, Math.sin(a) * r);
+      else shape.lineTo(Math.cos(a) * r, Math.sin(a) * r);
+    }
+    shape.closePath();
+    const geo = new THREE.ExtrudeGeometry(shape, { depth: 0.08, bevelEnabled: true, bevelSize: 0.02, bevelThickness: 0.02, bevelSegments: 2 });
+    geo.translate(0, 0, -0.04);
+    group.add(mesh(geo, plastic(0xffd34d, { metalness: 0.35, roughness: 0.25, emissive: 0xffb300, emissiveIntensity: 0.35 })));
+    group.add(mesh(new THREE.CylinderGeometry(0.05, 0.06, 0.2, 10), plastic(0xc9a227), [0, -0.26, 0]));
+    addStud(group, 0, 0, 0.07, 0xfff3b0, 0.05, 0.04, Math.PI / 2);
+    return group;
+  }
+
+  function buildXmasTreeModel() {
+    petalRoots = [];
+    const pot = treePot();
+    const trunk = treeTrunk();
+    const bottom = treeTier(0, [0x1b5234, 0x21603c, 0x2a7047]);
+    const middle = treeTier(1, [0x1f5a38, 0x266842, 0x2f784c]);
+    const top = treeTier(2, [0x236040, 0x2c7049, 0x378255]);
+    const ornaments = treeOrnaments();
+    const garland = treeGarland();
+    const star = treeStar();
+    return {
+      groups: [pot, trunk, bottom, middle, top, ornaments, garland, star],
+      stemGroup: trunk,
+      leafLeftGroup: null,
+      leafRightGroup: null,
+      centerGroup: top,
+      petalGroup: star,
+      petalRoots,
+      headSwayGroups: [star],
+      leafSway: [],
+    };
+  }
+
+  function goalXmasTreeSvg() {
+    return goalShell(`
+      <g class="goal-piece" data-step="0"><path d="M74 128 H106 L102 148 H78 Z" fill="#C8202B"/><rect x="72" y="125" width="36" height="6" rx="2" fill="#A8161F"/></g>
+      <g class="goal-piece" data-step="1"><rect x="86" y="112" width="8" height="15" rx="2" fill="#6B3F22"/></g>
+      <g class="goal-piece" data-step="2"><path d="M90 74 L132 114 H48 Z" fill="#2E8B57"/></g>
+      <g class="goal-piece" data-step="3"><path d="M90 52 L120 88 H60 Z" fill="#3A9D5D"/></g>
+      <g class="goal-piece" data-step="4"><path d="M90 34 L110 64 H70 Z" fill="#48B06A"/></g>
+      <g class="goal-piece" data-step="5">
+        <circle cx="70" cy="108" r="4" fill="#D62F38"/><circle cx="104" cy="102" r="4" fill="#FFC72C"/>
+        <circle cx="84" cy="82" r="4" fill="#3B7BD8"/><circle cx="102" cy="78" r="3.5" fill="#D62F38"/>
+        <circle cx="90" cy="60" r="3.5" fill="#FFC72C"/>
+      </g>
+      <g class="goal-piece" data-step="6"><path d="M58 104 Q90 96 122 88 M66 80 Q90 74 112 66" stroke="#FFF3B0" stroke-width="2.5" stroke-linecap="round"/></g>
+      <g class="goal-piece" data-step="7"><path d="M90 20 L93.5 28 L102 28.6 L95.5 34 L97.6 42.4 L90 37.8 L82.4 42.4 L84.5 34 L78 28.6 L86.5 28 Z" fill="#FFD34D" stroke="#C9A227" stroke-width="1"/></g>
+    `, "#E6F3EA");
+  }
+
+  /* ---------------------------------------------------------
+     Mini-brick figures (reindeer, bird): shapes filled with
+     small square bricks on one shared grid, studs on top
+     --------------------------------------------------------- */
+
+  const VOX = 0.13;
+  const voxBoxGeo = new THREE.BoxGeometry(VOX * 0.97, VOX * 0.97, VOX * 0.97);
+  const voxStudGeo = makeStudGeometry(VOX * 0.3, 0.045);
+
+  // Fill an ellipsoid (centre c, radii r) with bricks. colorAt(x, y, z) picks each
+  // brick's colour; only the outer shell is built. Top-facing bricks get a stud.
+  function voxelBlob(group, c, r, colorAt, { studs = true } = {}) {
+    const [cx, cy, cz] = c;
+    const [rx, ry, rz] = r;
+    const inside = (x, y, z) => ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 + ((z - cz) / rz) ** 2 <= 1;
+    const range = (center, radius) => [Math.floor((center - radius) / VOX), Math.ceil((center + radius) / VOX)];
+    const [i0, i1] = range(cx, rx);
+    const [j0, j1] = range(cy, ry);
+    const [k0, k1] = range(cz, rz);
+    for (let i = i0; i <= i1; i += 1) {
+      for (let j = j0; j <= j1; j += 1) {
+        for (let k = k0; k <= k1; k += 1) {
+          const x = i * VOX;
+          const y = j * VOX;
+          const z = k * VOX;
+          if (!inside(x, y, z)) continue;
+          const shell = !inside(x + VOX, y, z) || !inside(x - VOX, y, z) || !inside(x, y + VOX, z)
+            || !inside(x, y - VOX, z) || !inside(x, y, z + VOX) || !inside(x, y, z - VOX);
+          if (!shell) continue;
+          const color = colorAt(x, y, z);
+          group.add(mesh(voxBoxGeo, plastic(color, { roughness: 0.38 }), [x, y, z]));
+          if (studs && !inside(x, y + VOX, z)) {
+            group.add(mesh(voxStudGeo, plastic(color, { roughness: 0.38 }), [x, y + VOX * 0.5 + 0.02, z]));
+          }
+        }
+      }
+    }
+  }
+
+  // A straight column of bricks from y0 to y1 at (x, z).
+  function voxelColumn(group, x, z, y0, y1, colorAt) {
+    const gx = Math.round(x / VOX) * VOX;
+    const gz = Math.round(z / VOX) * VOX;
+    for (let j = Math.round(y0 / VOX); j <= Math.round(y1 / VOX); j += 1) {
+      group.add(mesh(voxBoxGeo, plastic(colorAt(j * VOX), { roughness: 0.38 }), [gx, j * VOX, gz]));
+    }
+  }
+
+  /* ---------- Reindeer (sitting, Christmas) ---------- */
+
+  const DEER_BROWN = 0x9a6234;
+  const DEER_DARK = 0x6b3f22;
+  const DEER_CREAM = 0xf1dcb8;
+  const DEER_HEAD = [0, 1.75, 0.15];
+
+  function deerLegs() {
+    const group = new THREE.Group();
+    // Front legs standing straight, dark hooves at the bottom.
+    [-0.26, 0.26].forEach((x) => voxelColumn(group, x, 0.39, 0.13, 0.78, (y) => (y < 0.3 ? 0x3b2416 : DEER_BROWN)));
+    // Folded back legs (haunches) on each side.
+    [-0.46, 0.46].forEach((x) => voxelBlob(group, [x, 0.36, -0.2], [0.2, 0.26, 0.42], (px, py, pz) => (pz > 0.12 && py < 0.26 ? 0x3b2416 : DEER_BROWN)));
+    return group;
+  }
+
+  function deerBody() {
+    const group = new THREE.Group();
+    voxelBlob(group, [0, 0.86, -0.05], [0.5, 0.56, 0.56], (x, y, z) => (z > 0.28 && Math.abs(x) < 0.26 && y < 1.15 ? DEER_CREAM : DEER_BROWN));
+    // Little white tail at the back.
+    voxelBlob(group, [0, 0.95, -0.62], [0.1, 0.12, 0.1], () => 0xfaf6ef, { studs: false });
+    return group;
+  }
+
+  function deerHead() {
+    const group = new THREE.Group();
+    const [hx, hy, hz] = DEER_HEAD;
+    voxelBlob(group, [hx, hy, hz], [0.44, 0.42, 0.42], (x, y, z) => (z > hz + 0.22 && y < hy - 0.02 ? DEER_CREAM : DEER_BROWN));
+    return group;
+  }
+
+  function deerFace() {
+    const group = new THREE.Group();
+    const [, hy, hz] = DEER_HEAD;
+    const front = hz + 0.42 + 0.04;
+    [-0.17, 0.17].forEach((x) => {
+      group.add(mesh(new THREE.BoxGeometry(0.1, 0.13, 0.04), plastic(0x1f1a17), [x, hy + 0.1, front - 0.03]));
+      group.add(mesh(new THREE.BoxGeometry(0.035, 0.035, 0.02), plastic(0xffffff), [x + 0.02, hy + 0.13, front]));
+    });
+    // Shiny red nose.
+    group.add(mesh(new THREE.SphereGeometry(0.12, 20, 14), plastic(0xe0262f, { roughness: 0.15, clearcoat: 1, emissive: 0x5a0000, emissiveIntensity: 0.3 }), [0, hy - 0.12, front + 0.04]));
+    // Rosy cheeks.
+    [-0.3, 0.3].forEach((x) => group.add(mesh(new THREE.BoxGeometry(0.09, 0.05, 0.02), plastic(0xf29a9a), [x, hy - 0.04, front - 0.12])));
+    return group;
+  }
+
+  function deerEars() {
+    const group = new THREE.Group();
+    const [, hy, hz] = DEER_HEAD;
+    [-1, 1].forEach((side) => {
+      voxelBlob(group, [side * 0.52, hy + 0.12, hz], [0.2, 0.08, 0.1], (x) => (Math.abs(x) > 0.55 ? DEER_CREAM : DEER_BROWN), { studs: false });
+    });
+    return group;
+  }
+
+  function deerAntlers() {
+    const group = new THREE.Group();
+    const wood = plastic(DEER_DARK, { roughness: 0.55 });
+    const [, hy, hz] = DEER_HEAD;
+    [-1, 1].forEach((side) => {
+      const antler = new THREE.Group();
+      antler.position.set(side * 0.22, hy + 0.38, hz - 0.05);
+      antler.rotation.z = side * -0.35;
+      antler.add(mesh(new THREE.CylinderGeometry(0.035, 0.045, 0.62, 8), wood, [0, 0.31, 0]));
+      // Tines branching outwards.
+      [[0.18, 0.5], [0.36, 0.42], [0.52, 0.32]].forEach(([y, len]) => {
+        antler.add(mesh(new THREE.CylinderGeometry(0.025, 0.032, len, 8), wood, [side * len * 0.38, y + len * 0.3, 0], [0, 0, side * -0.95]));
+      });
+      antler.add(mesh(new THREE.SphereGeometry(0.04, 8, 6), wood, [0, 0.62, 0]));
+      group.add(antler);
+    });
+    return group;
+  }
+
+  function buildReindeerModel() {
+    petalRoots = [];
+    const base = snowmanBase();
+    base.add(redPedestal());
+    const legs = deerLegs();
+    const body = deerBody();
+    const head = deerHead();
+    const face = deerFace();
+    const ears = deerEars();
+    const antlers = deerAntlers();
+    const hat = snowmanHat([0.02, DEER_HEAD[1] + 0.33, DEER_HEAD[2] + 0.05], 0.62);
+    return {
+      groups: [base, legs, body, head, face, ears, antlers, hat],
+      stemGroup: body,
+      leafLeftGroup: null,
+      leafRightGroup: null,
+      centerGroup: head,
+      petalGroup: hat,
+      petalRoots,
+      headSwayGroups: [hat],
+      leafSway: [],
+    };
+  }
+
+  function goalReindeerSvg() {
+    return goalShell(`
+      <g class="goal-piece" data-step="0"><ellipse cx="90" cy="148" rx="52" ry="8" fill="#DFE9F1"/></g>
+      <g class="goal-piece" data-step="1"><rect x="76" y="118" width="8" height="26" fill="#9A6234"/><rect x="96" y="118" width="8" height="26" fill="#9A6234"/><rect x="76" y="138" width="8" height="6" fill="#3B2416"/><rect x="96" y="138" width="8" height="6" fill="#3B2416"/></g>
+      <g class="goal-piece" data-step="2"><rect x="66" y="96" width="48" height="36" rx="10" fill="#9A6234"/><rect x="80" y="104" width="20" height="22" rx="6" fill="#F1DCB8"/></g>
+      <g class="goal-piece" data-step="3"><rect x="68" y="56" width="44" height="40" rx="12" fill="#9A6234"/><rect x="76" y="76" width="28" height="16" rx="6" fill="#F1DCB8"/></g>
+      <g class="goal-piece" data-step="4"><rect x="79" y="66" width="5" height="7" fill="#1F1A17"/><rect x="96" y="66" width="5" height="7" fill="#1F1A17"/><circle cx="90" cy="82" r="6" fill="#E0262F"/></g>
+      <g class="goal-piece" data-step="5"><rect x="56" y="62" width="14" height="7" rx="3" fill="#9A6234"/><rect x="110" y="62" width="14" height="7" rx="3" fill="#9A6234"/></g>
+      <g class="goal-piece" data-step="6"><path d="M80 56 L70 28 M74 40 L62 34 M72 32 L66 22 M100 56 L110 28 M106 40 L118 34 M108 32 L114 22" stroke="#6B3F22" stroke-width="3.5" stroke-linecap="round"/></g>
+      <g class="goal-piece" data-step="7"><path d="M78 56 Q88 34 104 42 L102 56 Z" fill="#D62F38"/><rect x="76" y="53" width="28" height="6" rx="3" fill="#FFFFFF" stroke="#C9D6E2"/><circle cx="105" cy="42" r="4" fill="#FFFFFF" stroke="#C9D6E2"/></g>
+    `, "#F3E7DA");
+  }
+
+  /* ---------- Santa peeking out of a brick chimney (12 pieces) ---------- */
+
+  const SANTA_RED = 0xd42a35;
+  const SANTA_SKIN = 0xf2c9a8;
+  const SANTA_WHITE = 0xf7f4ee;
+  const CHIMNEY = { w: 1.5, d: 1.0, z: -0.05, top: 1.6 };
+  const SANTA_HEAD = { c: [0, 3.0, 0.05], r: [0.46, 0.44, 0.4] };
+
+  // Point on the front surface of an ellipsoid at (x, y).
+  function ellFront(c, r, x, y, lift = 0.02) {
+    const k = 1 - ((x - c[0]) / r[0]) ** 2 - ((y - c[1]) / r[1]) ** 2;
+    return c[2] + r[2] * Math.sqrt(Math.max(0, k)) + lift;
+  }
+
+  // Brick-built walls: a mortar core with staggered bricks on all four sides.
+  function chimneyBricks(y0, y1) {
+    const group = new THREE.Group();
+    const { w, d, z } = CHIMNEY;
+    group.add(mesh(new THREE.BoxGeometry(w - 0.02, y1 - y0, d - 0.02), plastic(0x8a6a55, { roughness: 0.9, clearcoat: 0 }), [0, (y0 + y1) / 2, z]));
+    const rowH = 0.11;
+    const brickW = 0.25;
+    const colors = [0xb8714a, 0xa45f3d, 0xc98458, 0xae6844];
+    const geoCache = new Map();
+    const brickGeo = (len, deep) => {
+      const key = `${len.toFixed(3)}-${deep}`;
+      if (!geoCache.has(key)) geoCache.set(key, deep ? new THREE.BoxGeometry(0.045, rowH * 0.86, len) : new THREE.BoxGeometry(len, rowH * 0.86, 0.045));
+      return geoCache.get(key);
+    };
+    const rows = Math.round((y1 - y0) / rowH);
+    for (let r = 0; r < rows; r += 1) {
+      const y = y0 + rowH * (r + 0.5);
+      const shift = r % 2 ? brickW / 2 : 0;
+      // Front and back faces (along x), then left and right faces (along z).
+      [[d / 2, false], [-d / 2, false], [w / 2, true], [-w / 2, true]].forEach(([offset, side]) => {
+        const span = side ? d : w;
+        for (let s = -span / 2 - shift; s < span / 2; s += brickW) {
+          const a = Math.max(s, -span / 2);
+          const b = Math.min(s + brickW, span / 2);
+          if (b - a < 0.05) continue;
+          const len = b - a - 0.02;
+          const mid = (a + b) / 2;
+          const color = colors[Math.floor(hash3(r, s * 7, offset * 3) * colors.length)];
+          const pos = side ? [offset + Math.sign(offset) * 0.012, y, z + mid] : [mid, y, z + offset + Math.sign(offset) * 0.012];
+          group.add(mesh(brickGeo(len, side), plastic(color, { roughness: 0.7, clearcoat: 0.1 }), pos));
+        }
+      });
+    }
+    return group;
+  }
+
+  function santaBase() {
+    const group = new THREE.Group();
+    const snow = plastic(SANTA_WHITE, { roughness: 0.55 });
+    group.add(mesh(new THREE.BoxGeometry(2.5, 0.16, 1.7), snow, [0, 0.08, 0]));
+    // Rounded snow edges.
+    [[0, 0.85, 2.5, 0], [0, -0.85, 2.5, 0], [1.25, 0, 1.7, Math.PI / 2], [-1.25, 0, 1.7, Math.PI / 2]].forEach(([x, z, len, ry]) => {
+      group.add(mesh(new THREE.CapsuleGeometry(0.09, len - 0.18, 6, 12), snow, [x, 0.12, z], [0, ry, Math.PI / 2]));
+    });
+    // Red carpet in front of the chimney.
+    group.add(mesh(new THREE.BoxGeometry(1.7, 0.03, 0.42), plastic(0x9e1a24, { roughness: 0.8, clearcoat: 0 }), [0, 0.175, 0.62]));
+    // Snow drifts at the back corner.
+    [[-0.95, -0.55, 0.22], [-0.7, -0.65, 0.16], [1.05, 0.55, 0.14]].forEach(([x, z, rr]) => {
+      const drift = mesh(new THREE.SphereGeometry(rr, 14, 10), snow, [x, 0.16, z]);
+      drift.scale.y = 0.6;
+      group.add(drift);
+    });
+    // Warm glowing lights on the base.
+    [[-1.05, 0.7], [-0.4, 0.78], [0.45, 0.78], [1.1, 0.68], [-1.1, -0.2]].forEach(([x, z]) => {
+      group.add(mesh(new THREE.SphereGeometry(0.07, 14, 10), plastic(0xfff1c2, { emissive: 0xffc66b, emissiveIntensity: 1.2 }), [x, 0.24, z]));
+    });
+    return group;
+  }
+
+  function santaLedge() {
+    const group = new THREE.Group();
+    const { z, top, d } = CHIMNEY;
+    group.add(mesh(new THREE.BoxGeometry(1.74, 0.14, 1.22), plastic(0x9c8466, { roughness: 0.6 }), [0, top + 0.07, z]));
+    group.add(mesh(new THREE.BoxGeometry(1.62, 0.08, 1.12), plastic(0x7d6a52, { roughness: 0.7 }), [0, top - 0.01, z]));
+    // Snow resting on the ledge corners.
+    const snow = plastic(SANTA_WHITE, { roughness: 0.55 });
+    [[-0.66, 0.38, 0.2, 0.18], [0.7, -0.4, 0.18, 0.2], [-0.7, -0.42, 0.16, 0.16], [0.78, 0.42, 0.1, 0.12]].forEach(([x, dz, rx, rz]) => {
+      const lump = mesh(new THREE.SphereGeometry(1, 16, 10), snow, [x, top + 0.15, z + dz]);
+      lump.scale.set(rx, 0.06, rz);
+      group.add(lump);
+    });
+    // Icicles hanging under the front edge.
+    const ice = plastic(0xdff3ff, { roughness: 0.1, clearcoat: 1, transparent: true, opacity: 0.85 });
+    for (let i = 0; i < 11; i += 1) {
+      const x = -0.78 + i * 0.156;
+      const len = 0.07 + hash3(i, 3, 7) * 0.12;
+      group.add(mesh(new THREE.ConeGeometry(0.022, len, 6), ice, [x, top - len / 2, z + d / 2 + 0.1], [Math.PI, 0, 0]));
+    }
+    [[-0.75, 0.45], [0.75, -0.55]].forEach(([x, dz]) => addStud(group, x, top + 0.17, z + dz, 0x9c8466, 0.06, 0.05));
+    return group;
+  }
+
+  function santaBody() {
+    const group = new THREE.Group();
+    voxelBlob(group, [0, 2.2, 0], [0.6, 0.55, 0.46], () => SANTA_RED);
+    // White fur trim down the front and gold buttons.
+    for (let y = 1.75; y <= 2.2; y += VOX) {
+      group.add(mesh(new THREE.BoxGeometry(0.14, VOX * 0.95, 0.06), plastic(SANTA_WHITE), [0, y, ellFront([0, 2.2, 0], [0.6, 0.55, 0.46], 0, y, 0.01)]));
+    }
+    [2.0, 1.86].forEach((y) => addStud(group, 0.13, y, ellFront([0, 2.2, 0], [0.6, 0.55, 0.46], 0.13, y, 0.04), 0xd9b04c, 0.05, 0.05, Math.PI / 2));
+    return group;
+  }
+
+  // Left arm rests on the chimney ledge.
+  function santaArmRest() {
+    const group = new THREE.Group();
+    // Upper arm hangs from the shoulder, forearm lies forward along the ledge.
+    voxelBlob(group, [-0.7, 2.14, 0.06], [0.2, 0.32, 0.22], () => SANTA_RED);
+    voxelBlob(group, [-0.68, 1.88, 0.32], [0.18, 0.13, 0.3], () => SANTA_RED);
+    // White fur cuff at the wrist.
+    voxelBlob(group, [-0.68, 1.88, 0.58], [0.2, 0.14, 0.07], () => SANTA_WHITE, { studs: false });
+    // Mitten gripping the front edge, fingers curled over it.
+    voxelBlob(group, [-0.68, 1.85, 0.7], [0.15, 0.11, 0.1], () => 0x1f1d22);
+    voxelBlob(group, [-0.68, 1.72, 0.7], [0.13, 0.09, 0.07], () => 0x1f1d22, { studs: false });
+    group.add(mesh(new THREE.CapsuleGeometry(0.045, 0.08, 4, 8), plastic(0x1f1d22), [-0.52, 1.88, 0.7], [0, 0, -1.1]));
+    return group;
+  }
+
+  // Right arm raised, waving hello. The group pivots at the shoulder so it can sway.
+  function santaArmWave() {
+    const group = new THREE.Group();
+    group.position.set(0.5, 2.38, 0.08);
+    group.rotation.z = -0.38;
+    const arm = new THREE.Group();
+    voxelBlob(arm, [0.12, 0.3, 0], [0.18, 0.36, 0.2], () => SANTA_RED);
+    voxelBlob(arm, [0.12, 0.66, 0], [0.18, 0.07, 0.18], () => SANTA_WHITE, { studs: false });
+    voxelBlob(arm, [0.12, 0.84, 0.02], [0.15, 0.15, 0.13], () => 0x1f1d22);
+    // Thumb sticking out.
+    arm.add(mesh(new THREE.CapsuleGeometry(0.045, 0.08, 4, 8), plastic(0x1f1d22), [-0.04, 0.82, 0.08], [0, 0, 0.6]));
+    group.add(arm);
+    return group;
+  }
+
+  function santaHead() {
+    const group = new THREE.Group();
+    voxelBlob(group, SANTA_HEAD.c, SANTA_HEAD.r, () => SANTA_SKIN, { studs: false });
+    // Ears peeking out at the sides.
+    [-1, 1].forEach((side) => group.add(mesh(new THREE.SphereGeometry(0.08, 12, 10), plastic(SANTA_SKIN), [side * 0.45, 3.0, 0.02])));
+    return group;
+  }
+
+  function santaBeard() {
+    const group = new THREE.Group();
+    const front = (c, r, x, y) => ellFront(c, r, x, y, 0.0);
+    // Main beard: starts under the nose, wide at the cheeks, rounded tip.
+    const main = { c: [0, 2.52, 0.3], r: [0.44, 0.38, 0.24] };
+    voxelBlob(group, main.c, main.r, () => SANTA_WHITE, { studs: false });
+    voxelBlob(group, [0, 2.2, 0.36], [0.26, 0.16, 0.16], () => SANTA_WHITE, { studs: false });
+    [-1, 1].forEach((side) => voxelBlob(group, [side * 0.38, 2.82, 0.16], [0.12, 0.26, 0.18], () => SANTA_WHITE, { studs: false }));
+    // Fluffy curls: round 1x1 studs scattered over the beard.
+    const curl = plastic(0xffffff, { roughness: 0.5 });
+    for (let row = 0; row < 4; row += 1) {
+      const y = 2.75 - row * 0.15;
+      const n = 5 - Math.floor(row / 2);
+      for (let i = 0; i < n; i += 1) {
+        const x = (i - (n - 1) / 2) * 0.16 + (row % 2) * 0.05;
+        if (Math.abs(x) > main.r[0] * 0.85) continue;
+        group.add(mesh(new THREE.SphereGeometry(0.065, 10, 8), curl, [x, y, front(main.c, main.r, x, y) - 0.01]));
+      }
+    }
+    // Curly moustache.
+    const mz = ellFront(SANTA_HEAD.c, SANTA_HEAD.r, 0, 2.87, 0.06);
+    [-1, 1].forEach((side) => {
+      const m = mesh(new THREE.CapsuleGeometry(0.06, 0.18, 6, 10), curl, [side * 0.13, 2.87, mz], [0, 0, side * 1.25]);
+      group.add(m);
+      group.add(mesh(new THREE.SphereGeometry(0.055, 10, 8), curl, [side * 0.27, 2.93, mz - 0.04]));
+    });
+    return group;
+  }
+
+  function santaFace() {
+    const group = new THREE.Group();
+    const { c, r } = SANTA_HEAD;
+    [-0.16, 0.16].forEach((x) => {
+      const zf = ellFront(c, r, x, 3.06, 0.015);
+      group.add(mesh(new THREE.CylinderGeometry(0.095, 0.095, 0.03, 20), plastic(0xffffff), [x, 3.06, zf], [Math.PI / 2, 0, 0]));
+      group.add(mesh(new THREE.CylinderGeometry(0.058, 0.058, 0.03, 16), plastic(0x1f1a17), [x + 0.015, 3.05, zf + 0.012], [Math.PI / 2, 0, 0]));
+      group.add(mesh(new THREE.CylinderGeometry(0.02, 0.02, 0.02, 8), plastic(0xffffff), [x + 0.035, 3.075, zf + 0.025], [Math.PI / 2, 0, 0]));
+      // Bushy white eyebrow.
+      const brow = mesh(new THREE.CapsuleGeometry(0.035, 0.12, 4, 8), plastic(0xffffff, { roughness: 0.6 }), [x, 3.18, ellFront(c, r, x, 3.18, 0.02)], [0, 0, Math.PI / 2 + Math.sign(x) * -0.2]);
+      group.add(brow);
+    });
+    group.add(mesh(new THREE.SphereGeometry(0.1, 18, 14), plastic(0xec8f97, { roughness: 0.25, clearcoat: 1 }), [0, 2.96, ellFront(c, r, 0, 2.96, 0.05)]));
+    [-0.29, 0.29].forEach((x) => group.add(mesh(new THREE.CylinderGeometry(0.065, 0.065, 0.02, 14), plastic(0xf5a3a8), [x, 2.96, ellFront(c, r, x, 2.96, 0.005)], [Math.PI / 2, 0, 0])));
+    return group;
+  }
+
+  function santaHat() {
+    // Outer group sits on the head so it can sway a little.
+    const group = new THREE.Group();
+    group.position.set(0, 3.3, 0);
+    const hat = new THREE.Group();
+    group.add(hat);
+    voxelBlob(hat, [0, 0.12, -0.03], [0.48, 0.24, 0.43], () => SANTA_RED);
+    voxelBlob(hat, [0.18, 0.36, -0.14], [0.32, 0.2, 0.3], () => SANTA_RED);
+    voxelBlob(hat, [0.42, 0.44, -0.28], [0.2, 0.15, 0.18], () => SANTA_RED);
+    voxelBlob(hat, [0.6, 0.3, -0.32], [0.12, 0.15, 0.12], () => SANTA_RED, { studs: false });
+    voxelBlob(hat, [0, -0.02, 0.02], [0.52, 0.1, 0.47], () => SANTA_WHITE, { studs: false });
+    hat.add(mesh(new THREE.SphereGeometry(0.14, 18, 14), plastic(0xfff3d0, { emissive: 0xffcf6b, emissiveIntensity: 0.9 }), [0.66, 0.1, -0.32]));
+    return group;
+  }
+
+  function santaWreath() {
+    const group = new THREE.Group();
+    const cx = 0;
+    const cy = 0.95;
+    const cz = CHIMNEY.z + CHIMNEY.d / 2 + 0.08;
+    const leafColors = [0x2e8b57, 0x3fa968, 0x267a4b];
+    for (let i = 0; i < 16; i += 1) {
+      const a = (i / 16) * Math.PI * 2;
+      const leaf = mesh(new THREE.SphereGeometry(0.1, 10, 8), plastic(leafColors[i % 3], { roughness: 0.4 }), [cx + Math.cos(a) * 0.32, cy + Math.sin(a) * 0.32, cz], [0, 0, a + 0.6]);
+      leaf.scale.set(1.5, 0.75, 0.6);
+      group.add(leaf);
+    }
+    for (let i = 0; i < 7; i += 1) {
+      const a = (i / 7) * Math.PI * 2 + 0.25;
+      group.add(mesh(new THREE.SphereGeometry(0.05, 12, 10), plastic(0xe0262f, { roughness: 0.2, clearcoat: 1, emissive: 0x600000, emissiveIntensity: 0.4 }), [cx + Math.cos(a) * 0.36, cy + Math.sin(a) * 0.36, cz + 0.07]));
+    }
+    // Red bow at the top.
+    const red = plastic(0xd42a35, { roughness: 0.35 });
+    [-1, 1].forEach((side) => {
+      const loop = mesh(new THREE.TorusGeometry(0.08, 0.03, 8, 18), red, [cx + side * 0.1, cy + 0.34, cz + 0.06]);
+      loop.scale.set(1.3, 0.8, 0.6);
+      group.add(loop);
+      group.add(mesh(new THREE.BoxGeometry(0.05, 0.18, 0.03), red, [cx + side * 0.06, cy + 0.2, cz + 0.07], [0, 0, side * 0.3]));
+    });
+    group.add(mesh(new THREE.BoxGeometry(0.07, 0.07, 0.06), red, [cx, cy + 0.34, cz + 0.07]));
+    // Warm lantern glowing in the middle of the wreath.
+    group.add(mesh(new THREE.CylinderGeometry(0.17, 0.17, 0.04, 28), plastic(0xffe3a3, { emissive: 0xffb347, emissiveIntensity: 1.1 }), [cx, cy, cz - 0.03], [Math.PI / 2, 0, 0]));
+    group.add(mesh(new THREE.TorusGeometry(0.18, 0.025, 8, 28), plastic(0xc9a227, { metalness: 0.4 }), [cx, cy, cz - 0.01]));
+    return group;
+  }
+
+  function santaSack() {
+    const group = new THREE.Group();
+    voxelBlob(group, [0.98, 0.55, -0.42], [0.3, 0.38, 0.3], (x, y) => (y > 0.78 ? 0x6b3f22 : 0x8a5a32), { studs: false });
+    group.add(mesh(new THREE.TorusGeometry(0.1, 0.025, 8, 16), plastic(0xd9b04c), [0.98, 0.9, -0.42], [Math.PI / 2, 0, 0]));
+    // Presents peeking out of the sack.
+    [[0.9, 1.02, -0.45, 0x2e8b57, 0xffd34d, 0.22], [1.08, 1.06, -0.36, 0x3b7bd8, 0xffffff, 0.16]].forEach(([x, y, z, box, ribbon, size]) => {
+      const gift = new THREE.Group();
+      gift.position.set(x, y, z);
+      gift.rotation.y = 0.4;
+      gift.add(mesh(new THREE.BoxGeometry(size, size, size), plastic(box)));
+      gift.add(mesh(new THREE.BoxGeometry(size + 0.01, size + 0.01, 0.04), plastic(ribbon)));
+      group.add(gift);
+    });
+    // A candy cane leaning on the chimney.
+    const cane = new THREE.Group();
+    cane.position.set(0.82, 0.2, 0.32);
+    cane.rotation.z = -0.15;
+    for (let i = 0; i < 6; i += 1) {
+      cane.add(mesh(new THREE.CylinderGeometry(0.035, 0.035, 0.08, 10), plastic(i % 2 ? 0xffffff : 0xd42a35), [0, 0.04 + i * 0.08, 0]));
+    }
+    cane.add(mesh(new THREE.TorusGeometry(0.07, 0.035, 8, 14, Math.PI), plastic(0xd42a35), [-0.07, 0.48, 0]));
+    group.add(cane);
+    return group;
+  }
+
+  function buildSantaModel() {
+    petalRoots = [];
+    const base = santaBase();
+    base.add(redPedestal());
+    const low = chimneyBricks(0.16, 0.93);
+    const high = chimneyBricks(0.93, CHIMNEY.top);
+    const ledge = santaLedge();
+    const body = santaBody();
+    const armRest = santaArmRest();
+    const armWave = santaArmWave();
+    const head = santaHead();
+    const beard = santaBeard();
+    const face = santaFace();
+    const hat = santaHat();
+    const wreath = santaWreath();
+    const sack = santaSack();
+    return {
+      groups: [base, low, high, ledge, body, armRest, armWave, head, beard, face, hat, wreath, sack],
+      stemGroup: body,
+      leafLeftGroup: null,
+      leafRightGroup: null,
+      centerGroup: head,
+      petalGroup: hat,
+      petalRoots,
+      headSwayGroups: [hat],
+      // The raised arm waves hello.
+      leafSway: [{ group: armWave, baseZ: armWave.rotation.z, amp: 0.22, phase: 0 }],
+    };
+  }
+
+  function goalSantaSvg() {
+    return goalShell(`
+      <g class="goal-piece" data-step="0"><rect x="34" y="140" width="112" height="10" rx="5" fill="#F7F4EE" stroke="#C9D6E2"/><rect x="52" y="138" width="76" height="4" fill="#9E1A24"/></g>
+      <g class="goal-piece" data-step="1"><rect x="56" y="112" width="68" height="28" fill="#B8714A"/><path d="M56 121H124M56 130H124" stroke="#8A6A55" stroke-width="1.5"/></g>
+      <g class="goal-piece" data-step="2"><rect x="56" y="90" width="68" height="22" fill="#A45F3D"/><path d="M56 99H124M56 106H124" stroke="#8A6A55" stroke-width="1.5"/></g>
+      <g class="goal-piece" data-step="3"><rect x="50" y="84" width="80" height="8" rx="2" fill="#9C8466"/></g>
+      <g class="goal-piece" data-step="4"><path d="M64 84 Q64 58 90 58 Q116 58 116 84 Z" fill="#D42A35"/></g>
+      <g class="goal-piece" data-step="5"><rect x="52" y="70" width="14" height="16" rx="5" fill="#D42A35"/><rect x="52" y="80" width="14" height="7" rx="3" fill="#1F1D22"/></g>
+      <g class="goal-piece" data-step="6"><rect x="114" y="40" width="13" height="30" rx="5" fill="#D42A35" transform="rotate(20 120 70)"/><rect x="118" y="30" width="13" height="10" rx="4" fill="#1F1D22" transform="rotate(20 120 70)"/></g>
+      <g class="goal-piece" data-step="7"><rect x="72" y="34" width="36" height="30" rx="10" fill="#F2C9A8"/></g>
+      <g class="goal-piece" data-step="8"><path d="M72 52 Q72 82 90 84 Q108 82 108 52 Q90 60 72 52 Z" fill="#F7F4EE" stroke="#D8D2C6"/></g>
+      <g class="goal-piece" data-step="9"><circle cx="83" cy="45" r="3" fill="#1F1A17"/><circle cx="97" cy="45" r="3" fill="#1F1A17"/><circle cx="90" cy="51" r="3.5" fill="#E9898F"/></g>
+      <g class="goal-piece" data-step="10"><path d="M70 36 Q78 14 104 20 L112 34 Z" fill="#D42A35"/><rect x="68" y="32" width="44" height="6" rx="3" fill="#F7F4EE"/><circle cx="114" cy="28" r="4" fill="#FFE9B0"/></g>
+      <g class="goal-piece" data-step="11"><circle cx="90" cy="118" r="11" fill="none" stroke="#2E8B57" stroke-width="5"/><circle cx="82" cy="113" r="2" fill="#E0262F"/><circle cx="99" cy="122" r="2" fill="#E0262F"/><path d="M86 106 L90 109 L94 106" stroke="#D42A35" stroke-width="3"/></g>
+      <g class="goal-piece" data-step="12"><ellipse cx="136" cy="124" rx="10" ry="14" fill="#8A5A32"/><rect x="130" y="104" width="10" height="9" fill="#2E8B57"/></g>
+    `, "#FBE3E3");
+  }
+
+  /* ---------- Christmas snow globe gift (12 pieces) ---------- */
+
+  const GLOBE = { cy: 1.55, r: 1.0, floor: 1.02 };
+  const GOLD = 0xd9b04c;
+
+  // Low red display pedestal with gold rims, sitting under a whole scene.
+  // Built from y = -lift up to 0, so it ends up on the wooden base once the scene is lifted.
+  const PEDESTAL_LIFT = 0.4;
+  function redPedestal(radius = 1.56) {
+    const group = new THREE.Group();
+    const h = PEDESTAL_LIFT;
+    const profile = [[0, -h], [radius + 0.08, -h], [radius + 0.1, -h + 0.06], [radius + 0.03, -h + 0.16], [radius, -0.05], [radius - 0.02, 0], [0, 0]]
+      .map(([r, y]) => new THREE.Vector2(r, y));
+    group.add(mesh(new THREE.LatheGeometry(profile, 72), plastic(0xc8202b, { roughness: 0.32, clearcoat: 0.8 })));
+    const gold = plastic(GOLD, { metalness: 0.45, roughness: 0.25 });
+    group.add(mesh(new THREE.TorusGeometry(radius + 0.09, 0.035, 10, 72), gold, [0, -h + 0.05, 0], [Math.PI / 2, 0, 0]));
+    group.add(mesh(new THREE.TorusGeometry(radius - 0.01, 0.035, 10, 72), gold, [0, -0.02, 0], [Math.PI / 2, 0, 0]));
+    // Little snowy dots around the band.
+    for (let i = 0; i < 28; i += 1) {
+      const a = (i / 28) * Math.PI * 2;
+      group.add(mesh(new THREE.SphereGeometry(0.03, 8, 6), plastic(0xffffff), [Math.cos(a) * (radius + 0.05), -h * 0.55, Math.sin(a) * (radius + 0.05)]));
+    }
+    return group;
+  }
+
+  function globeBase() {
+    const group = new THREE.Group();
+    const red = plastic(0xc8202b, { roughness: 0.32, clearcoat: 0.8 });
+    // Rounded pedestal: wide at the bottom, narrowing to the globe.
+    const profile = [[0, 0.1], [1.12, 0.1], [1.16, 0.18], [1.1, 0.32], [1.0, 0.62], [0.95, 0.86], [0.92, 0.96], [0.86, 1.0], [0, 1.0]]
+      .map(([r, y]) => new THREE.Vector2(r, y));
+    group.add(mesh(new THREE.LatheGeometry(profile, 64), red));
+    return group;
+  }
+
+  function globeTrims() {
+    const group = new THREE.Group();
+    const gold = plastic(GOLD, { metalness: 0.45, roughness: 0.25 });
+    group.add(mesh(new THREE.TorusGeometry(1.15, 0.045, 10, 64), gold, [0, 0.16, 0], [Math.PI / 2, 0, 0]));
+    group.add(mesh(new THREE.TorusGeometry(0.98, 0.03, 10, 64), gold, [0, 0.66, 0], [Math.PI / 2, 0, 0]));
+    group.add(mesh(new THREE.TorusGeometry(0.9, 0.05, 10, 64), gold, [0, 0.99, 0], [Math.PI / 2, 0, 0]));
+    // Four little gold feet.
+    for (let i = 0; i < 4; i += 1) {
+      const a = (i / 4) * Math.PI * 2 + Math.PI / 4;
+      group.add(mesh(new THREE.SphereGeometry(0.11, 16, 12), gold, [Math.cos(a) * 0.98, 0.1, Math.sin(a) * 0.98]));
+    }
+    // White snowy dots around the middle band.
+    for (let i = 0; i < 18; i += 1) {
+      const a = (i / 18) * Math.PI * 2;
+      group.add(mesh(new THREE.SphereGeometry(0.035, 8, 6), plastic(0xffffff), [Math.cos(a) * 1.04, 0.45, Math.sin(a) * 1.04]));
+    }
+    return group;
+  }
+
+  function globeBow() {
+    const group = new THREE.Group();
+    const z = 1.08;
+    const ribbon = plastic(0xe0263f, { roughness: 0.3, clearcoat: 1 });
+    [-1, 1].forEach((side) => {
+      const loop = mesh(new THREE.TorusGeometry(0.15, 0.05, 10, 22), ribbon, [side * 0.17, 0.58, z], [0, 0, side * 0.35]);
+      loop.scale.set(1.25, 0.8, 0.55);
+      group.add(loop);
+      group.add(mesh(new THREE.BoxGeometry(0.09, 0.3, 0.04), ribbon, [side * 0.1, 0.36, z - 0.02], [0, 0, side * 0.35]));
+    });
+    group.add(mesh(new THREE.SphereGeometry(0.075, 14, 12), ribbon, [0, 0.58, z + 0.02]));
+    // Holly leaves and berries behind the bow.
+    const holly = plastic(0x2e8b57, { roughness: 0.4 });
+    [[-0.42, 0.62, 0.4], [-0.38, 0.5, -0.3], [0.42, 0.62, -0.4], [0.38, 0.5, 0.3]].forEach(([x, y, rz]) => {
+      const leaf = mesh(new THREE.SphereGeometry(0.1, 10, 8), holly, [x, y, z - 0.06], [0, 0, rz]);
+      leaf.scale.set(1.7, 0.7, 0.4);
+      group.add(leaf);
+    });
+    [[-0.3, 0.58], [-0.27, 0.65], [0.3, 0.58], [0.27, 0.65]].forEach(([x, y]) => group.add(mesh(new THREE.SphereGeometry(0.035, 10, 8), plastic(0xff2a3a, { roughness: 0.15, clearcoat: 1 }), [x, y, z])));
+    return group;
+  }
+
+  function globeSnowFloor() {
+    const group = new THREE.Group();
+    const snow = plastic(SNOW_WHITE, { roughness: 0.6 });
+    group.add(mesh(new THREE.CylinderGeometry(0.84, 0.84, 0.08, 48), snow, [0, GLOBE.floor + 0.04, 0]));
+    for (let i = 0; i < 12; i += 1) {
+      const a = (i / 12) * Math.PI * 2;
+      const r = 0.55 + (i % 3) * 0.08;
+      const lump = mesh(new THREE.SphereGeometry(0.12 + (i % 2) * 0.04, 12, 9), plastic(i % 2 ? SNOW_WHITE : SNOW_SHADE, { roughness: 0.55 }), [Math.cos(a) * r, GLOBE.floor + 0.08, Math.sin(a) * r]);
+      lump.scale.y = 0.45;
+      group.add(lump);
+    }
+    return group;
+  }
+
+  function globeTree() {
+    const group = new THREE.Group();
+    group.position.set(-0.38, GLOBE.floor + 0.02, -0.22);
+    group.scale.setScalar(0.3);
+    group.userData.baseScale = 0.3;
+    group.add(treeTrunk(), treeTier(0, [0x1b5234, 0x21603c, 0x2a7047]), treeTier(1, [0x1f5a38, 0x266842, 0x2f784c]), treeTier(2, [0x236040, 0x2c7049, 0x378255]), treeOrnaments(), treeStar());
+    return group;
+  }
+
+  function globeHouse() {
+    const group = new THREE.Group();
+    group.position.set(0.36, GLOBE.floor + 0.08, -0.3);
+    group.rotation.y = -0.45;
+    group.add(mesh(new THREE.BoxGeometry(0.42, 0.3, 0.34), plastic(0xb5713f, { roughness: 0.5 }), [0, 0.15, 0]));
+    // Snowy pitched roof.
+    [-1, 1].forEach((side) => {
+      group.add(mesh(new THREE.BoxGeometry(0.5, 0.05, 0.26), plastic(0xc8202b), [0, 0.38, side * 0.1], [side * 0.75, 0, 0]));
+      group.add(mesh(new THREE.BoxGeometry(0.52, 0.035, 0.24), plastic(0xffffff, { roughness: 0.6 }), [0, 0.41, side * 0.1], [side * 0.75, 0, 0]));
+    });
+    group.add(mesh(new THREE.BoxGeometry(0.06, 0.12, 0.06), plastic(0x8a5a32), [0.12, 0.47, -0.05]));
+    // Glowing windows and a door.
+    const glow = plastic(0xffe3a3, { emissive: 0xffb347, emissiveIntensity: 1.1 });
+    [-0.12, 0.12].forEach((x) => group.add(mesh(new THREE.BoxGeometry(0.08, 0.08, 0.01), glow, [x, 0.18, 0.175])));
+    group.add(mesh(new THREE.BoxGeometry(0.08, 0.14, 0.01), plastic(0x6b3f22), [0, 0.07, 0.175]));
+    // Icing trim along the eaves.
+    for (let i = 0; i < 6; i += 1) group.add(mesh(new THREE.SphereGeometry(0.02, 6, 5), plastic(0xffffff), [-0.2 + i * 0.08, 0.3, 0.18]));
+    return group;
+  }
+
+  function globeSanta() {
+    const group = new THREE.Group();
+    const x = 0.06;
+    const z = 0.24;
+    const ground = GLOBE.floor + 0.08;
+    const y = ground + 0.14; // body sits on top of the legs
+    const red = plastic(0xd42a35, { roughness: 0.35 });
+    const white = plastic(0xffffff, { roughness: 0.5 });
+    // Legs: red trousers and black boots with the toes pointing forward.
+    [-1, 1].forEach((side) => {
+      const lx = x + side * 0.065;
+      group.add(mesh(new THREE.CylinderGeometry(0.048, 0.052, 0.12, 12), red, [lx, ground + 0.09, z]));
+      group.add(mesh(new THREE.TorusGeometry(0.05, 0.014, 6, 14), white, [lx, ground + 0.05, z], [Math.PI / 2, 0, 0]));
+      group.add(mesh(new THREE.BoxGeometry(0.09, 0.05, 0.13), plastic(0x1f1d22, { roughness: 0.3, clearcoat: 1 }), [lx, ground + 0.025, z + 0.025]));
+    });
+    group.add(mesh(new THREE.CylinderGeometry(0.11, 0.17, 0.3, 18), red, [x, y + 0.15, z]));
+    group.add(mesh(new THREE.TorusGeometry(0.16, 0.03, 8, 20), white, [x, y + 0.02, z], [Math.PI / 2, 0, 0]));
+    group.add(mesh(new THREE.BoxGeometry(0.3, 0.04, 0.27), plastic(0x232328), [x, y + 0.14, z]));
+    group.add(mesh(new THREE.BoxGeometry(0.06, 0.05, 0.02), plastic(GOLD, { metalness: 0.4 }), [x, y + 0.14, z + 0.14]));
+    group.add(mesh(new THREE.SphereGeometry(0.1, 16, 12), plastic(SANTA_SKIN), [x, y + 0.38, z]));
+    const beard = mesh(new THREE.SphereGeometry(0.1, 14, 10), white, [x, y + 0.31, z + 0.05]);
+    beard.scale.set(1, 1.1, 0.7);
+    group.add(beard);
+    [-0.035, 0.035].forEach((ex) => group.add(mesh(new THREE.SphereGeometry(0.014, 6, 5), plastic(0x1f1a17), [x + ex, y + 0.41, z + 0.09])));
+    group.add(mesh(new THREE.SphereGeometry(0.02, 8, 6), plastic(0xec8f97), [x, y + 0.38, z + 0.1]));
+    group.add(mesh(new THREE.ConeGeometry(0.1, 0.2, 16), red, [x + 0.02, y + 0.54, z], [0, 0, -0.3]));
+    group.add(mesh(new THREE.TorusGeometry(0.095, 0.025, 8, 18), white, [x, y + 0.45, z], [Math.PI / 2, 0, 0]));
+    group.add(mesh(new THREE.SphereGeometry(0.035, 10, 8), white, [x + 0.08, y + 0.63, z]));
+    // Waving arms.
+    [-1, 1].forEach((side) => group.add(mesh(new THREE.CapsuleGeometry(0.035, 0.12, 4, 8), red, [x + side * 0.15, y + 0.26 + (side > 0 ? 0.06 : 0), z], [0, 0, side * (side > 0 ? 2.3 : 0.5)])));
+    // Gift sack on his back.
+    const sack = mesh(new THREE.SphereGeometry(0.11, 12, 10), plastic(0x8a5a32), [x - 0.12, y + 0.22, z - 0.12]);
+    sack.scale.y = 1.2;
+    group.add(sack);
+    return group;
+  }
+
+  function globeSnowman() {
+    const group = new THREE.Group();
+    const x = -0.36;
+    const z = 0.3;
+    const y = GLOBE.floor + 0.06;
+    const snow = plastic(SNOW_WHITE, { roughness: 0.5 });
+    group.add(mesh(new THREE.SphereGeometry(0.13, 16, 12), snow, [x, y + 0.12, z]));
+    group.add(mesh(new THREE.SphereGeometry(0.095, 16, 12), snow, [x, y + 0.31, z]));
+    [-0.03, 0.03].forEach((ex) => group.add(mesh(new THREE.SphereGeometry(0.012, 6, 5), plastic(0x232328), [x + ex, y + 0.33, z + 0.085])));
+    group.add(mesh(new THREE.ConeGeometry(0.016, 0.07, 8), plastic(0xff8a1f), [x, y + 0.31, z + 0.12], [Math.PI / 2, 0, 0]));
+    group.add(mesh(new THREE.TorusGeometry(0.085, 0.022, 6, 16), plastic(0x2e8b57), [x, y + 0.23, z], [Math.PI / 2, 0, 0]));
+    group.add(mesh(new THREE.CylinderGeometry(0.075, 0.075, 0.015, 14), plastic(0x232328), [x, y + 0.395, z]));
+    group.add(mesh(new THREE.CylinderGeometry(0.05, 0.05, 0.08, 14), plastic(0x232328), [x, y + 0.44, z]));
+    return group;
+  }
+
+  function globeGifts() {
+    const group = new THREE.Group();
+    [[0.42, 0.28, 0.12, 0x2e8b57, 0xffc72c, 0.4], [0.55, 0.12, 0.09, 0x3b7bd8, 0xffffff, -0.3], [0.32, 0.46, 0.08, 0xff9db5, 0xe0263f, 0.2]].forEach(([x, z, s, box, ribbon, ry]) => {
+      const gift = new THREE.Group();
+      gift.position.set(x, GLOBE.floor + 0.08 + s / 2, z);
+      gift.rotation.y = ry;
+      gift.add(mesh(new THREE.BoxGeometry(s, s, s), plastic(box)));
+      gift.add(mesh(new THREE.BoxGeometry(s + 0.006, s + 0.006, s * 0.22), plastic(ribbon)));
+      gift.add(mesh(new THREE.BoxGeometry(s * 0.22, s + 0.006, s + 0.006), plastic(ribbon)));
+      group.add(gift);
+    });
+    return group;
+  }
+
+  function globeGlass() {
+    const group = new THREE.Group();
+    const glass = plastic(0xffffff, { transparent: true, opacity: 0.16, roughness: 0.02, clearcoat: 1, clearcoatRoughness: 0.02, envMapIntensity: 1.4, depthWrite: false });
+    // Sphere cut off where it meets the base.
+    const cut = Math.acos((GLOBE.floor - GLOBE.cy) / GLOBE.r);
+    const sphere = mesh(new THREE.SphereGeometry(GLOBE.r, 64, 40, 0, Math.PI * 2, 0, cut), glass, [0, GLOBE.cy, 0]);
+    sphere.renderOrder = 5;
+    sphere.castShadow = false;
+    group.add(sphere);
+    // A soft highlight streak on the glass.
+    const shine = mesh(new THREE.SphereGeometry(GLOBE.r + 0.005, 32, 16, -0.9, 0.35, 0.5, 0.7), plastic(0xffffff, { transparent: true, opacity: 0.35, depthWrite: false }), [0, GLOBE.cy, 0]);
+    shine.renderOrder = 6;
+    shine.castShadow = false;
+    group.add(shine);
+    return group;
+  }
+
+  function globeSnowflakes() {
+    const group = new THREE.Group();
+    const flake = plastic(0xffffff, { emissive: 0xffffff, emissiveIntensity: 0.25 });
+    let placed = 0;
+    for (let i = 0; placed < 70 && i < 400; i += 1) {
+      const x = (hash3(i, 1, 2) - 0.5) * 1.7;
+      const y = GLOBE.floor + 0.25 + hash3(i, 3, 4) * 1.15;
+      const z = (hash3(i, 5, 6) - 0.5) * 1.7;
+      if (Math.hypot(x, y - GLOBE.cy, z) > GLOBE.r - 0.08) continue;
+      group.add(mesh(new THREE.SphereGeometry(0.018 + hash3(i, 7, 8) * 0.02, 6, 5), flake, [x, y, z]));
+      placed += 1;
+    }
+    return group;
+  }
+
+  function globeKeyLights() {
+    const group = new THREE.Group();
+    // Ring of coloured lights around the top of the base.
+    const colors = [0xff6b6b, 0xffd34d, 0x7fd99a, 0x9fd8ff, 0xff9db5];
+    for (let i = 0; i < 20; i += 1) {
+      const a = (i / 20) * Math.PI * 2;
+      const c = colors[i % colors.length];
+      group.add(mesh(new THREE.SphereGeometry(0.045, 10, 8), plastic(c, { emissive: c, emissiveIntensity: 1.1 }), [Math.cos(a) * 0.97, 0.86, Math.sin(a) * 0.97]));
+    }
+    // Gold wind-up key for the music box, at the back.
+    const gold = plastic(GOLD, { metalness: 0.5, roughness: 0.25 });
+    const key = new THREE.Group();
+    key.position.set(0, 0.5, -1.06);
+    key.add(mesh(new THREE.CylinderGeometry(0.035, 0.035, 0.22, 10), gold, [0, 0, -0.08], [Math.PI / 2, 0, 0]));
+    [-1, 1].forEach((side) => {
+      const wing = mesh(new THREE.TorusGeometry(0.09, 0.03, 8, 16), gold, [side * 0.1, 0, -0.2]);
+      wing.scale.set(1.1, 0.8, 1);
+      key.add(wing);
+    });
+    group.add(key);
+    return group;
+  }
+
+  // Scale a group by k around the point (x, y, z), so it grows in place.
+  function scaleAbout(group, k, x, y, z) {
+    group.scale.setScalar(k);
+    group.userData.baseScale = k;
+    group.position.set(x - k * x, y - k * y, z - k * z);
+    return group;
+  }
+
+  function buildGlobeModel() {
+    petalRoots = [];
+    const base = globeBase();
+    const trims = globeTrims();
+    const bow = globeBow();
+    const floor = globeSnowFloor();
+    const tree = globeTree();
+    const house = globeHouse();
+    const santa = scaleAbout(globeSanta(), 1.45, 0.06, GLOBE.floor + 0.08, 0.24);
+    const snowman = scaleAbout(globeSnowman(), 1.4, -0.36, GLOBE.floor + 0.06, 0.3);
+    const gifts = scaleAbout(globeGifts(), 1.3, 0.42, GLOBE.floor + 0.08, 0.3);
+    const glass = globeGlass();
+    const flakes = globeSnowflakes();
+    const lights = globeKeyLights();
+    return {
+      groups: [base, trims, bow, floor, tree, house, santa, snowman, gifts, glass, flakes, lights],
+      stemGroup: base,
+      leafLeftGroup: null,
+      leafRightGroup: null,
+      centerGroup: santa,
+      petalGroup: flakes,
+      petalRoots,
+      headSwayGroups: [],
+      leafSway: [],
+    };
+  }
+
+  function goalGlobeSvg() {
+    return goalShell(`
+      <g class="goal-piece" data-step="0"><path d="M52 146 H128 L122 112 H58 Z" fill="#C8202B"/></g>
+      <g class="goal-piece" data-step="1"><rect x="50" y="143" width="80" height="4" rx="2" fill="#D9B04C"/><rect x="56" y="110" width="68" height="4" rx="2" fill="#D9B04C"/></g>
+      <g class="goal-piece" data-step="2"><ellipse cx="82" cy="128" rx="7" ry="5" fill="#E0263F"/><ellipse cx="98" cy="128" rx="7" ry="5" fill="#E0263F"/><circle cx="90" cy="128" r="3" fill="#E0263F"/><ellipse cx="70" cy="128" rx="6" ry="3" fill="#2E8B57"/><ellipse cx="110" cy="128" rx="6" ry="3" fill="#2E8B57"/></g>
+      <g class="goal-piece" data-step="3"><ellipse cx="90" cy="108" rx="34" ry="5" fill="#F4F7FA"/></g>
+      <g class="goal-piece" data-step="4"><path d="M76 74 L86 104 H66 Z" fill="#2A7047"/><circle cx="76" cy="72" r="2.5" fill="#FFD34D"/></g>
+      <g class="goal-piece" data-step="5"><rect x="98" y="90" width="16" height="14" fill="#B5713F"/><path d="M96 91 L106 82 L116 91 Z" fill="#C8202B"/><rect x="102" y="94" width="4" height="4" fill="#FFE3A3"/></g>
+      <g class="goal-piece" data-step="6"><path d="M86 106 L90 88 L94 106 Z" fill="#D42A35"/><circle cx="90" cy="86" r="4" fill="#F2C9A8"/><path d="M86 84 L90 76 L94 84 Z" fill="#D42A35"/></g>
+      <g class="goal-piece" data-step="7"><circle cx="76" cy="104" r="4" fill="#fff" stroke="#C9D6E2"/><circle cx="76" cy="97" r="3" fill="#fff" stroke="#C9D6E2"/></g>
+      <g class="goal-piece" data-step="8"><rect x="100" y="100" width="6" height="6" fill="#2E8B57"/><rect x="107" y="102" width="5" height="5" fill="#3B7BD8"/></g>
+      <g class="goal-piece" data-step="9"><circle cx="90" cy="76" r="38" fill="#DFF3FF" fill-opacity=".35" stroke="#C9D6E2" stroke-width="2"/></g>
+      <g class="goal-piece" data-step="10"><circle cx="74" cy="60" r="1.6" fill="#fff"/><circle cx="104" cy="54" r="1.6" fill="#fff"/><circle cx="90" cy="46" r="1.4" fill="#fff"/><circle cx="66" cy="78" r="1.4" fill="#fff"/><circle cx="112" cy="74" r="1.6" fill="#fff"/></g>
+      <g class="goal-piece" data-step="11"><circle cx="62" cy="113" r="2" fill="#FF6B6B"/><circle cx="76" cy="113" r="2" fill="#FFD34D"/><circle cx="104" cy="113" r="2" fill="#7FD99A"/><circle cx="118" cy="113" r="2" fill="#9FD8FF"/></g>
+    `, "#FBE3E3");
   }
 
   function createBee() {
@@ -3262,7 +4562,6 @@
   function syncSoundButton() {
     soundBtn.classList.toggle("is-muted", !state.soundOn);
     soundBtn.setAttribute("aria-pressed", String(state.soundOn));
-    soundBtn.setAttribute("aria-label", state.soundOn ? "ปิดเสียง" : "เปิดเสียง");
   }
 
   function showPhotoStatus(message) {
@@ -3314,7 +4613,7 @@
     if (blueprintGroup) blueprintGroup.visible = false;
     markers.forEach((marker) => { marker.visible = false; });
     ghostGroups.forEach((ghost) => { ghost.visible = false; });
-    beeGroup.visible = !isNight;
+    beeGroup.visible = beeAllowed();
     dropDome();
     updateHUD({ pop: false });
     sfxWin();
@@ -3781,21 +5080,67 @@
 
   $("#helpBtn").addEventListener("click", () => openModal("help"));
   $("#themeBtn").addEventListener("click", toggleTheme);
+  $("#xmasBtn").addEventListener("click", toggleXmas);
+  $("#introNight").addEventListener("click", toggleTheme);
+
+  // Settings menu (gear button): night, Christmas, sound and language switches.
+  const settingsBtn = $("#settingsBtn");
+  const settingsMenu = $("#settingsMenu");
+  function setSettingsOpen(open) {
+    settingsMenu.hidden = !open;
+    settingsBtn.setAttribute("aria-expanded", String(open));
+  }
+  settingsBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setSettingsOpen(settingsMenu.hidden);
+  });
+  document.addEventListener("click", (event) => {
+    if (!settingsMenu.hidden && !event.target.closest(".settings")) setSettingsOpen(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !settingsMenu.hidden) {
+      setSettingsOpen(false);
+      settingsBtn.focus();
+    }
+  });
+  $("#introXmas").addEventListener("click", toggleXmas);
 
   // Title screen
   const intro = document.getElementById("intro");
   const introArt = document.getElementById("introArt");
-  if (introArt) introArt.innerHTML = fullGoalSvg(LEVELS[0]);
+  // Home screen shows the game logo (with a Santa hat in the Christmas theme).
+  if (introArt) {
+    introArt.innerHTML = `<img src="logo.svg" alt="">${document.querySelector(".brand__hat")?.outerHTML || ""}`;
+  }
   $("#introStart").addEventListener("click", () => {
     ensureAudio();
     intro.classList.add("is-leaving");
     window.setTimeout(() => intro.classList.add("is-hidden"), 460);
-    startupStep = "help";
+    // Go straight to choosing a level; "How to play" only opens from the ? button.
+    startupStep = "levels";
     window.setTimeout(() => {
-      if (!helpModal.classList.contains("is-open")) openModal("help");
+      if (!levelsModal.classList.contains("is-open")) openModal("levels");
     }, 260);
   });
   window.setTimeout(() => $("#introStart")?.focus({ preventScroll: true }), 120);
+
+  // Brand button (top left) goes back to the title screen.
+  function showIntro() {
+    startupStep = "intro"; // set first, so closing a dialog doesn't continue the opening flow
+    ["help", "levels", "victory"].forEach((name) => {
+      const modal = name === "help" ? helpModal : name === "levels" ? levelsModal : victoryModal;
+      if (modal?.classList.contains("is-open")) closeModal(name, false);
+    });
+    exitPhotoMode({ silent: true });
+    intro.classList.remove("is-hidden");
+    void intro.offsetWidth; // let the fade-in play from hidden
+    intro.classList.remove("is-leaving");
+    window.setTimeout(() => $("#introStart")?.focus({ preventScroll: true }), 120);
+  }
+  $(".brand").addEventListener("click", (event) => {
+    event.preventDefault();
+    showIntro();
+  });
   $("#photoTheme").addEventListener("click", toggleTheme);
   const photoWatermark = document.getElementById("photoWatermark");
   if (photoWatermark) photoWatermark.textContent = WATERMARK_TEXT;
@@ -3889,6 +5234,83 @@
     }
   });
 
+  /* ---------------------------------------------------------
+     Drag a piece from the tray straight onto its glowing spot.
+     Tap piece -> tap spot still works the same as before.
+     --------------------------------------------------------- */
+  const pieceDrag = { index: -1, pointerId: null, startX: 0, startY: 0, active: false, ghost: null, source: null };
+
+  // True when (clientX, clientY) is on the current glowing spot, or close enough to it.
+  function isOverCurrentTarget(clientX, clientY) {
+    if (!camera || state.current >= STEPS.length) return false;
+    const rect = canvas.getBoundingClientRect();
+    if (clientX < rect.left || clientX > rect.right || clientY < rect.top || clientY > rect.bottom) return false;
+    screenToPointer({ clientX, clientY });
+    raycaster.setFromCamera(pointer, camera);
+    if (raycaster.intersectObjects(hitMeshes, false).some((hit) => hit.object.userData.stepIndex === state.current)) return true;
+    // Forgiving drop: near the spot on screen counts too (small fingers, small screens).
+    const p = new THREE.Vector3(...STEPS[state.current].target).project(camera);
+    const sx = rect.left + ((p.x + 1) / 2) * rect.width;
+    const sy = rect.top + ((1 - p.y) / 2) * rect.height;
+    return Math.hypot(clientX - sx, clientY - sy) < Math.max(52, rect.width * 0.05);
+  }
+
+  function endPieceDrag() {
+    if (pieceDrag.ghost) pieceDrag.ghost.remove();
+    app.classList.remove("is-dragging-piece");
+    canvas.classList.remove("is-target-hover");
+    pieceDrag.index = -1;
+    pieceDrag.pointerId = null;
+    pieceDrag.active = false;
+    pieceDrag.ghost = null;
+    pieceDrag.source = null;
+  }
+
+  tray.addEventListener("pointerdown", (event) => {
+    const piece = event.target.closest(".piece");
+    if (!piece || piece.disabled || event.button > 0) return;
+    const index = Number(piece.dataset.index);
+    if (index !== state.current || state.won || state.transitioning) return;
+    pieceDrag.index = index;
+    pieceDrag.pointerId = event.pointerId;
+    pieceDrag.startX = event.clientX;
+    pieceDrag.startY = event.clientY;
+    pieceDrag.source = piece;
+  });
+
+  window.addEventListener("pointermove", (event) => {
+    if (pieceDrag.index < 0 || event.pointerId !== pieceDrag.pointerId) return;
+    if (!pieceDrag.active) {
+      if (Math.hypot(event.clientX - pieceDrag.startX, event.clientY - pieceDrag.startY) < 10) return;
+      pieceDrag.active = true;
+      selectPiece(pieceDrag.index); // shows the glowing spot and the ghost preview
+      const ghost = document.createElement("div");
+      ghost.className = "drag-ghost";
+      const icon = pieceDrag.source.querySelector(".brick-icon");
+      if (icon) ghost.appendChild(icon.cloneNode(true));
+      document.body.appendChild(ghost);
+      pieceDrag.ghost = ghost;
+      app.classList.add("is-dragging-piece");
+    }
+    pieceDrag.ghost.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
+    const over = isOverCurrentTarget(event.clientX, event.clientY);
+    pieceDrag.ghost.classList.toggle("is-over", over);
+    canvas.classList.toggle("is-target-hover", over);
+  });
+
+  window.addEventListener("pointerup", (event) => {
+    if (pieceDrag.index < 0 || event.pointerId !== pieceDrag.pointerId) return;
+    const dropped = pieceDrag.active;
+    const over = dropped && isOverCurrentTarget(event.clientX, event.clientY);
+    endPieceDrag();
+    if (!dropped) return; // a plain tap: the click handler selects the piece as before
+    if (over) placeCurrentPiece();
+    else showToast("ลากไปวางที่จุดเรืองแสงนะ"); // piece stays picked, so a tap on the spot still works
+  });
+  window.addEventListener("pointercancel", (event) => {
+    if (event.pointerId === pieceDrag.pointerId) endPieceDrag();
+  });
+
   renderStepList();
   renderTray();
   syncSoundButton();
@@ -3899,7 +5321,7 @@
 
   const initialized = initScene();
   if (initialized) {
-    // Every time the game opens: title screen -> How to play -> Choose level.
+    // Every time the game opens: title screen -> Choose level (How to play is on the ? button).
     startupStep = "intro";
   }
 

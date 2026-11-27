@@ -1,18 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="15" fill="#f7e6bd"/>
-  <g fill="#ffc72c" stroke="#393329" stroke-width="2">
-    <ellipse cx="32" cy="12" rx="5" ry="10"/>
-    <ellipse cx="32" cy="12" rx="5" ry="10" transform="rotate(45 32 32)"/>
-    <ellipse cx="32" cy="12" rx="5" ry="10" transform="rotate(90 32 32)"/>
-    <ellipse cx="32" cy="12" rx="5" ry="10" transform="rotate(135 32 32)"/>
-    <ellipse cx="32" cy="12" rx="5" ry="10" transform="rotate(180 32 32)"/>
-    <ellipse cx="32" cy="12" rx="5" ry="10" transform="rotate(225 32 32)"/>
-    <ellipse cx="32" cy="12" rx="5" ry="10" transform="rotate(270 32 32)"/>
-    <ellipse cx="32" cy="12" rx="5" ry="10" transform="rotate(315 32 32)"/>
+  <!-- App icon / favicon: the logo on a warm rounded tile (generated from logo.svg) -->
+  <defs>
+    <linearGradient id="pl-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfe6ee"/>
+      <stop offset="1" stop-color="#fff0c4"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#pl-bg)"/>
+  <g transform="translate(5.5 6) scale(0.83)">
+  <!-- Pineapple Lego logo: a smiling pineapple made from a 2x2 brick -->
+  <defs>
+    <linearGradient id="pl-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd84a"/>
+      <stop offset="1" stop-color="#f6a821"/>
+    </linearGradient>
+    <linearGradient id="pl-leaf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fd06a"/>
+      <stop offset="1" stop-color="#2e8b57"/>
+    </linearGradient>
+    <clipPath id="pl-clip"><rect x="9" y="26" width="46" height="34" rx="11"/></clipPath>
+  </defs>
+  <!-- Leaf crown -->
+  <g stroke="#2b3a24" stroke-width="2.2" stroke-linejoin="round" fill="url(#pl-leaf)">
+    <path d="M32 3 C36 10 37 17 34 25 H30 C27 17 28 10 32 3 Z"/>
+    <path d="M18 9 C25 11 30 17 31 25 H26 C22 21 19 16 18 9 Z"/>
+    <path d="M46 9 C39 11 34 17 33 25 H38 C42 21 45 16 46 9 Z"/>
+    <path d="M11 18 C18 18 24 21 27 26 H20 C16 25 13 22 11 18 Z"/>
+    <path d="M53 18 C46 18 40 21 37 26 H44 C48 25 51 22 53 18 Z"/>
   </g>
-  <circle cx="32" cy="32" r="14" fill="#7a4b2c" stroke="#393329" stroke-width="2"/>
-  <circle cx="27" cy="29" r="2.3" fill="#9a6238"/>
-  <circle cx="36" cy="31" r="2.3" fill="#9a6238"/>
-  <circle cx="31" cy="38" r="2.3" fill="#9a6238"/>
-  <rect x="29" y="48" width="6" height="12" rx="3" fill="#4f9b50"/>
+  <!-- Brick studs peeking out under the leaves -->
+  <g fill="#ffcf3a" stroke="#3a3328" stroke-width="2.2">
+    <rect x="14" y="21" width="11" height="7" rx="2.5"/>
+    <rect x="39" y="21" width="11" height="7" rx="2.5"/>
+  </g>
+  <!-- Brick body -->
+  <rect x="9" y="26" width="46" height="34" rx="11" fill="url(#pl-body)"/>
+  <g clip-path="url(#pl-clip)" stroke="#e08a00" stroke-width="1.6" stroke-opacity="0.55">
+    <path d="M0 30 L34 64 M10 26 L48 64 M24 26 L62 64 M38 26 L72 60 M52 26 L80 54"/>
+    <path d="M64 30 L30 64 M54 26 L16 64 M40 26 L2 64 M26 26 L-8 60 M12 26 L-16 54"/>
+  </g>
+  <rect x="9" y="26" width="46" height="34" rx="11" fill="none" stroke="#3a3328" stroke-width="2.4"/>
+  <path d="M14 31 H24" stroke="#fff6c8" stroke-width="2.6" stroke-linecap="round" opacity="0.8"/>
+  <!-- Face -->
+  <ellipse cx="24.5" cy="41" rx="3.2" ry="3.8" fill="#2a2420"/>
+  <ellipse cx="39.5" cy="41" rx="3.2" ry="3.8" fill="#2a2420"/>
+  <circle cx="25.6" cy="39.6" r="1.1" fill="#fff"/>
+  <circle cx="40.6" cy="39.6" r="1.1" fill="#fff"/>
+  <path d="M28 47 Q32 51 36 47" fill="none" stroke="#2a2420" stroke-width="2.2" stroke-linecap="round"/>
+  <ellipse cx="18.5" cy="47" rx="3.4" ry="2.2" fill="#ff8a8a" opacity="0.75"/>
+  <ellipse cx="45.5" cy="47" rx="3.4" ry="2.2" fill="#ff8a8a" opacity="0.75"/>
+  </g>
 </svg>

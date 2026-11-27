@@ -1,5 +1,6 @@
-/* Pineapple i18n: Thai (original) / English / Lao.
-   Translates the DOM by looking up the original Thai text, so game.js needs no changes. */
+/* Pineapple i18n: Lao / English. Thai is no longer offered to players.
+   game.js and index.html are still written in Thai: this file translates the DOM
+   by looking up that original Thai text, so every new Thai string needs an entry in D. */
 (function () {
   "use strict";
   const D = {
@@ -197,7 +198,175 @@
     "เลือกก้านจากถาด แล้วแตะจุดเรืองแสง": ["Pick the stem from the tray, then tap the glowing spot", "ເລືອກກ້ານຈາກຖາດ ແລ້ວແຕະຈຸດເຮືອງແສງ"],
     "บันทึกรูปแล้ว ✓": ["Photo saved ✓", "ບັນທຶກຮູບແລ້ວ ✓"],
     "เปิดเสียงแล้ว": ["Sound on", "ເປີດສຽງແລ້ວ"],
-    "ปิดเสียงแล้ว": ["Sound off", "ປິດສຽງແລ້ວ"]
+    "ปิดเสียงแล้ว": ["Sound off", "ປິດສຽງແລ້ວ"],
+    // Christmas theme + snowman level
+    "ธีมคริสต์มาส": ["Christmas theme", "ທີມຄຣິສມາສ"],
+    "ธีมดอกไม้": ["Flower theme", "ທີມດອກໄມ້"],
+    "กลางคืน": ["Night", "ກາງຄືນ"],
+    "ตั้งค่า": ["Settings", "ຕັ້ງຄ່າ"],
+    "เสียง": ["Sound", "ສຽງ"],
+    "ภาษา": ["Language", "ພາສາ"],
+    "ลากไปวางที่จุดเรืองแสงนะ": ["Drop it on the glowing spot", "ລາກໄປວາງທີ່ຈຸດເຮືອງແສງເດີ້"],
+    "หรือลากชิ้นส่วนไปวางที่จุดเรืองแสงก็ได้": ["Or drag the piece onto the glowing spot", "ຫຼື ລາກຊິ້ນສ່ວນໄປວາງທີ່ຈຸດເຮືອງແສງກໍໄດ້"],
+    "คริสต์มาส": ["Christmas", "ຄຣິສມາສ"],
+    "เปิดธีมคริสต์มาส": ["Turn on Christmas theme", "ເປີດທີມຄຣິສມາສ"],
+    "ปิดธีมคริสต์มาส": ["Turn off Christmas theme", "ປິດທີມຄຣິສມາສ"],
+    "สโนว์แมน": ["Snowman", "ຕຸ໊ກກະຕາຫິມະ"],
+    "สโนว์แมนเสร็จแล้ว!": ["Snowman complete!", "ຕຸ໊ກກະຕາຫິມະສຳເລັດແລ້ວ!"],
+    "ลากฉากเพื่อชื่นชมสโนว์แมน": ["Drag the scene to admire your snowman", "ລາກສາກເພື່ອຊົມຕຸ໊ກກະຕາຫິມະ"],
+    "สโนว์แมนพร้อมฉลองคริสต์มาสแล้ว": ["Your snowman is ready for Christmas", "ຕຸ໊ກກະຕາຫິມະພ້ອມສະຫຼອງຄຣິສມາສແລ້ວ"],
+    "กองหิมะ": ["Snow", "ກອງຫິມະ"],
+    "ตัวล่าง": ["Body", "ໂຕລຸ່ມ"],
+    "หัว": ["Head", "ຫົວ"],
+    "แขนซ้าย": ["Left arm", "ແຂນຊ້າຍ"],
+    "แขนขวา": ["Right arm", "ແຂນຂວາ"],
+    "หน้า": ["Face", "ໜ້າ"],
+    "ผ้าพันคอ": ["Scarf", "ຜ້າພັນຄໍ"],
+    "หมวกซานต้า": ["Santa hat", "ໝວກຊານຕາ"],
+    "วางกองหิมะบนฐาน": ["Put the snow on the base", "ວາງກອງຫິມະເທິງຖານ"],
+    "เริ่มจากกองหิมะก่อน": ["Start with the snow", "ເລີ່ມຈາກກອງຫິມະກ່ອນ"],
+    "วางก้อนหิมะใหญ่เป็นตัว": ["Place the big snowball as the body", "ວາງກ້ອນຫິມະໃຫຍ່ເປັນໂຕ"],
+    "ปั้นตัวสโนว์แมน": ["Build the snowman's body", "ປັ້ນໂຕຕຸ໊ກກະຕາຫິມະ"],
+    "วางก้อนหิมะเล็กเป็นหัว": ["Place the small snowball as the head", "ວາງກ້ອນຫິມະນ້ອຍເປັນຫົວ"],
+    "ตัวพร้อมแล้ว วางหัว": ["Body ready, add the head", "ໂຕພ້ອມແລ້ວ ວາງຫົວ"],
+    "ปักแขนกิ่งไม้ด้านซ้าย": ["Stick in the left twig arm", "ປັກແຂນກິ່ງໄມ້ດ້ານຊ້າຍ"],
+    "เพิ่มแขนกิ่งไม้ข้างแรก": ["Add the first twig arm", "ເພີ່ມແຂນກິ່ງໄມ້ຂ້າງທຳອິດ"],
+    "ปักแขนกิ่งไม้ด้านขวา": ["Stick in the right twig arm", "ປັກແຂນກິ່ງໄມ້ດ້ານຂວາ"],
+    "เพิ่มแขนอีกข้าง": ["Add the other arm", "ເພີ່ມແຂນອີກຂ້າງ"],
+    "ติดตา จมูกแครอท และปาก": ["Add the eyes, carrot nose and smile", "ຕິດຕາ ດັງແຄລອດ ແລະ ປາກ"],
+    "แต่งหน้าให้สโนว์แมน": ["Give the snowman a face", "ແຕ່ງໜ້າໃຫ້ຕຸ໊ກກະຕາຫິມະ"],
+    "พันผ้าพันคอสีเขียว": ["Wrap the green scarf", "ພັນຜ້າພັນຄໍສີຂຽວ"],
+    "พันผ้าพันคอให้อุ่น": ["Wrap a scarf to keep warm", "ພັນຜ້າພັນຄໍໃຫ້ອົບອຸ່ນ"],
+    "สวมหมวกซานต้าสีแดง": ["Put on the red Santa hat", "ໃສ່ໝວກຊານຕາສີແດງ"],
+    "เกือบเสร็จ สวมหมวกซานต้า": ["Almost done, put on the Santa hat", "ເກືອບແລ້ວ ໃສ່ໝວກຊານຕາ"],
+    // Christmas tree level
+    "ต้นคริสต์มาส": ["Christmas tree", "ຕົ້ນຄຣິສມາສ"],
+    "ต้นคริสต์มาสเสร็จแล้ว!": ["Christmas tree complete!", "ຕົ້ນຄຣິສມາສສຳເລັດແລ້ວ!"],
+    "ลากฉากเพื่อชื่นชมต้นคริสต์มาส": ["Drag the scene to admire your tree", "ລາກສາກເພື່ອຊົມຕົ້ນຄຣິສມາສ"],
+    "ต้นคริสต์มาสพร้อมฉลองแล้ว": ["Your tree is ready to celebrate", "ຕົ້ນຄຣິສມາສພ້ອມສະຫຼອງແລ້ວ"],
+    "กระถาง": ["Pot", "ກະຖາງ"],
+    "ลำต้น": ["Trunk", "ລຳຕົ້ນ"],
+    "ใบชั้นล่าง": ["Bottom tier", "ໃບຊັ້ນລຸ່ມ"],
+    "ใบชั้นกลาง": ["Middle tier", "ໃບຊັ້ນກາງ"],
+    "ใบชั้นบน": ["Top tier", "ໃບຊັ້ນເທິງ"],
+    "ลูกบอลประดับ": ["Baubles", "ໝາກບານປະດັບ"],
+    "สายไฟประดับ": ["Lights", "ສາຍໄຟປະດັບ"],
+    "ดาวบนยอด": ["Star", "ດາວເທິງຍອດ"],
+    "ตั้งกระถางสีแดงกลางฐาน": ["Stand the red pot in the middle of the base", "ຕັ້ງກະຖາງສີແດງກາງຖານ"],
+    "เริ่มจากตั้งกระถาง": ["Start with the pot", "ເລີ່ມຈາກຕັ້ງກະຖາງ"],
+    "ปักลำต้นลงในกระถาง": ["Plant the trunk in the pot", "ປັກລຳຕົ້ນລົງໃນກະຖາງ"],
+    "กระถางพร้อม ปักลำต้น": ["Pot ready, add the trunk", "ກະຖາງພ້ອມ ປັກລຳຕົ້ນ"],
+    "วางใบสนชั้นใหญ่สุด": ["Place the biggest pine tier", "ວາງໃບແປກຊັ້ນໃຫຍ່ສຸດ"],
+    "วางใบสนชั้นล่าง": ["Place the bottom pine tier", "ວາງໃບແປກຊັ້ນລຸ່ມ"],
+    "ซ้อนใบสนชั้นกลาง": ["Stack the middle pine tier", "ຊ້ອນໃບແປກຊັ້ນກາງ"],
+    "วางใบสนชั้นยอด": ["Place the top pine tier", "ວາງໃບແປກຊັ້ນຍອດ"],
+    "วางใบสนชั้นบนสุด": ["Add the very top tier", "ວາງໃບແປກຊັ້ນເທິງສຸດ"],
+    "แขวนลูกบอลประดับรอบต้น": ["Hang baubles all around", "ແຂວນໝາກບານປະດັບອ້ອມຕົ້ນ"],
+    "แต่งลูกบอลหลากสี": ["Decorate with colorful baubles", "ແຕ່ງໝາກບານຫຼາກສີ"],
+    "พันสายไฟวนรอบต้น": ["Wind the lights around the tree", "ພັນສາຍໄຟວົນອ້ອມຕົ້ນ"],
+    "พันสายไฟให้ต้นเป็นประกาย": ["Add lights to make it sparkle", "ພັນສາຍໄຟໃຫ້ຕົ້ນເຫຼື້ອມ"],
+    "ติดดาวสีทองบนยอด": ["Put the gold star on top", "ຕິດດາວສີຄຳເທິງຍອດ"],
+    "เกือบเสร็จ ติดดาวบนยอด": ["Almost done, add the star", "ເກືອບແລ້ວ ຕິດດາວເທິງຍອດ"],
+    "ขา": ["Legs", "ຂາ"],
+    "ลำตัว": ["Body", "ລຳໂຕ"],
+    // Reindeer level
+    "กวางเรนเดียร์": ["Reindeer", "ກວາງເຣນເດຍ"],
+    "กวางเรนเดียร์เสร็จแล้ว!": ["Reindeer complete!", "ກວາງເຣນເດຍສຳເລັດແລ້ວ!"],
+    "ลากฉากเพื่อชื่นชมกวางเรนเดียร์": ["Drag the scene to admire your reindeer", "ລາກສາກເພື່ອຊົມກວາງເຣນເດຍ"],
+    "กวางเรนเดียร์พร้อมลากเลื่อนซานต้าแล้ว": ["Your reindeer is ready to pull Santa's sleigh", "ກວາງເຣນເດຍພ້ອມລາກລໍ້ເລື່ອນຊານຕາແລ້ວ"],
+    "หู": ["Ears", "ຫູ"],
+    "ตาและจมูกแดง": ["Eyes & red nose", "ຕາ ແລະ ດັງແດງ"],
+    "เขากวาง": ["Antlers", "ເຂົາກວາງ"],
+    "วางขาหน้าและขาหลัง": ["Place the front and back legs", "ວາງຂາໜ້າ ແລະ ຂາຫຼັງ"],
+    "ต่อขากวางก่อน": ["Start with the legs", "ຕໍ່ຂາກວາງກ່ອນ"],
+    "วางลำตัวสีน้ำตาล": ["Place the brown body", "ວາງລຳໂຕສີນ້ຳຕານ"],
+    "ต่อลำตัวกวาง": ["Build the reindeer's body", "ຕໍ່ລຳໂຕກວາງ"],
+    "วางหัวบนลำตัว": ["Put the head on the body", "ວາງຫົວເທິງລຳໂຕ"],
+    "ติดตากับจมูกแดง": ["Add the eyes and red nose", "ຕິດຕາ ກັບດັງແດງ"],
+    "แต่งหน้าให้กวาง": ["Give the reindeer a face", "ແຕ່ງໜ້າໃຫ້ກວາງ"],
+    "ติดหูสองข้าง": ["Add both ears", "ຕິດຫູສອງຂ້າງ"],
+    "เพิ่มหูสองข้าง": ["Add the two ears", "ເພີ່ມຫູສອງຂ້າງ"],
+    "ปักเขากวางสองข้าง": ["Add both antlers", "ປັກເຂົາກວາງສອງຂ້າງ"],
+    "ปักเขากวางให้สวย": ["Antlers on top", "ປັກເຂົາກວາງໃຫ້ງາມ"],
+    // Santa's chimney level
+    "ซานต้าบนปล่องไฟ": ["Santa's chimney", "ຊານຕາເທິງປ່ອງໄຟ"],
+    "ซานต้ามาถึงแล้ว!": ["Santa is here!", "ຊານຕາມາຮອດແລ້ວ!"],
+    "ลากฉากเพื่อชื่นชมซานต้า": ["Drag the scene to admire Santa", "ລາກສາກເພື່ອຊົມຊານຕາ"],
+    "ซานต้าพร้อมแจกของขวัญแล้ว": ["Santa is ready to hand out presents", "ຊານຕາພ້ອມແຈກຂອງຂວັນແລ້ວ"],
+    "ฐานหิมะ": ["Snowy base", "ຖານຫິມະ"],
+    "ปล่องไฟชั้นล่าง": ["Chimney (low)", "ປ່ອງໄຟຊັ້ນລຸ່ມ"],
+    "ปล่องไฟชั้นบน": ["Chimney (top)", "ປ່ອງໄຟຊັ້ນເທິງ"],
+    "ขอบปล่องไฟ": ["Ledge", "ຂອບປ່ອງໄຟ"],
+    "ตัวซานต้า": ["Santa's body", "ໂຕຊານຕາ"],
+    "เครายาว": ["Beard", "ໜວດຍາວ"],
+    "ตาและจมูก": ["Eyes & nose", "ຕາ ແລະ ດັງ"],
+    "พวงหรีด": ["Wreath", "ພວງຫຼີດ"],
+    "แขนขวาโบกมือ": ["Waving arm", "ແຂນຂວາໂບກມື"],
+    "วางแขนซ้ายเกาะขอบปล่องไฟ": ["Rest the left arm on the ledge", "ວາງແຂນຊ້າຍເກາະຂອບປ່ອງໄຟ"],
+    "เพิ่มแขนซ้าย": ["Add the left arm", "ເພີ່ມແຂນຊ້າຍ"],
+    "ยกแขนขวาโบกมือทักทาย": ["Raise the right arm to wave", "ຍົກແຂນຂວາໂບກມືທັກທາຍ"],
+    "ซานต้าโบกมือทักทาย": ["Santa waves hello", "ຊານຕາໂບກມືທັກທາຍ"],
+    "ถุงของขวัญ": ["Gift sack", "ຖົງຂອງຂວັນ"],
+    "วางฐานหิมะกับพรมแดง": ["Lay the snowy base and red carpet", "ວາງຖານຫິມະ ກັບພົມແດງ"],
+    "เริ่มจากฐานหิมะ": ["Start with the snowy base", "ເລີ່ມຈາກຖານຫິມະ"],
+    "ก่ออิฐชั้นล่างของปล่องไฟ": ["Lay the chimney's lower bricks", "ກໍ່ດິນຈີ່ຊັ້ນລຸ່ມຂອງປ່ອງໄຟ"],
+    "ก่อปล่องไฟอิฐ": ["Build the brick chimney", "ກໍ່ປ່ອງໄຟດິນຈີ່"],
+    "ก่ออิฐให้ปล่องไฟสูงขึ้น": ["Build the chimney higher", "ກໍ່ດິນຈີ່ໃຫ້ປ່ອງໄຟສູງຂຶ້ນ"],
+    "ก่ออิฐชั้นบน": ["Lay the upper bricks", "ກໍ່ດິນຈີ່ຊັ້ນເທິງ"],
+    "วางขอบบนปล่องไฟ": ["Put the ledge on top", "ວາງຂອບເທິງປ່ອງໄຟ"],
+    "ปิดขอบปล่องไฟ": ["Cap the chimney", "ປິດຂອບປ່ອງໄຟ"],
+    "ให้ซานต้าโผล่จากปล่องไฟ": ["Santa pops out of the chimney", "ໃຫ້ຊານຕາໂຜ່ອອກຈາກປ່ອງໄຟ"],
+    "ซานต้าโผล่ออกมาแล้ว": ["Santa is popping out", "ຊານຕາໂຜ່ອອກມາແລ້ວ"],
+    "วางหัวซานต้า": ["Place Santa's head", "ວາງຫົວຊານຕາ"],
+    "ตัวพร้อม วางหัว": ["Body ready, add the head", "ໂຕພ້ອມ ວາງຫົວ"],
+    "ติดเคราขาวฟู": ["Add the fluffy white beard", "ຕິດໜວດຂາວຟູ"],
+    "ติดเคราขาว": ["Add the white beard", "ຕິດໜວດຂາວ"],
+    "ติดตากับจมูกชมพู": ["Add the eyes and pink nose", "ຕິດຕາ ກັບດັງສີບົວ"],
+    "แต่งหน้าซานต้า": ["Give Santa a face", "ແຕ່ງໜ້າຊານຕາ"],
+    "สวมหมวกให้ซานต้า": ["Put Santa's hat on", "ໃສ່ໝວກໃຫ້ຊານຕາ"],
+    "แขวนพวงหรีดหน้าปล่องไฟ": ["Hang the wreath on the chimney", "ແຂວນພວງຫຼີດໜ້າປ່ອງໄຟ"],
+    "แขวนพวงหรีด": ["Hang the wreath", "ແຂວນພວງຫຼີດ"],
+    "วางถุงของขวัญข้างปล่องไฟ": ["Put the gift sack by the chimney", "ວາງຖົງຂອງຂວັນຂ້າງປ່ອງໄຟ"],
+    "เกือบเสร็จ วางถุงของขวัญ": ["Almost done, add the gift sack", "ເກືອບແລ້ວ ວາງຖົງຂອງຂວັນ"],
+    // Snow globe gift level
+    "ของขวัญ": ["Gifts", "ຂອງຂວັນ"],
+    "สุขสันต์วันคริสต์มาส!": ["Merry Christmas!", "ສຸກສັນວັນຄຣິສມາສ!"],
+    "ลากฉากเพื่อชื่นชมของขวัญ": ["Drag the scene to admire your gift", "ລາກສາກເພື່ອຊົມຂອງຂວັນ"],
+    "ลูกแก้วหิมะพร้อมมอบเป็นของขวัญแล้ว": ["Your snow globe is ready to give", "ລູກແກ້ວຫິມະພ້ອມມອບເປັນຂອງຂວັນແລ້ວ"],
+    "ฐานสีแดง": ["Red base", "ຖານສີແດງ"],
+    "ขอบทอง": ["Gold trims", "ຂອບຄຳ"],
+    "โบว์และใบฮอลลี่": ["Bow & holly", "ໂບ ແລະ ໃບຮອລລີ້"],
+    "พื้นหิมะ": ["Snow floor", "ພື້ນຫິມະ"],
+    "บ้านขนมปังขิง": ["Gingerbread house", "ເຮືອນເຂົ້າໜົມຂີງ"],
+    "ซานต้า": ["Santa", "ຊານຕາ"],
+    "กองของขวัญ": ["Gift pile", "ກອງຂອງຂວັນ"],
+    "ลูกแก้ว": ["Glass globe", "ລູກແກ້ວ"],
+    "เกล็ดหิมะ": ["Snowflakes", "ເກັດຫິມະ"],
+    "ไฟและกุญแจไขลาน": ["Lights & key", "ໄຟ ແລະ ກະແຈໄຂລານ"],
+    "ตั้งฐานสีแดงกลางเวที": ["Stand the red base in the middle", "ຕັ້ງຖານສີແດງກາງເວທີ"],
+    "เริ่มจากฐานลูกแก้ว": ["Start with the globe's base", "ເລີ່ມຈາກຖານລູກແກ້ວ"],
+    "ใส่ขอบทองและขาทอง": ["Add the gold rims and feet", "ໃສ່ຂອບຄຳ ແລະ ຂາຄຳ"],
+    "แต่งขอบสีทอง": ["Gold trim", "ແຕ່ງຂອບສີຄຳ"],
+    "ติดโบว์แดงด้านหน้า": ["Tie the red bow on the front", "ຕິດໂບແດງດ້ານໜ້າ"],
+    "ผูกโบว์ให้สวย": ["Tie a pretty bow", "ຜູກໂບໃຫ້ງາມ"],
+    "โรยพื้นหิมะบนฐาน": ["Spread snow on the base", "ໂຮຍພື້ນຫິມະເທິງຖານ"],
+    "ปูพื้นหิมะในลูกแก้ว": ["Snow inside the globe", "ປູພື້ນຫິມະໃນລູກແກ້ວ"],
+    "ตั้งต้นคริสต์มาสด้านซ้าย": ["Stand the tree on the left", "ຕັ້ງຕົ້ນຄຣິສມາສດ້ານຊ້າຍ"],
+    "ตั้งต้นคริสต์มาสน้อย": ["A little Christmas tree", "ຕັ້ງຕົ້ນຄຣິສມາສນ້ອຍ"],
+    "วางบ้านหลังเล็กด้านหลัง": ["Put the little house at the back", "ວາງເຮືອນຫຼັງນ້ອຍດ້ານຫຼັງ"],
+    "สร้างบ้านหลังน้อย": ["Build a little house", "ສ້າງເຮືອນຫຼັງນ້ອຍ"],
+    "วางซานต้าตรงกลาง": ["Put Santa in the middle", "ວາງຊານຕາກາງ"],
+    "ซานต้ามาแล้ว": ["Santa is here", "ຊານຕາມາແລ້ວ"],
+    "วางสโนว์แมนตัวจิ๋ว": ["Add the tiny snowman", "ວາງຕຸ໊ກກະຕາຫິມະນ້ອຍ"],
+    "เพิ่มสโนว์แมน": ["Add a snowman", "ເພີ່ມຕຸ໊ກກະຕາຫິມະ"],
+    "วางกล่องของขวัญจิ๋ว": ["Add the tiny presents", "ວາງກ່ອງຂອງຂວັນນ້ອຍ"],
+    "เพิ่มของขวัญ": ["Add presents", "ເພີ່ມຂອງຂວັນ"],
+    "ครอบลูกแก้วใส": ["Put the clear glass globe on", "ຄອບລູກແກ້ວໃສ"],
+    "ครอบลูกแก้ว": ["Cover with glass", "ຄອບລູກແກ້ວ"],
+    "เติมเกล็ดหิมะในลูกแก้ว": ["Fill the globe with snowflakes", "ເຕີມເກັດຫິມະໃນລູກແກ້ວ"],
+    "ใส่เกล็ดหิมะ": ["Add snowflakes", "ໃສ່ເກັດຫິມະ"],
+    "เปิดไฟและติดกุญแจไขลาน": ["Turn on the lights and add the key", "ເປີດໄຟ ແລະ ຕິດກະແຈໄຂລານ"],
+    "เกือบเสร็จ เปิดไฟประดับ": ["Almost done, lights on", "ເກືອບແລ້ວ ເປີດໄຟປະດັບ"]
   };
   const R = [
     [/^(?:ดอก)?(.+)บานแล้ว!$/, ["$1 in bloom!", "$1ບານແລ້ວ!"]],
@@ -221,13 +390,13 @@
   ];
   const THAI = /[\u0E00-\u0E7F]/;
   const IDX = { en: 0, lo: 1 };
-  const NAMES = { th: "TH", en: "EN", lo: "ລາວ" };
-  const ORDER = ["th", "en", "lo"];
+  const NAMES = { en: "EN", lo: "ລາວ" };
+  const ORDER = ["lo", "en"]; // a saved "th" from older versions falls back to Lao
   let lang = "lo"; // default for new players; a saved choice (bb-lang) wins
   try { const v = localStorage.getItem("bb-lang"); if (ORDER.includes(v)) lang = v; } catch (e) { /* storage unavailable */ }
 
   function T(s) {
-    if (lang === "th" || !THAI.test(s)) return s;
+    if (!THAI.test(s)) return s;
     const k = IDX[lang];
     const t = s.trim();
     const d = D[t];
@@ -272,23 +441,25 @@
   });
 
   const css = document.createElement("style");
-  css.textContent = '#langBtn{font:700 12px/1 system-ui,sans-serif;min-width:44px;padding:0 8px}' +
-    'html[lang="lo"] *{font-family:"Noto Sans Lao","Phetsarath OT","Lao UI","Leelawadee UI",sans-serif !important}' +
+  css.textContent = '' +
+    'html[lang="lo"] *{font-family:"Fredoka","Noto Sans Lao Looped","Noto Sans Lao","Phetsarath OT","Lao UI",sans-serif !important}' +
     // The game name is Latin text: keep its rounded display font in Lao mode too.
+    // Lao script has no capitals: drop the wide tracking meant for English labels.
+    'html[lang="lo"] *:not(.level-badge__label):not(.piece__en):not(.modal__kicker):not(.level-card__en){letter-spacing:normal !important}' +
     // Handwritten signature keeps its script font in Lao mode.
     'html[lang="lo"] .photo-watermark{font-family:"Snell Roundhand","Apple Chancery","Segoe Script","Brush Script MT","Dancing Script",cursive !important}' +
-    'html[lang="lo"] .intro__title,html[lang="lo"] .intro__title *,html[lang="lo"] .intro__by,html[lang="lo"] .brand__copy strong{font-family:"Fredoka","Avenir Next Rounded",sans-serif !important}' +
+    'html[lang="lo"] .intro__title,html[lang="lo"] .intro__title *,html[lang="lo"] .brand__copy strong{font-family:"Fredoka","Avenir Next Rounded",sans-serif !important}' +
     // "Now playing" badge on the level card is CSS text, so translate it here too.
     'html[lang="en"] .level-card.is-active::after{content:"Playing"}' +
     'html[lang="lo"] .level-card.is-active::after{content:"ກຳລັງຫຼິ້ນ"}';
   document.head.appendChild(css);
 
   const btn = document.createElement("button");
-  btn.id = "langBtn"; btn.type = "button"; btn.className = "icon-btn";
-  btn.setAttribute("aria-label", "Language: ไทย / English / ລາວ");
-  btn.title = "ไทย / English / ລາວ";
-  const sound = document.getElementById("soundBtn");
-  if (sound && sound.parentNode) sound.parentNode.insertBefore(btn, sound);
+  btn.id = "langBtn"; btn.type = "button"; btn.className = "settings__lang";
+  btn.setAttribute("aria-label", "Language: ລາວ / English");
+  btn.title = "ລາວ / English";
+  const slot = document.getElementById("langSlot"); // row in the settings menu
+  if (slot) slot.appendChild(btn);
   else document.body.appendChild(btn);
 
   function apply() {

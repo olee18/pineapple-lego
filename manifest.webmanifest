@@ -1,8 +1,8 @@
 {
   "name": "Pineapple Lego — 3D Flower Builder",
   "short_name": "Pineapple Lego",
-  "description": "เกมต่อดอกทานตะวัน 3D สไตล์เลโก้",
-  "lang": "th",
+  "description": "ເກມຕໍ່ດອກໄມ້ 3D ແບບເລໂກ້",
+  "lang": "lo",
   "start_url": "./index.html",
   "scope": "./",
   "id": "./index.html",
