@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&family=Noto+Sans+Lao+Looped:wght@400..700&display=swap">
   <!-- The page stays hidden until i18n.js has translated it (no flash of Thai text). If that script never runs, show it anyway after 2.5 s. -->
   <script>setTimeout(function () { document.documentElement.classList.add("i18n-ready"); }, 2500);</script>
-  <link rel="stylesheet" href="styles.css?v=72">
+  <link rel="stylesheet" href="styles.css?v=75">
 </head>
 <body>
   <div class="app" id="app">
@@ -228,8 +228,8 @@
       <div class="done-bar">
         <span class="done-bar__title">ต่อครบแล้ว!</span>
         <div class="done-bar__actions">
-          <button class="btn btn--primary" id="doneNext" type="button">ด่านถัดไป</button>
           <button class="btn btn--secondary" id="donePhoto" type="button">ถ่ายรูป</button>
+          <button class="btn btn--primary" id="doneNext" type="button">ด่านถัดไป</button>
         </div>
       </div>
 
@@ -409,14 +409,9 @@
       </div>
       <p class="win-best" id="winBest" role="status" aria-live="polite"></p>
       <div class="win-actions">
-        <button class="btn btn--primary win-next" id="nextLevel" type="button" hidden>ด่านถัดไป</button>
-        <button class="btn btn--primary" id="playAgain" type="button">สร้างอีกครั้ง</button>
         <button class="btn btn--secondary" id="keepLooking" type="button">โหมดถ่ายรูป</button>
+        <button class="btn btn--primary" id="nextLevel" type="button" hidden>ด่านถัดไป</button>
       </div>
-      <button class="save-link" id="saveBtn" type="button">
-        <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3.5 6.5h11v8h-11v-8Z" stroke="currentColor" stroke-width="1.2"/><path d="M6 6.5 7.2 4h3.6L12 6.5" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><circle cx="9" cy="10.5" r="2.2" stroke="currentColor" stroke-width="1.2"/></svg>
-        บันทึกรูปดอกไม้
-      </button>
     </div>
   </div>
 
@@ -426,7 +421,7 @@
 
   <!-- ?v=… makes browsers fetch the new file after each update (bump it together with CACHE in sw.js). -->
   <script src="vendor/three.min.js"></script>
-  <script src="game.js?v=72"></script>
-  <script src="i18n.js?v=72"></script>
+  <script src="game.js?v=75"></script>
+  <script src="i18n.js?v=75"></script>
 </body>
 </html>

@@ -127,6 +127,7 @@
       build: buildSnowmanModel,
       goalSvg: goalSnowmanSvg(),
       bare: true, // stands on snow, no soil bed
+      lift: 0.4 /* red pedestal height */,
       noBee: true,
       winTh: "สโนว์แมนเสร็จแล้ว!",
       doneSub: "ลากฉากเพื่อชื่นชมสโนว์แมน",
@@ -1680,9 +1681,10 @@
       const next = LEVELS[activeLevelIndex + 1];
       nextLevel.textContent = `ด่านถัดไป: ${next.th}`;
     }
-    const playAgain = $("#playAgain");
-    playAgain.classList.toggle("btn--primary", nextLevel.hidden);
-    playAgain.classList.toggle("btn--secondary", !nextLevel.hidden);
+    // On the last level there is no "next level", so photo mode becomes the main button.
+    const keepLooking = $("#keepLooking");
+    keepLooking.classList.toggle("btn--primary", nextLevel.hidden);
+    keepLooking.classList.toggle("btn--secondary", !nextLevel.hidden);
     document.title = `Pineapple Lego — ${level.th}`;
   }
 
@@ -3147,6 +3149,7 @@
   function buildSnowmanModel() {
     petalRoots = [];
     const base = snowmanBase();
+    base.add(redPedestal());
     const body = snowmanBody();
     const head = snowmanHead();
     const armL = snowmanArm(-1);
@@ -4838,7 +4841,7 @@
     app.inert = true;
     const focusTarget = name === "levels"
       ? modal.querySelector(".level-card.is-active") || modal.querySelector(".modal__close")
-      : modal.querySelector(".modal__close, .btn, .save-link");
+      : modal.querySelector(".modal__close, .btn");
     window.setTimeout(() => focusTarget?.focus({ preventScroll: true }), 80);
   }
 
@@ -5170,16 +5173,12 @@
     ensureAudio();
     resetGame();
   });
-  $("#playAgain").addEventListener("click", () => {
-    resetGame();
-  });
   $("#keepLooking").addEventListener("click", enterPhotoMode);
   $("#doneNext").addEventListener("click", () => {
     if (activeLevelIndex < LEVELS.length - 1) activateLevel(activeLevelIndex + 1);
     else openModal("levels");
   });
   $("#donePhoto").addEventListener("click", enterPhotoMode);
-  $("#saveBtn").addEventListener("click", saveBloom);
   levelMenuBtn.addEventListener("click", () => openModal("levels"));
 
   // Toolbar labels: hover and keyboard focus are handled in CSS; this shows the

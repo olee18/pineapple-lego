@@ -1536,33 +1536,19 @@ html.is-xmas .brand__hat { display: block; }
 }
 
 .win-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  display: flex;
+  gap: 10px;
 }
-.win-actions .btn { min-width: 0; width: 100%; }
-.win-next { grid-column: 1 / -1; }
+.win-actions .btn {
+  flex: 1 1 0;
+  min-width: 0;
+  height: auto;
+  min-height: 46px;
+  padding: 8px 12px;
+  line-height: 1.25;
+  text-align: center;
+}
 .btn[hidden] { display: none; }
-
-.save-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  margin-top: 13px;
-  padding: 4px 7px;
-  border: 0;
-  color: var(--ink-faint);
-  background: transparent;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color 0.2s ease;
-}
-.save-link:hover { color: var(--ink); }
-.save-link svg { width: 13px; height: 13px; }
 
 .confetti {
   position: absolute;
@@ -1985,7 +1971,7 @@ html.is-xmas .brand__hat { display: block; }
   .win-badge { width: 74px; height: 74px; margin-top: 7px; }
   .win-badge svg { width: 56px; height: 56px; }
   .win-star { width: 33px; }
-  .win-actions .btn { min-width: 0; height: 41px; }
+  .win-actions .btn { min-height: 44px; }
 }
 
 @media (max-width: 480px) {
@@ -2003,10 +1989,7 @@ html.is-xmas .brand__hat { display: block; }
   .brick-icon--stem { transform: scale(0.82); }
   .brick-icon--core { transform: scale(0.84); }
   .brick-icon--petals { transform: scale(0.88); }
-  .win-actions { grid-template-columns: 1fr; }
-  .win-actions .btn { width: 100%; }
   .win-stats strong { font-size: 14px; }
-  .save-link { margin-top: 11px; }
 }
 
 @media (max-height: 720px) and (min-width: 761px) {
