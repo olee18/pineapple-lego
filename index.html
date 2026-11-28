@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&family=Noto+Sans+Lao+Looped:wght@400..700&display=swap">
   <!-- The page stays hidden until i18n.js has translated it (no flash of Thai text). If that script never runs, show it anyway after 2.5 s. -->
   <script>setTimeout(function () { document.documentElement.classList.add("i18n-ready"); }, 2500);</script>
-  <link rel="stylesheet" href="styles.css?v=75">
+  <link rel="stylesheet" href="styles.css?v=76">
 </head>
 <body>
   <div class="app" id="app">
@@ -45,16 +45,6 @@
           <strong>Pineapple Lego</strong>
         </span>
       </a>
-
-      <button class="level-badge" id="levelBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="เลือกด่าน">
-        <svg class="level-badge__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="5.2" height="5.2" rx="1.3" stroke="currentColor" stroke-width="1.6"/><rect x="11.3" y="3.5" width="5.2" height="5.2" rx="1.3" stroke="currentColor" stroke-width="1.6"/><rect x="3.5" y="11.3" width="5.2" height="5.2" rx="1.3" stroke="currentColor" stroke-width="1.6"/><rect x="11.3" y="11.3" width="5.2" height="5.2" rx="1.3" fill="currentColor"/></svg>
-        <span class="level-badge__label" id="levelLabel">LEVEL 01</span>
-        <span class="level-badge__name" id="levelName">ทานตะวัน</span>
-        <span class="level-badge__dot" id="levelDot" aria-hidden="true"></span>
-        <svg class="level-badge__chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-          <path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
 
       <div class="toolbar">
         <button class="icon-btn" id="levelMenuBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="เลือกด่าน" data-tip="Choose level" data-tip-lo="ເລືອກດ່ານ">
@@ -421,7 +411,7 @@
 
   <!-- ?v=… makes browsers fetch the new file after each update (bump it together with CACHE in sw.js). -->
   <script src="vendor/three.min.js"></script>
-  <script src="game.js?v=75"></script>
-  <script src="i18n.js?v=75"></script>
+  <script src="game.js?v=76"></script>
+  <script src="i18n.js?v=76"></script>
 </body>
 </html>

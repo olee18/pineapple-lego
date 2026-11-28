@@ -326,7 +326,6 @@
     [/^หยิบ(.+)จากถาด$/, ["Pick $1 from the tray", "ເອົາ $1 ຈາກຖາດ"]],
     [/^Pineapple Lego — (.+)$/, ["Pineapple Lego — $1", "Pineapple Lego — $1"]], // browser tab title, e.g. the level name
     [/^เลือก(.+)จากถาด แล้วแตะจุดเรืองแสง$/, ["Pick $1 from the tray, then tap the glowing spot", "ເລືອກ $1 ຈາກຖາດ ແລ້ວແຕະຈຸດເຮືອງແສງ"]],
-    [/^เลือกด่าน — ปัจจุบัน (.+)$/, ["Choose level — current: $1", "ເລືອກດ່ານ — ປັດຈຸບັນ $1"]],
     [/^ด่าน (\d+): (.+)$/, ["Level $1: $2", "ດ່ານ $1: $2"]],
     [/^ด่านถัดไป: (.+)$/, ["Next level: $1", "ດ່ານຕໍ່ໄປ: $1"]],
     [/^สถิติที่ดีที่สุด (.+)$/, ["Best record $1", "ສະຖິຕິທີ່ດີທີ່ສຸດ $1"]],
