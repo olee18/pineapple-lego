@@ -119,6 +119,7 @@
     },
     {
       id: "snowman",
+      isNew: true, // shows the NEW badge on the level card
       th: "สโนว์แมน",
       en: "Snowman",
       difficulty: "ง่าย",
@@ -143,6 +144,7 @@
     },
     {
       id: "xmasTree",
+      isNew: true, // shows the NEW badge on the level card
       th: "ต้นคริสต์มาส",
       en: "Christmas tree",
       difficulty: "ท้าทาย",
@@ -168,6 +170,7 @@
     },
     {
       id: "reindeer",
+      isNew: true, // shows the NEW badge on the level card
       th: "กวางเรนเดียร์",
       en: "Reindeer",
       difficulty: "ท้าทาย",
@@ -193,6 +196,7 @@
     },
     {
       id: "santa",
+      isNew: true, // shows the NEW badge on the level card
       th: "ซานต้าบนปล่องไฟ",
       en: "Santa's chimney",
       difficulty: "มาสเตอร์",
@@ -223,12 +227,14 @@
     },
     {
       id: "globe",
+      isNew: true, // shows the NEW badge on the level card
       th: "ของขวัญ",
       en: "Gifts",
       difficulty: "มาสเตอร์",
       accent: "#C8202B",
       build: buildGlobeModel,
       goalSvg: goalGlobeSvg(),
+      scale: 1.3 /* the snow globe looked small next to the other levels, especially on phones */,
       bare: true,
       noBee: true,
       winTh: "สุขสันต์วันคริสต์มาส!",
@@ -251,10 +257,19 @@
     },
   ];
 
-  // Levels standing on a red pedestal are raised by `lift`; move their glowing spots up too.
+  // A level can be enlarged with `scale` (about the centre of the base) and raised with `lift`
+  // (red pedestal). Move its glowing spots, marker rings and tap areas to match.
   LEVELS.forEach((level) => {
-    if (!level.lift) return;
-    level.steps.forEach((step) => { step.target = [step.target[0], step.target[1] + level.lift, step.target[2]]; });
+    const k = level.scale || 1;
+    const lift = level.lift || 0;
+    if (k === 1 && !lift) return;
+    level.steps.forEach((step) => {
+      step.target = [step.target[0] * k, step.target[1] * k + lift, step.target[2] * k];
+      if (k !== 1) {
+        step.markerScale *= k;
+        step.hitRadius *= k;
+      }
+    });
   });
 
   let activeLevelIndex = 0;
@@ -1537,6 +1552,14 @@
       leafSway = [];
 
       const model = level.build();
+      if (level.scale) {
+        // Uniform scale about the origin: positions and sizes both grow; the pieces keep their own base scale.
+        model.groups.forEach((group) => {
+          group.position.multiplyScalar(level.scale);
+          group.scale.multiplyScalar(level.scale);
+          group.userData.baseScale = (group.userData.baseScale || 1) * level.scale;
+        });
+      }
       if (level.lift) model.groups.forEach((group) => { group.position.y += level.lift; });
       const separate = new Set(model.petalRoots || []);
       model.groups.forEach((group) => mergePieceMeshes(group, separate));
@@ -1629,7 +1652,7 @@
     ghostGroups.forEach((ghost) => { ghost.visible = false; });
     markers.forEach((marker) => { marker.visible = false; });
     petalRoots.forEach((petal) => petal.scale.set(1, 1, 1));
-    stemGroup.scale.set(1, 1, 1);
+    stemGroup.scale.setScalar(stemGroup.userData.baseScale || 1);
     if (leafLeftGroup) leafLeftGroup.rotation.z = leafSway[0]?.baseZ ?? 0.4;
     if (leafRightGroup) leafRightGroup.rotation.z = leafSway[1]?.baseZ ?? 0.42;
     if (centerGroup) centerGroup.rotation.z = 0;
@@ -1678,7 +1701,7 @@
       return `<button class="level-card${isActive ? " is-active" : ""}${isDone ? " is-done" : ""}" type="button" data-level="${index}" ${isActive ? 'aria-current="true"' : ""}>
         <span class="level-card__art" aria-hidden="true">${fullGoalSvg(level)}</span>
         <span class="level-card__body">
-          <span class="level-card__top"><span class="level-card__num">LEVEL ${String(index + 1).padStart(2, "0")}</span><span class="level-card__diff">${level.difficulty}</span></span>
+          <span class="level-card__top"><span class="level-card__num">LEVEL ${String(index + 1).padStart(2, "0")}</span><span class="level-card__diff">${level.difficulty}</span>${level.isNew ? '<span class="level-card__new">NEW</span>' : ""}</span>
           <strong class="level-card__name">${level.th}</strong>
           <span class="level-card__en">${level.en}</span>
           <span class="level-card__best"><span>${isDone ? "★" : "☆"}</span> ${best}</span>
@@ -4507,10 +4530,11 @@
     group.visible = true;
 
     if (index === 0) {
-      group.scale.set(1, 0.001, 1);
+      const base = group.userData.baseScale || 1;
+      group.scale.set(base, 0.001 * base, base);
       tween(reducedMotion ? 0.01 : 0.72, 0, (p) => {
         const eased = easeOutBack(p);
-        group.scale.y = Math.max(0.001, eased);
+        group.scale.y = Math.max(0.001, eased) * base;
       });
     } else if (index === STEPS.length - 1) {
       petalRoots.forEach((petal) => petal.scale.set(0.001, 0.001, 0.001));
@@ -4681,7 +4705,7 @@
       blueprintMaterial.opacity = 0.24;
     }
     petalRoots.forEach((petal) => petal.scale.set(1, 1, 1));
-    stemGroup.scale.set(1, 1, 1);
+    stemGroup.scale.setScalar(stemGroup.userData.baseScale || 1);
     leafSway.forEach(({ group, baseZ }) => { group.rotation.z = baseZ; });
     centerGroup.rotation.z = 0;
     petalGroup.rotation.z = 0;

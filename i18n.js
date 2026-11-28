@@ -341,8 +341,14 @@
   const IDX = { en: 0, lo: 1 };
   const NAMES = { en: "EN", lo: "ລາວ" };
   const ORDER = ["lo", "en"]; // a saved "th" from older versions falls back to Lao
-  let lang = "lo"; // default for new players; a saved choice (bb-lang) wins
-  try { const v = localStorage.getItem("bb-lang"); if (ORDER.includes(v)) lang = v; } catch (e) { /* storage unavailable */ }
+  // Every launch starts in Lao. A language picked during this visit survives page reloads
+  // (sessionStorage), but is forgotten when the tab/app is closed.
+  let lang = "lo";
+  try {
+    localStorage.removeItem("bb-lang"); // older versions remembered the choice forever
+    const v = sessionStorage.getItem("bb-lang");
+    if (ORDER.includes(v)) lang = v;
+  } catch (e) { /* storage unavailable */ }
 
   function T(s) {
     if (!THAI.test(s)) return s;
@@ -411,16 +417,23 @@
   if (slot) slot.appendChild(btn);
   else document.body.appendChild(btn);
 
+  const langChoices = document.querySelectorAll("[data-lang]"); // the ລາວ | EN pill on the title screen
+
   function apply() {
     document.documentElement.lang = lang;
     btn.textContent = NAMES[lang];
+    langChoices.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
     walk(document.documentElement);
+    document.documentElement.classList.add("i18n-ready"); // lets the page show (see styles.css)
   }
-  btn.addEventListener("click", () => {
-    lang = ORDER[(ORDER.indexOf(lang) + 1) % ORDER.length];
-    try { localStorage.setItem("bb-lang", lang); } catch (e) { /* ignore */ }
+  function setLang(next) {
+    if (!ORDER.includes(next) || next === lang) return;
+    lang = next;
+    try { sessionStorage.setItem("bb-lang", lang); } catch (e) { /* ignore */ }
     apply();
-  });
+  }
+  btn.addEventListener("click", () => setLang(ORDER[(ORDER.indexOf(lang) + 1) % ORDER.length]));
+  langChoices.forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
   apply();
   mo.observe(document.documentElement, { subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ATTRS });
 })();
