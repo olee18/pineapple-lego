@@ -65,7 +65,6 @@
       en: "Sunflower",
       difficulty: "เริ่มต้น",
       accent: "#FFC72C",
-      cardBg: "#FFF3CB",
       build: buildSunflowerModel,
       goalSvg: goalSunflowerPremiumSvg(),
       steps: [
@@ -85,7 +84,6 @@
       en: "Rose",
       difficulty: "ท้าทาย",
       accent: "#E45454",
-      cardBg: "#FFE5E2",
       build: buildRoseModel,
       goalSvg: goalRosePremiumSvg(),
       steps: [
@@ -106,7 +104,6 @@
       en: "Bouquet",
       difficulty: "มาสเตอร์",
       accent: "#B97CD9",
-      cardBg: "#F3E6FA",
       build: buildBouquetModel,
       goalSvg: goalBouquetSvg(),
       steps: [
@@ -126,7 +123,6 @@
       en: "Snowman",
       difficulty: "ง่าย",
       accent: "#D62F38",
-      cardBg: "#E8F1F8",
       build: buildSnowmanModel,
       goalSvg: goalSnowmanSvg(),
       bare: true, // stands on snow, no soil bed
@@ -151,7 +147,6 @@
       en: "Christmas tree",
       difficulty: "ท้าทาย",
       accent: "#2E8B57",
-      cardBg: "#E6F3EA",
       build: buildXmasTreeModel,
       goalSvg: goalXmasTreeSvg(),
       bare: true,
@@ -177,7 +172,6 @@
       en: "Reindeer",
       difficulty: "ท้าทาย",
       accent: "#9A6234",
-      cardBg: "#F3E7DA",
       build: buildReindeerModel,
       goalSvg: goalReindeerSvg(),
       bare: true,
@@ -203,7 +197,6 @@
       en: "Santa's chimney",
       difficulty: "มาสเตอร์",
       accent: "#D42A35",
-      cardBg: "#FBE3E3",
       build: buildSantaModel,
       goalSvg: goalSantaSvg(),
       bare: true,
@@ -234,7 +227,6 @@
       en: "Gifts",
       difficulty: "มาสเตอร์",
       accent: "#C8202B",
-      cardBg: "#FBE3E3",
       build: buildGlobeModel,
       goalSvg: goalGlobeSvg(),
       bare: true,
@@ -1158,8 +1150,10 @@
         ambientPollen.material.opacity = THREE.MathUtils.lerp(from.pollenOpacity, to.pollenOpacity, p);
       }
     };
-    ambientPollen && (ambientPollen.material.blending = isNight && !isXmas ? THREE.AdditiveBlending : THREE.NormalBlending);
-    ambientPollen && (ambientPollen.material.needsUpdate = true);
+    if (ambientPollen) {
+      ambientPollen.material.blending = isNight && !isXmas ? THREE.AdditiveBlending : THREE.NormalBlending;
+      ambientPollen.material.needsUpdate = true;
+    }
     fairyLights.visible = isNight || isXmas;
     // Red / green / gold bulbs for Christmas, warm white otherwise.
     let bulb = 0;
