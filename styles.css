@@ -2782,3 +2782,14 @@ html:not(.i18n-ready) .app { visibility: hidden; }
   line-height: 1.3;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
 }
+
+/* Credit under the game name on the title screen. */
+.intro__by {
+  margin-top: 6px;
+  color: var(--ink-soft);
+  font-family: "Fredoka", var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.app.is-night .intro__by { color: #d6d0ec; }

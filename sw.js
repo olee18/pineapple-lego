@@ -1,5 +1,5 @@
 /* Pineapple — offline app shell */
-const CACHE = "brickbloom-v71";
+const CACHE = "brickbloom-v72";
 const ASSETS = [
   "./",
   "./index.html",
@@ -50,7 +50,7 @@ self.addEventListener("fetch", (event) => {
 
   // Network first, so players always get the newest files when online (no stale
   // game after an update). If the network fails, fall back to the saved copy.
-  // ignoreSearch matters: the page asks for "game.js?v=71" but the install step
+  // ignoreSearch matters: the page asks for "game.js?v=72" but the install step
   // saved plain "game.js", so without it the offline lookup would miss.
   event.respondWith(
     fetch(event.request)
