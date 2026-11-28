@@ -64,6 +64,7 @@
       th: "ทานตะวัน",
       en: "Sunflower",
       difficulty: "เริ่มต้น",
+      accent: "#FFC72C",
       build: buildSunflowerModel,
       goalSvg: goalSunflowerPremiumSvg(),
       steps: [
@@ -82,6 +83,7 @@
       th: "กุหลาบ",
       en: "Rose",
       difficulty: "ท้าทาย",
+      accent: "#E45454",
       build: buildRoseModel,
       goalSvg: goalRosePremiumSvg(),
       steps: [
@@ -101,6 +103,7 @@
       bare: true, // the vase stands on the bare wooden base
       en: "Bouquet",
       difficulty: "มาสเตอร์",
+      accent: "#B97CD9",
       build: buildBouquetModel,
       goalSvg: goalBouquetSvg(),
       steps: [
@@ -120,6 +123,7 @@
       th: "สโนว์แมน",
       en: "Snowman",
       difficulty: "ง่าย",
+      accent: "#D62F38",
       build: buildSnowmanModel,
       goalSvg: goalSnowmanSvg(),
       bare: true, // stands on snow, no soil bed
@@ -145,6 +149,7 @@
       th: "ต้นคริสต์มาส",
       en: "Christmas tree",
       difficulty: "ท้าทาย",
+      accent: "#2E8B57",
       build: buildXmasTreeModel,
       goalSvg: goalXmasTreeSvg(),
       bare: true,
@@ -170,6 +175,7 @@
       th: "กวางเรนเดียร์",
       en: "Reindeer",
       difficulty: "ท้าทาย",
+      accent: "#9A6234",
       build: buildReindeerModel,
       goalSvg: goalReindeerSvg(),
       bare: true,
@@ -195,6 +201,7 @@
       th: "ซานต้าบนปล่องไฟ",
       en: "Santa's chimney",
       difficulty: "มาสเตอร์",
+      accent: "#D42A35",
       build: buildSantaModel,
       goalSvg: goalSantaSvg(),
       bare: true,
@@ -225,6 +232,7 @@
       th: "ของขวัญ",
       en: "Gifts",
       difficulty: "มาสเตอร์",
+      accent: "#C8202B",
       build: buildGlobeModel,
       goalSvg: goalGlobeSvg(),
       scale: 1.3 /* the snow globe looked small next to the other levels, especially on phones */,
@@ -315,8 +323,10 @@
   const mobileStep = $("#mobileStep");
   const mobileFill = $("#mobileFill");
   const mobileTimer = $("#mobileTimer");
-  const mobileLevelBtn = $("#mobileLevelBtn");
   const mobileLevelName = $("#mobileLevelName");
+  const levelLabel = $("#levelLabel");
+  const levelName = $("#levelName");
+  const levelDot = $("#levelDot");
   const instruction = $("#instruction");
   const instructionBadge = $("#instructionBadge");
   const instructionTitle = $("#instructionTitle");
@@ -1655,7 +1665,11 @@
   function updateLevelUI() {
     const level = LEVELS[activeLevelIndex];
     if (!level) return;
+    levelLabel.textContent = `LEVEL ${String(activeLevelIndex + 1).padStart(2, "0")}`;
+    levelName.textContent = level.th;
     mobileLevelName.textContent = level.th;
+    levelDot.style.background = level.accent;
+    levelDot.style.boxShadow = `0 0 0 3px ${level.accent}33`;
     goalArt.innerHTML = level.goalSvg;
     winTitle.textContent = level.winTh || `${level.th}บานแล้ว!`;
     winBadge.innerHTML = fullGoalSvg(level);
@@ -1774,7 +1788,7 @@
     if (!boot && !silent) {
       showToast(`ด่าน ${index + 1}: ${LEVELS[index].th}`);
       window.setTimeout(() => {
-        const target = window.innerWidth < 760 ? mobileLevelBtn : levelMenuBtn;
+        const target = levelMenuBtn;
         target?.focus({ preventScroll: true });
       }, 120);
     }
@@ -4858,7 +4872,7 @@
       const target = name === "help"
         ? $("#helpBtn")
         : name === "levels"
-          ? (window.innerWidth < 760 ? mobileLevelBtn : levelMenuBtn)
+          ? levelMenuBtn
           : $("#resetBtn");
       target?.focus({ preventScroll: true });
     }
@@ -5142,7 +5156,6 @@
   const photoWatermark = document.getElementById("photoWatermark");
   if (photoWatermark) photoWatermark.textContent = WATERMARK_TEXT;
   app.classList.toggle("is-night", isNight); // set before WebGL is ready, so the sky is right immediately
-  mobileLevelBtn.addEventListener("click", () => openModal("levels"));
   nextLevel.addEventListener("click", () => {
     activateLevel(activeLevelIndex + 1);
   });

@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&family=Noto+Sans+Lao+Looped:wght@400..700&display=swap">
   <!-- The page stays hidden until i18n.js has translated it (no flash of Thai text). If that script never runs, show it anyway after 2.5 s. -->
   <script>setTimeout(function () { document.documentElement.classList.add("i18n-ready"); }, 2500);</script>
-  <link rel="stylesheet" href="styles.css?v=76">
+  <link rel="stylesheet" href="styles.css?v=77">
 </head>
 <body>
   <div class="app" id="app">
@@ -45,6 +45,12 @@
           <strong>Pineapple Lego</strong>
         </span>
       </a>
+
+      <div class="level-badge" id="levelBadge">
+        <span class="level-badge__label" id="levelLabel">LEVEL 01</span>
+        <span class="level-badge__name" id="levelName">ทานตะวัน</span>
+        <span class="level-badge__dot" id="levelDot" aria-hidden="true"></span>
+      </div>
 
       <div class="toolbar">
         <button class="icon-btn" id="levelMenuBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="เลือกด่าน" data-tip="Choose level" data-tip-lo="ເລືອກດ່ານ">
@@ -187,11 +193,8 @@
         </p>
       </aside>
 
-      <div class="mobile-progress" role="group" aria-label="ความคืบหน้าและเลือกด่าน">
-        <button class="mobile-level-btn" id="mobileLevelBtn" type="button" aria-haspopup="dialog">
-          <span id="mobileLevelName">ทานตะวัน</span>
-          <svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="m2.5 4 2.5 2.5L7.5 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+      <div class="mobile-progress" role="group" aria-label="ความคืบหน้า">
+        <span class="mobile-level-name" id="mobileLevelName">ทานตะวัน</span>
         <span id="mobileStep">ขั้น 1 / 5</span>
         <span class="mobile-track"><i id="mobileFill"></i></span>
         <span class="mobile-timer" id="mobileTimer">00:00</span>
@@ -411,7 +414,7 @@
 
   <!-- ?v=… makes browsers fetch the new file after each update (bump it together with CACHE in sw.js). -->
   <script src="vendor/three.min.js"></script>
-  <script src="game.js?v=76"></script>
-  <script src="i18n.js?v=76"></script>
+  <script src="game.js?v=77"></script>
+  <script src="i18n.js?v=77"></script>
 </body>
 </html>
