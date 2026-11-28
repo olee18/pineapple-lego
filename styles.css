@@ -1413,7 +1413,6 @@ html.is-xmas .brand__hat { display: block; }
   }
   .done-bar__title { text-align: center; }
   .done-bar__actions { display: grid; grid-template-columns: 1fr 1fr; }
-  .done-bar__actions #doneNext { grid-column: 1 / -1; }
 }
 
 .app.is-victory .build-panel,
@@ -2689,3 +2688,58 @@ html.is-xmas .drag-ghost.is-over { background: #e3f3e8; box-shadow: 0 0 0 6px rg
   .brand__mark { width: 34px; height: 34px; }
 }
 
+
+/* How to play: 7 tips can be taller than a phone screen. Keep the title and the
+   Start button in view and let only the list scroll (soft fade at the bottom). */
+.help-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.help-card .help-steps {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 16px 0 12px;
+  padding: 0 2px 18px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-mask-image: linear-gradient(#000 calc(100% - 26px), transparent);
+  mask-image: linear-gradient(#000 calc(100% - 26px), transparent);
+}
+.help-card > .btn { flex: none; align-self: center; }
+
+/* Toolbar labels: our own English name under each top button (the browser's
+   built-in tooltip is slow, follows the language and never shows on tap). */
+.toolbar .icon-btn[data-tip]::after {
+  content: attr(data-tip) "\A" attr(data-tip-lo);
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 6;
+  padding: 6px 11px;
+  border-radius: 9px;
+  color: #fff;
+  background: rgba(40, 34, 26, 0.94);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+  font-family: "Fredoka", var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  text-align: center;
+  white-space: pre;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.toolbar .icon-btn[data-tip]:focus-visible::after,
+.toolbar .icon-btn[data-tip].show-tip::after {
+  opacity: 1;
+  transform: none;
+}
+@media (hover: hover) {
+  .toolbar .icon-btn[data-tip]:hover::after { opacity: 1; transform: none; }
+}
+/* Not while its menu / window is open. */
+.toolbar .icon-btn[data-tip][aria-expanded="true"]::after { opacity: 0 !important; }

@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&family=Noto+Sans+Lao+Looped:wght@400..700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=61">
+  <link rel="stylesheet" href="styles.css?v=68">
 </head>
 <body>
   <div class="app" id="app">
@@ -55,23 +55,20 @@
       </button>
 
       <div class="toolbar">
-        <button class="icon-btn" id="photoBtn" type="button" aria-label="โหมดถ่ายรูป" title="โหมดถ่ายรูป (หลังต่อเสร็จ)" disabled>
-          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M3.5 6.6h3l1.2-2h4.6l1.2 2h3v8.9h-13V6.6Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
-            <circle cx="10" cy="11" r="2.8" stroke="currentColor" stroke-width="1.4"/>
-          </svg>
+        <button class="icon-btn" id="levelMenuBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="เลือกด่าน" data-tip="Choose level" data-tip-lo="ເລືອກດ່ານ">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="5.2" height="5.2" rx="1.3" stroke="currentColor" stroke-width="1.6"/><rect x="11.3" y="3.5" width="5.2" height="5.2" rx="1.3" stroke="currentColor" stroke-width="1.6"/><rect x="3.5" y="11.3" width="5.2" height="5.2" rx="1.3" stroke="currentColor" stroke-width="1.6"/><rect x="11.3" y="11.3" width="5.2" height="5.2" rx="1.3" fill="currentColor"/></svg>
         </button>
-        <button class="icon-btn" id="helpBtn" type="button" aria-label="วิธีเล่น" title="วิธีเล่น">
+        <button class="icon-btn" id="helpBtn" type="button" aria-label="วิธีเล่น" data-tip="How to play" data-tip-lo="ວິທີຫຼິ້ນ">
           <span class="question-mark">?</span>
         </button>
-        <button class="icon-btn" id="resetBtn" type="button" aria-label="เริ่มใหม่" title="เริ่มใหม่">
+        <button class="icon-btn" id="resetBtn" type="button" aria-label="เริ่มใหม่" data-tip="Restart" data-tip-lo="ເລີ່ມໃໝ່">
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
             <path d="M15.8 8A6 6 0 1 0 16 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
             <path d="M12.6 5.6h3.7v3.7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
         <div class="settings">
-          <button class="icon-btn" id="settingsBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="settingsMenu" aria-label="ตั้งค่า" title="ตั้งค่า">
+          <button class="icon-btn" id="settingsBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="settingsMenu" aria-label="ตั้งค่า" data-tip="Settings" data-tip-lo="ຕັ້ງຄ່າ">
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path d="M8.6 2.8h2.8l.4 2 1.5.8 1.9-.8 1.4 2.4-1.5 1.3v1.8l1.5 1.3-1.4 2.4-1.9-.8-1.5.8-.4 2H8.6l-.4-2-1.5-.8-1.9.8-1.4-2.4 1.5-1.3V9.1L3.4 7.8l1.4-2.4 1.9.8 1.5-.8.4-2Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
               <circle cx="10" cy="10" r="2.4" stroke="currentColor" stroke-width="1.4"/>
@@ -231,7 +228,6 @@
         <div class="done-bar__actions">
           <button class="btn btn--primary" id="doneNext" type="button">ด่านถัดไป</button>
           <button class="btn btn--secondary" id="donePhoto" type="button">ถ่ายรูป</button>
-          <button class="btn btn--secondary" id="doneReplay" type="button">เล่นอีกครั้ง</button>
         </div>
       </div>
 
@@ -331,6 +327,22 @@
           <span class="help-steps__icon">3</span>
           <div><strong>หมุนดูรอบ ๆ</strong><p>ลากฉากเพื่อหมุน ม้วนหรือหุบนิ้วเพื่อซูม</p></div>
         </li>
+        <li>
+          <span class="help-steps__icon">4</span>
+          <div><strong>ต่อทีละชิ้นตามลำดับ</strong><p>ชิ้นที่ยังไม่ถึงคิวจะล็อกอยู่ ต่อชิ้นที่สว่างให้เสร็จ ชิ้นถัดไปจะปลดล็อกเอง</p></div>
+        </li>
+        <li>
+          <span class="help-steps__icon">5</span>
+          <div><strong>ต่อเร็ว ได้ดาวเยอะ</strong><p>เวลาเริ่มนับตอนเลือกชิ้นแรก ต่อครบใน 1 นาที 30 วินาที ได้ 3 ดาว ภายใน 3 นาที ได้ 2 ดาว</p></div>
+        </li>
+        <li>
+          <span class="help-steps__icon">6</span>
+          <div><strong>ถ่ายรูปเก็บไว้</strong><p>ต่อครบแล้วกดปุ่มถ่ายรูปที่ขึ้นมาด้านล่าง เพื่อบันทึกรูปลงเครื่อง</p></div>
+        </li>
+        <li>
+          <span class="help-steps__icon">7</span>
+          <div><strong>เลือกด่านและตั้งค่า</strong><p>กดชื่อด่านหรือไอคอนเลือกด่านด้านบนเพื่อเปลี่ยนด่าน กดปุ่มฟันเฟืองเพื่อเปิดโหมดกลางคืน ธีมคริสต์มาส เสียง และเปลี่ยนภาษา</p></div>
+        </li>
       </ol>
       <button class="btn btn--primary" type="button" data-close="help">เริ่มสร้างเลย</button>
     </div>
@@ -408,7 +420,7 @@
 
   <!-- ?v=… makes browsers fetch the new file after each update (bump it together with CACHE in sw.js). -->
   <script src="vendor/three.min.js"></script>
-  <script src="game.js?v=61"></script>
-  <script src="i18n.js?v=61"></script>
+  <script src="game.js?v=68"></script>
+  <script src="i18n.js?v=68"></script>
 </body>
 </html>

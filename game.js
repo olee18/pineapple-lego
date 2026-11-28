@@ -155,6 +155,7 @@
       build: buildXmasTreeModel,
       goalSvg: goalXmasTreeSvg(),
       bare: true,
+      lift: 0.4 /* red pedestal height */,
       noBee: true,
       winTh: "ต้นคริสต์มาสเสร็จแล้ว!",
       doneSub: "ลากฉากเพื่อชื่นชมต้นคริสต์มาส",
@@ -329,7 +330,7 @@
   const winStars = $("#winStars");
   const confetti = $("#confetti");
   const soundBtn = $("#soundBtn");
-  const photoBtn = $("#photoBtn");
+  const levelMenuBtn = $("#levelMenuBtn");
   const photoBar = $("#photoBar");
   const photoSave = $("#photoSave");
   const photoExit = $("#photoExit");
@@ -1734,8 +1735,6 @@
     closeModal("levels", false);
     app.classList.remove("is-victory", "is-photo", "is-done");
     hideDragHint();
-    photoBtn.disabled = true;
-    photoBtn.setAttribute("aria-pressed", "false");
     if (beeGroup) beeGroup.visible = false;
     hideDome();
     if (particleSystem) {
@@ -3351,6 +3350,7 @@
   function buildXmasTreeModel() {
     petalRoots = [];
     const pot = treePot();
+    pot.add(redPedestal());
     const trunk = treeTrunk();
     const bottom = treeTier(0, [0x1b5234, 0x21603c, 0x2a7047]);
     const middle = treeTier(1, [0x1f5a38, 0x266842, 0x2f784c]);
@@ -4582,7 +4582,6 @@
     photoBar.classList.add("is-visible");
     photoBar.setAttribute("aria-hidden", "false");
     window.setTimeout(showDragHint, 450);
-    photoBtn.setAttribute("aria-pressed", "true");
     showPhotoStatus("");
     haptic(10);
     window.setTimeout(() => photoExit?.focus({ preventScroll: true }), 120);
@@ -4593,11 +4592,9 @@
     app.classList.remove("is-photo");
     photoBar?.classList.remove("is-visible");
     photoBar?.setAttribute("aria-hidden", "true");
-    photoBtn.setAttribute("aria-pressed", "false");
-    photoBtn.disabled = !state.won;
     if (!silent) {
       showToast("ออกจากโหมดถ่ายรูปแล้ว");
-      photoBtn.focus({ preventScroll: true });
+      document.getElementById("donePhoto")?.focus({ preventScroll: true });
     }
   }
 
@@ -4636,7 +4633,6 @@
     save.levels[level.id] = progress;
     persistSave();
     updateBestLine();
-    photoBtn.disabled = false;
     winBest.classList.toggle("is-new", isNewBest);
     if (isNewBest) {
       winBest.textContent = previousBest === null
@@ -4703,8 +4699,6 @@
     confetti.innerHTML = "";
     winBest.textContent = "";
     winBest.classList.remove("is-new");
-    photoBtn.disabled = true;
-    photoBtn.setAttribute("aria-pressed", "false");
     winStars.querySelectorAll(".win-star").forEach((star) => {
       star.classList.remove("is-on");
       star.style.color = "";
@@ -4818,6 +4812,7 @@
     if (name === "levels") {
       updateLevelCards();
       levelBtn.setAttribute("aria-expanded", "true");
+      levelMenuBtn.setAttribute("aria-expanded", "true");
     }
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
@@ -4836,7 +4831,10 @@
     modal.setAttribute("aria-hidden", "true");
     if (name === "victory") app.classList.remove("is-victory");
     if (name === "victory" && state.won && restoreFocus) window.setTimeout(showDragHint, 300);
-    if (name === "levels") levelBtn.setAttribute("aria-expanded", "false");
+    if (name === "levels") {
+      levelBtn.setAttribute("aria-expanded", "false");
+      levelMenuBtn.setAttribute("aria-expanded", "false");
+    }
 
     let firstHelp = false;
     if (name === "help" && !save.tutorialSeen) {
@@ -5163,9 +5161,19 @@
     else openModal("levels");
   });
   $("#donePhoto").addEventListener("click", enterPhotoMode);
-  $("#doneReplay").addEventListener("click", () => resetGame());
   $("#saveBtn").addEventListener("click", saveBloom);
-  photoBtn.addEventListener("click", enterPhotoMode);
+  levelMenuBtn.addEventListener("click", () => openModal("levels"));
+
+  // Toolbar labels: hover and keyboard focus are handled in CSS; this shows the
+  // name briefly after a tap or click too (phones have no hover).
+  document.querySelectorAll(".toolbar .icon-btn[data-tip]").forEach((btn) => {
+    let tipTimer = 0;
+    btn.addEventListener("click", () => {
+      btn.classList.add("show-tip");
+      window.clearTimeout(tipTimer);
+      tipTimer = window.setTimeout(() => btn.classList.remove("show-tip"), 1600);
+    });
+  });
   photoExit.addEventListener("click", () => exitPhotoMode());
   photoSave.addEventListener("click", () => {
     const mode = saveBloom();
